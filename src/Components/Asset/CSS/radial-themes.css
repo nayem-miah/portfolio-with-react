@@ -1,0 +1,219 @@
+element {
+    background-color: rgb(207, 204, 4);
+    stroke: rgb(199, 200, 196);
+    fill: #5c80a4;
+}
+
+.radial svg #xhtml .xid {
+    position: relative;
+    top: 9px;
+}
+
+
+/* radial rate bars */
+
+.bar1 {
+    stroke-width: 1;
+}
+
+.bar2 {
+    stroke-width: 2;
+}
+
+.bar3 {
+    stroke-width: 3;
+}
+
+.bar4 {
+    stroke-width: 4;
+}
+
+.bar5 {
+    stroke-width: 5;
+}
+
+.bar6 {
+    stroke-width: 6;
+}
+
+.bar7 {
+    stroke-width: 7;
+}
+
+.bar8 {
+    stroke-width: 8;
+}
+
+.bar9 {
+    stroke-width: 9;
+}
+
+.bar10 {
+    stroke-width: 10;
+}
+
+
+/*stroke linecap*/
+
+svg path.cap-round {
+    stroke-linecap: round;
+}
+
+svg path.cap-squared {
+    stroke-linecap: square;
+}
+
+svg path.cap-butt {
+    stroke-linecap: butt;
+}
+
+
+/*default theme settings*/
+
+.radial svg circle {
+    fill: rgba(0, 0, 0, 0.21);
+}
+
+.radial svg circle.no-fill {
+    fill: none !important;
+}
+
+.radial svg path {
+    fill: rgba(108, 108, 108, 0.1);
+    stroke: rgba(19, 194, 27, 0.92);
+}
+
+.radial svg path.no-fill {
+    fill: none !important;
+}
+
+.radial svg path:not([class*=cap-]) {
+    stroke-linecap: square;
+}
+
+.radial svg path:not([class*=bar]) {
+    stroke-width: 10;
+}
+
+.radial svg #xhtml {
+    position: relative;
+    top: 8px;
+}
+
+
+/*custom theme settings*/
+
+.radial .theme-1 svg {
+    color: rgba(225, 225, 225);
+}
+
+.radial .theme-1 svg circle {
+    fill: rgba(0, 0, 0, 0.21);
+}
+
+.radial .theme-1 svg path {
+    fill: rgba(0, 0, 0, 0.21);
+}
+
+.radial .theme-2 svg {
+    color: rgba(225, 225, 225);
+}
+
+.radial .theme-2 svg circle {
+    fill: rgba(0, 0, 0, 0.21);
+}
+
+.radial .theme-2 svg path {
+    fill: rgba(0, 0, 0, 0.21);
+}
+
+.radial .theme-3 svg path {
+    fill: rgba(25, 82, 198, 0.91);
+    stroke: rgb(201, 201, 201);
+}
+
+.radial .theme-4 svg path {
+    fill: rgba(25, 82, 198, 0.91);
+    stroke: rgb(228, 228, 228);
+}
+
+.radial .theme-5 svg path {
+    fill: none;
+    stroke: rgb(228, 228, 228);
+}
+
+.radial .theme-5 svg #xhtml,
+.radial .theme-6 svg #xhtml {
+    color: rgb(59, 57, 56);
+}
+
+.radial .theme-6 svg path {
+    fill: none;
+    stroke: rgb(228, 228, 228);
+    stroke-width: 4;
+}
+
+.radial .theme-6 svg circle {
+    fill: none;
+}
+
+.radial .theme-7 svg circle {
+    fill: rgba(0, 0, 0, 0.21);
+}
+
+.radial .theme-7 svg path {
+    fill: rgb(221, 25, 25);
+    stroke: rgba(207, 204, 4, .4);
+}
+
+.radial .theme-8 svg circle {
+    fill: rgba(0, 0, 0, 0.21);
+}
+
+.radial .theme-8 svg path {
+    fill: rgb(221, 25, 25);
+    stroke: rgba(207, 47, 4, 0.4);
+}
+
+.radial .theme-9 svg circle {
+    fill: rgb(255, 0, 0);
+}
+
+.radial .theme-9 svg path {
+    fill: rgb(221, 25, 25);
+    stroke: rgba(228, 228, 227, 0.4);
+}
+
+.radial .theme-10 svg circle {
+    fill: none;
+}
+
+.radial .theme-10 svg path {
+    stroke: rgba(30, 113, 78, 0.83) !important;
+    fill: rgb(21, 138, 94);
+}
+
+.radial .theme-10 svg #xhtml {
+    color: rgb(255, 255, 255);
+}
+
+.radial .theme-11 svg circle {
+    fill: none;
+}
+
+.radial .theme-11 svg path {
+    stroke: rgba(151, 4, 80, 0.76) !important;
+}
+
+.radial .theme-11 svg #xhtml {
+    color: rgb(185, 36, 106);
+}
+
+.radial .theme-12 svg path {
+    stroke: rgba(215, 215, 209, 0.7);
+    fill: rgb(3, 46, 176);
+}
+
+.radial .theme-12 svg #xhtml {
+    color: white;
+}
