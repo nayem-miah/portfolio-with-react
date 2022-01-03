@@ -4,6 +4,7 @@ import BlogImg from "../Img/signature.png";
 import HeroImg from "../Img/Design.png";
 import AboutImg from "../Img/about1.png";
 import HomePageExperinece from "./ChildComponents/HomePageExperinece";
+import SliderImg from "./ChildComponents/SliderImg";
 
 const Home = () => {
 
@@ -436,79 +437,9 @@ const Home = () => {
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div class="owl-carousel owl-theme owl-loaded portfolio">
-                            <div class="owl-stage-outer">
-                                <div class="owl-stage">
-                                    <div class="owl-item">
-                                        <div class="main">
-                                      <a href="./portfolio.html"><img class="img-fluid" src="https://i.ibb.co/bmV3QBD/food-9.png" alt=""/></a>
-                                           
-                                            <div class="overlay"></div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-item">
-                                        <div class="main">
-                                           <a href="./portfolio.html"> <img class="img-fluid" src="https://i.ibb.co/QDj7Qyc/food-10.png" alt=""/></a>
-                                            <div class="overlay"></div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-item">
-                                        <div class="main">
-                                            <a href="./portfolio.html"><img class="img-fluid" src="https://i.ibb.co/XFgPjS4/food-1.png" alt=""/></a>
-                                            <div class="overlay"></div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-item">
-                                        <div class="main">
-                                            <a href="./portfolio.html"><img class="img-fluid" src="https://i.ibb.co/9tRth5w/food-2.png" alt=""/></a>
-                                            <div class="overlay"></div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-item">
-                                        <div class="main">
-                                            <a href="./portfolio.html"><img class="img-fluid" src="https://i.ibb.co/wgQBnjL/food-3.png" alt=""/></a>
-                                            <div class="overlay"></div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-item">
-                                        <div class="main">
-                                           <a href="./portfolio.html"> <img class="img-fluid" src="https://i.ibb.co/VSXmrLQ/food-4.png" alt=""/></a>
-                                            <div class="overlay"></div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-item">
-                                        <div class="main">
-                                           <a href="./portfolio.html"> <img class="img-fluid" src="https://i.ibb.co/mDLtP0P/food-5.png" alt=""/></a>
-                                            <div class="overlay"></div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-item">
-                                        <div class="main">
-                                           <a href="./portfolio.html"> <img class="img-fluid" src="https://i.ibb.co/vLrKtxH/food-6.png" alt=""/></a>
-                                            <div class="overlay"></div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-item">
-                                        <div class="main">
-                                           <a href="./portfolio.html"> <img class="img-fluid" src="https://i.ibb.co/tJ9419T/food-7.png" alt=""/></a>
-                                            <div class="overlay"></div>
-                                        </div>
-                                    </div>
-                                    <div class="owl-item">
-                                        <div class="main">
-                                            <a href="./portfolio.html"><img class="img-fluid" src="https://i.ibb.co/vDfrr8w/food-8.png" alt=""/></a>
-                                            <div class="overlay"></div>
-                                        </div>
-                                    </div>
 
-                                </div>
-                            </div>
-                            <div class="owl-nav">
-                                <div class="owl-prev-1"><i class="fas fa-arrow-left"></i></div>
-                                <div class="owl-next-1"><i class="fas fa-arrow-right"></i></div>
-                            </div>
 
-                        </div>
+                     <SliderImg></SliderImg>
                     </div>
                 </div>
             </div>
