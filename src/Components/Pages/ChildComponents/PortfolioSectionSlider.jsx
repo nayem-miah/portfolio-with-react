@@ -8,7 +8,7 @@ import slider5 from '../../Img/food-5.png';
 import slider6 from '../../Img/food-6.png';
 import slider7 from '../../Img/food-7.png';
 
-const SliderImg = () => {
+const PortfolioSectionSlider = () => {
 
   var breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -32,4 +32,4 @@ const SliderImg = () => {
     );
 };
 
-export default SliderImg;
+export default PortfolioSectionSlider;

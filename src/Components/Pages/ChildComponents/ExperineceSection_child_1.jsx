@@ -1,6 +1,6 @@
 import React from "react";
 
-const HomePageExperinece = (props) => {
+const ExperineceSection_child_1 = (props) => {
  const {_id,time,company,des}=props.experince;
  
   return (
@@ -16,4 +16,4 @@ const HomePageExperinece = (props) => {
   );
 };
 
-export default HomePageExperinece;
+export default ExperineceSection_child_1;
