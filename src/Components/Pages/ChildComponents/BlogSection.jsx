@@ -76,14 +76,7 @@ const BlogSection = () => {
               
              
             </div>
-            <div class="owl-nav">
-              <div class="owl-prev">
-                <i class="fas fa-arrow-left"></i>
-              </div>
-              <div class="owl-next">
-                <i class="fas fa-arrow-right"></i>
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>

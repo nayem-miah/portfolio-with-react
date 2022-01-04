@@ -60,6 +60,9 @@ select:focus {
   background: #0b032d;
   /* overflow: hidden; */
 }
+.App{
+  overflow: hidden;
+}
 
 header {
   position: fixed;
@@ -1492,7 +1495,7 @@ portfolio
 }
 
 #blog .owl-carousel {
-  padding-top: 0;
+ margin-top: 50px;
 }
 
 #blog .owl-carousel .card {
@@ -1500,10 +1503,6 @@ portfolio
   transition: 0.3s linear;
 }
 
-#blog .owl-carousel .card:hover {
-  transform: scale(105%);
-  box-shadow: rgb(0 255 238 / 51%) 2px 4px 32px;
-}
 
 #blog .owl-carousel .date {
   color: #616161;
@@ -1551,33 +1550,37 @@ portfolio
   padding: 0 10px;
 }
 
-#blog .owl-nav .owl-prev {
-  font-size: 25px;
+
+#blog .rec-arrow-left {
+  position: relative;
+  bottom: 422px;
+  left: 88%;
+  font-size: 20px;
   background: #00ffee;
-  padding: 10px 20px;
+  padding: 0px 18px;
   border-radius: 10px;
   margin-right: 17px;
   border: 2px solid #00ffee;
   transition: 0.3s;
-  cursor: pointer;
 }
 
-#blog .owl-nav .owl-prev:hover {
+#blog .rec-arrow-left:hover {
   background: #00ffee00;
   color: #fff;
 }
 
-#blog .owl-nav .owl-next {
-  font-size: 25px;
+#blog .rec-arrow-right {
+  position: relative;
+  bottom: 422px;
+  font-size: 20px;
   background: #00ffee;
-  padding: 10px 20px;
+  padding: 0px 18px;
   border-radius: 10px;
   border: 2px solid #00ffee;
   transition: 0.3s;
-  cursor: pointer;
 }
 
-#blog .owl-nav .owl-next:hover {
+#blog .rec-arrow-right:hover {
   background: #00ffee00;
   color: #fff;
 }
@@ -2268,11 +2271,15 @@ portfolio
   line-height: 27px;
 }
 
+
 .blog_item .section-1 .part-1 .text-file .testimonial {
   margin: 30px 0;
   padding: 30px 30px;
   background: #00fff0;
   width: 100%;
+}
+.testimonial{
+  width: 90% !important;
 }
 
 .blog_item .section-1 .part-1 .text-file .testimonial .fas {
@@ -3547,6 +3554,13 @@ portfolio
   }
   .blog-page .section-1 .part-1 .tag-point a {
       font-size: 11px;
+  }
+  .testimonial{
+    width: 100% !important;
+  }
+  #blog .rec-arrow-right,
+  #blog .rec-arrow-left{
+    display: none;
   }
 
 }
