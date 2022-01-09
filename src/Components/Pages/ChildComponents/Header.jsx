@@ -1,24 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
-import logo from '../../Img/logo-2.png';
+import AutohorImg from "../../Img/amit.jpg";
+import SignatureImg from "../../Img/signature.png";
+import logo from "../../Img/logo-2.png";
 
 const Header = () => {
+
+  // For layout section
+  const [active,setActive]=useState('false');
+
+  const clickFunction= ()=>{
+    setActive(!active);
+  }
   return (
+    <>
       <header class="">
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark">
-            <Link class="navbar-brand" to='/'>
+            <Link class="navbar-brand" to="/">
               <img src={logo} alt="" />
             </Link>
-            <Link to='/'></Link>
-           
+            <Link to="/"></Link>
+
             <div class="login-btn-img d-none">
-              <img
-                class="btnClass-1 d-none"
-                src=''
-                alt=""
-              />
+              <img class="btnClass-1 d-none" src="" alt="" />
             </div>
             <button
               class="navbar-toggler"
@@ -35,39 +40,71 @@ const Header = () => {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul id="nav" class="navbar-nav ml-auto">
                 <li class="nav-item current ">
-                  <a class="nav-link " href="">
-                    {" "}
-                    About Us{" "}
-                  </a>
+                  <Link className="nav-link" to={"/"}>
+                    Home
+                  </Link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#experinece">
-                    Experinece{" "}
-                  </a>
+                  <Link className="nav-link" to={"/service"}>
+                    Service
+                  </Link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#SERVICES">
-                    Services
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#portfolio">
+                  <Link className="nav-link" to={"/project"}>
                     Project
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#blog">
-                    Work
-                  </a>
+                  <Link className="nav-link" to={"/blog"}>
+                    Blog
+                  </Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to={"/contact"}>
+                    Contact
+                  </Link>
                 </li>
                 <li class="login-btn animate__animated animate__rubberBand">
-                  <p class="btnClass">It's Me</p>
+                  <p onClick={clickFunction} class="btnClass">It's Me</p>
                 </li>
               </ul>
             </div>
           </nav>
         </div>
       </header>
+
+
+      {/* Layout */}
+
+      <section id="layout">
+        <div id="myBtn" className={`overlay ${active==false?'active': null}`}>
+          <div class="wrap">
+            <div class="icon">
+              <span onClick={clickFunction} className={`remove_btn ${active==false?null : active}`}>
+                <i class="fas fa-times"></i>
+              </span>
+              <span class="arrow_btn">
+                <i class="fas fa-arrow-left"></i>
+              </span>
+            </div>
+
+            <img class="img-fluid" src={logo} alt="" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+              ratione reprehenderit, error qui enim sit ex provident iure,
+              dolor, nulla eaque delectus, repudiandae commodi. Velit assumenda
+              odit quisquam at, error suscipit unde, necessitatibus ipsum
+              ratione excepturi ducimus labore, totam dolorem.
+            </p>
+
+            <div class="img-sin d-flex">
+              <img class="img-fluid amit" src={AutohorImg} alt="" />
+              <img class="img-fluid sing" src={SignatureImg} alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
 import BlogSectionSlider from "./BlogSectionSlider";
 import bannerSectionImg from '../../Img/Banner_section.png';
+import { Link } from "react-router-dom";
 
 const BlogSection = () => {
   const [blogSlider, setBlogSlider] = useState([]);
@@ -46,10 +47,8 @@ const BlogSection = () => {
           <div class="col d-flex justify-content-center">
             <div class="menu-bar d-flex">
               <h2>ALL BLOGS</h2>
-              <a href="./blog.html">
-                {" "}
-                <img class="img-fluid" src={bannerSectionImg} alt="" />
-              </a>
+              <Link to={'./blog'}><img class="img-fluid" src={bannerSectionImg} alt="" /></Link>
+              
               <span>
                 <i class="fas fa-arrow-left"></i>
               </span>
