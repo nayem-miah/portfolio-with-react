@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BlogSectionSlider = (props) => {
     console.log(props.blogSlider);
@@ -18,9 +19,9 @@ const BlogSectionSlider = (props) => {
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Ab sunt officia earum temporibus suscipit.
                     </p>
-                    <a href="./single-blog.html" class="btn">
-                      Read More{" "}
-                    </a>
+
+                    <Link className='btn' to={'/single-blog'}>Read More</Link>
+                    
                   </div>
                 </div>
               </div>
