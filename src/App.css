@@ -60,7 +60,7 @@ select:focus {
   background: #0b032d;
   /* overflow: hidden; */
 }
-.App{
+.App {
   overflow: hidden;
 }
 
@@ -74,11 +74,10 @@ header {
   align-items: center;
   transition: 0.6s;
   z-index: 99;
-  height: 120px;
   background: #0b032d;
 }
 
-.sticky {
+.StickyNav {
   height: 100px;
   background: #05001a;
   border-bottom: 3px solid #00fff0;
@@ -1495,14 +1494,13 @@ portfolio
 }
 
 #blog .owl-carousel {
- margin-top: 50px;
+  margin-top: 50px;
 }
 
 #blog .owl-carousel .card {
   border: none;
   transition: 0.3s linear;
 }
-
 
 #blog .owl-carousel .date {
   color: #616161;
@@ -1549,7 +1547,6 @@ portfolio
   right: 0;
   padding: 0 10px;
 }
-
 
 #blog .rec-arrow-left {
   position: relative;
@@ -1870,29 +1867,7 @@ portfolio
   padding-bottom: 86px;
 }
 
-#portfolio-items .nav {
-  padding: 90px 0;
-}
 
-#portfolio-items .nav ul {
-  display: flex;
-}
-
-#portfolio-items .nav ul li {
-  margin-right: 20px;
-}
-
-#portfolio-items .nav ul li a {
-  color: #292929;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-  font-family: "Oswald", sans-serif;
-}
-
-#portfolio-items .nav ul li a:hover {
-  color: #00ffee;
-}
 
 #portfolio-items .items {
 }
@@ -2271,14 +2246,13 @@ portfolio
   line-height: 27px;
 }
 
-
 .blog_item .section-1 .part-1 .text-file .testimonial {
   margin: 30px 0;
   padding: 30px 30px;
   background: #00fff0;
   width: 100%;
 }
-.testimonial{
+.testimonial {
   width: 90% !important;
 }
 
@@ -2746,845 +2720,907 @@ portfolio
   right: -363px;
 }
 
+/* Service Section */
+#mainServiceSection{
+  background: #fff;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.service-section.space {
+  margin-top: 150px;
+}
+
+.service-section h2 {
+  font-family: "Oswald", sans-serif;
+  position: relative;
+  font-weight: bold;
+  font-size: 40px;
+  color: #292929;
+}
+.service-section p {
+  font-size: 16px;
+  margin-top: 30px;
+  color: #292929a8;
+  user-select: none;
+}
 
 
+/* Contact Page */
 
+#contactSection{
+  background: #fff;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#contactSection .part-1 h2{
+  font-size: 40px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  color: #292929;
+  margin-top: 15px;
+}
+#contactSection .part-1 p{
+  margin-top: 20px;
+  font-size: 16px;
+  color: rgb(66, 66, 66);
+  padding-bottom: 20px;
+}
+#contactSection .part-1 h3{
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+  color: #292929;
+  margin-top: 15px;
+}
+#contactSection .part-1 h4{
+  font-size: 24px;
+  color: #292929;
+  font-family: sans-serif;
+}
+#contactSection .part-1 i{
+  font-size: 30px;
+  padding: 5px;
+  color: #292929;
+  transition: all .3s linear;
+}
+#contactSection .part-1 i:hover{
+  color: #00ffee;
+  transform: translateY(2px);
+}
+#contactSection .part-2 textarea:focus{
+  color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+    
+}
+#contactSection .part-2 .btn{
+  background: #00fff0;
+  font-size: 16px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border: 2px solid #00d1ff;
+  cursor: pointer;
+  transition: all 0.2s linear;
 
-
-
-
-
-
-
-
+}
 
 /* Responive */
 
 /* Media Query */
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width: 1200px) {
   nav .login-btn {
-      display: none;
+    display: none;
   }
 
   nav .btnClass-1 {
-      display: block !important;
-      margin-top: 10px;
+    display: block !important;
+    margin-top: 10px;
   }
 
   .navbar-dark .navbar-toggler {
-      color: #00fff0 !important;
-      border: 2px solid #00fff0;
+    color: #00fff0 !important;
+    border: 2px solid #00fff0;
   }
 
   #About figure .btn-contact {
-      top: 26%;
-
+    top: 26%;
   }
 
   #About figure .contact_file .main {
-      position: relative;
-      top: -60px;
-      width: 68%;
-      height: auto;
-
+    position: relative;
+    top: -60px;
+    width: 68%;
+    height: auto;
   }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
   header .navbar .nav-item:hover {
-      transform: none;
-
+    transform: none;
   }
-
-
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
   header {
-      display: block;
+    display: block;
   }
 
   .navbar {
-      margin-top: 24px;
-      padding: 0 !important;
+    margin-top: 24px;
+    padding: 0 !important;
   }
 
   .navbar ul {
-      background: #0b032d;
-      padding: 20px 40px;
+    background: #0b032d;
+    padding: 20px 40px;
   }
 
   .sticky {
-      height: 104px;
+    height: 104px;
   }
 
   header .navbar .nav-item::after {
-      left: 0px;
-
+    left: 0px;
   }
 
   header .navbar .nav-item:hover:after {
-      width: 90px;
+    width: 90px;
   }
 
   .login-btn-img {
-      display: block !important;
+    display: block !important;
   }
 
   nav .btnClass-1 {
-      display: block !important;
-      margin-top: 2px;
-      position: relative;
-      left: 156px;
-      cursor: pointer;
+    display: block !important;
+    margin-top: 2px;
+    position: relative;
+    left: 156px;
+    cursor: pointer;
   }
 
   #layout .overlay .wrap {
-      position: absolute;
-      top: 0;
-      right: 0%;
-      padding: 70px 20px 70px 30px;
-      background: #0B032D;
-      width: 57%;
-
+    position: absolute;
+    top: 0;
+    right: 0%;
+    padding: 70px 20px 70px 30px;
+    background: #0b032d;
+    width: 57%;
   }
 
-
   #hero .part-2 img {
-      margin-left: 0;
-      margin-top: 118px;
+    margin-left: 0;
+    margin-top: 118px;
   }
 
   #About {
-      padding-top: 61px;
+    padding-top: 61px;
   }
 
   #About .overlay {
-      height: 459px;
+    height: 459px;
   }
 
   #About figure:hover .overlay {
-      width: 690px;
+    width: 690px;
   }
 
   #About figure .btn-contact {
-      left: 43%;
-      top: 47%;
+    left: 43%;
+    top: 47%;
   }
 
   #About .warp {
-      margin-left: 0;
-      margin-top: 60px;
+    margin-left: 0;
+    margin-top: 60px;
   }
 
   #About .warp .btn-cv {
-      margin-top: 32px;
-
+    margin-top: 32px;
   }
-
 
   #About figure .contact_file .main {
-      width: 90%;
-      height: auto;
-      position: relative;
-      top: 0;
+    width: 90%;
+    height: auto;
+    position: relative;
+    top: 0;
   }
 
-
   #experinece {
-      padding-top: 70px;
+    padding-top: 70px;
   }
 
   #experinece .part-2 .wrap {
-      margin-left: 0;
-      margin-top: -29px;
+    margin-left: 0;
+    margin-top: -29px;
   }
 
   #experinece .box {
-      padding-top: 60px;
+    padding-top: 60px;
   }
 
   #experinece .box .text {
-      margin: 15px 0;
+    margin: 15px 0;
   }
 
   #experinece .box .text .overlay {
-      width: 100%;
+    width: 100%;
   }
 
   .percent_work {
-      margin-top: 0;
-      position: relative;
-      display: flex;
-      justify-content: center;
+    margin-top: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
   }
 
   #SERVICES {
-      padding-top: 60px;
+    padding-top: 60px;
   }
 
   #SERVICES .part-2 .wrap {
-      margin-left: 0px;
-      margin-top: -21px;
+    margin-left: 0px;
+    margin-top: -21px;
   }
 
   #SERVICES .card {
-      margin-top: 88px;
+    margin-top: 88px;
   }
 
   #SERVICES .overlay {
-      display: none;
+    display: none;
   }
 
   #SERVICES .card:hover {
-      transform: none;
-      background: #0b032d00 !important;
+    transform: none;
+    background: #0b032d00 !important;
   }
 
   #SERVICES .card:hover .card-title,
   #SERVICES .card:hover .card-text {
-      color: #fff;
+    color: #fff;
   }
 
   #SERVICES .card:hover i {
-      color: #00fff0;
+    color: #00fff0;
   }
 
   #portfolio {
-      padding-top: 90px;
+    padding-top: 90px;
   }
 
   #portfolio .part-2 .wrap {
-      margin-left: 0;
+    margin-left: 0;
   }
 
   #portfolio .owl-nav {
-      display: flex;
-      position: absolute;
-      top: 17px;
-      left: 37%;
-      padding: 0 10px;
+    display: flex;
+    position: absolute;
+    top: 17px;
+    left: 37%;
+    padding: 0 10px;
   }
 
   #portfolio .owl-carousel {
-      padding-top: 83px;
+    padding-top: 83px;
   }
 
   #TESTIMONIALS {
-      margin-top: 65px;
+    margin-top: 65px;
   }
 
   #TESTIMONIALS .part-2 .wrap {
-      margin-left: 0;
+    margin-left: 0;
   }
 
   #TESTIMONIALS .bd-example .right p {
-      color: #fff;
-      font-size: 19px;
-      font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 19px;
+    font-family: "Oswald", sans-serif;
   }
 
   #TESTIMONIALS .bd-example .right h3 {
-      font-size: 19px;
+    font-size: 19px;
   }
 
   #TESTIMONIALS .bd-example .body {
-      margin-top: 0;
+    margin-top: 0;
   }
 
   #Payment {
-      margin-top: 35px;
-      padding-bottom: 100px;
+    margin-top: 35px;
+    padding-bottom: 100px;
   }
 
   #Payment .card {
-      margin-top: 43px;
+    margin-top: 43px;
   }
 
   #blog {
-      padding-top: 0;
+    padding-top: 0;
   }
 
   #blog .part-2 .wrap {
-      margin-left: 0;
+    margin-left: 0;
   }
 
   #Payment .part-2 .wrap {
-      margin-left: 0;
+    margin-left: 0;
   }
 
   #blog .owl-nav {
-      top: -57px;
+    top: -57px;
   }
 
   .newsletter-bg-black {
-      padding-top: 45px;
+    padding-top: 45px;
   }
 
   #footer .part-1,
   #footer .part-2,
   #footer .part-3,
   #footer .part-4 {
-      padding: 12px 23px;
+    padding: 12px 23px;
   }
 
   #footer .part-4 img {
-      width: 8%;
-      margin-right: 10px;
+    width: 8%;
+    margin-right: 10px;
   }
 
   .blog_item .section-1 .part-2 .wrap-1 {
-      margin-top: 50px;
+    margin-top: 50px;
   }
 
   .blog_item .section-1 .part-2 .wrap-1 .text h2::before {
-      width: 86%;
+    width: 86%;
   }
 
   .blog_item .section-1 .part-2 .wrap-1:hover .text h2::after {
-      width: 86%;
+    width: 86%;
   }
 
   .blog_item .section-1 .part-2 .wrap-2 .text h2::before {
-      width: 86%;
+    width: 86%;
   }
 
   .blog_item .section-1 .part-2 .wrap-2:hover .text h2::after {
-      width: 86%;
+    width: 86%;
   }
 
   .blog_item .section-1 .part-2 .wrap-3 .text h2::before {
-      width: 86%;
+    width: 86%;
   }
 
   .blog_item .section-1 .part-2 .wrap-3:hover .text h2::after {
-      width: 86%;
+    width: 86%;
   }
 
   .blog_item .section-1 .part-2 .wrap-4 .text h2::before {
-      width: 86%;
+    width: 86%;
   }
 
   .blog_item .section-1 .part-2 .wrap-4:hover .text h2::after {
-
-      width: 86%;
-
+    width: 86%;
   }
   .blog_item .section-1 .part-1 .wrap-1,
   .blog_item .section-1 .part-2 .wrap-1,
   .blog_item .section-1 .part-2 .wrap-2,
   .blog_item .section-1 .part-2 .wrap-3,
-  .blog_item .section-1 .part-2 .wrap-4{
-      margin-left: 0px !important;
+  .blog_item .section-1 .part-2 .wrap-4 {
+    margin-left: 0px !important;
   }
-
-
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   #main header .container {
-      max-width: none !important;
-      padding-right: 0;
-      padding-left: 0;
-      margin-right: 0;
-      margin-left: 0;
+    max-width: none !important;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .navbar-dark .navbar-brand {
-      margin-left: 30px;
+    margin-left: 30px;
   }
 
   .navbar-dark .navbar-toggler {
-      margin-right: 15px;
+    margin-right: 15px;
   }
 
   nav .btnClass-1 {
-      display: block !important;
-      margin-top: 2px;
-      position: relative;
-      left: 96px;
-      cursor: pointer;
+    display: block !important;
+    margin-top: 2px;
+    position: relative;
+    left: 96px;
+    cursor: pointer;
   }
 
   #layout .overlay .wrap {
-      width: 68%;
+    width: 68%;
   }
 
-
   #layout .overlay .wrap img {
-      margin-top: 17px;
+    margin-top: 17px;
   }
 
   #hero {
-      margin-top: 20px;
+    margin-top: 20px;
   }
 
   #hero .part-1 h2 {
-      font-size: 45px;
+    font-size: 45px;
   }
 
   #hero .part-1 p {
-      margin-top: 26px;
-      font-size: 17px;
+    margin-top: 26px;
+    font-size: 17px;
   }
 
   #hero .part-2 img {
-
-      display: none;
-
+    display: none;
   }
 
   #About .overlay {
-      height: 339px;
+    height: 339px;
   }
 
   #About figure .btn-contact {
-      left: 38%;
-      top: 45%;
+    left: 38%;
+    top: 45%;
   }
 
   #About .warp h2 {
-      font-size: 45px;
+    font-size: 45px;
   }
 
   #About figure .contact_file .main {
-      width: 98%;
-      height: auto;
-      position: relative;
-      top: -96px;
+    width: 98%;
+    height: auto;
+    position: relative;
+    top: -96px;
   }
 
   #percent_work {
-      display: none;
+    display: none;
   }
 
   #portfolio .owl-nav {
-      left: 33%;
+    left: 33%;
   }
 
   #portfolio .owl-carousel img:hover {
-      transform: none;
+    transform: none;
   }
 
   #TESTIMONIALS .bd-example .right p {
-      color: #fff;
-      font-size: 16px;
-      font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Oswald", sans-serif;
   }
 
   #Payment {
-      margin-top: 35px;
-      padding-bottom: 60px;
+    margin-top: 35px;
+    padding-bottom: 60px;
   }
 
   #blog .menu-bar {
-      left: -135px;
+    left: -135px;
   }
 
   #blog .owl-carousel .card:hover {
-      transform: none;
-      box-shadow: none;
+    transform: none;
+    box-shadow: none;
   }
 
   .newsletter-bg-black {
-      padding-top: 16px;
+    padding-top: 16px;
   }
 
   .newsletter-bg-black .wrap .head-text {
-      font-size: 40px;
+    font-size: 40px;
+  }
+  .service-section h2 {
+    margin-top: 15px;
+  }
+  .service-section.space {
+    margin-top: 70px;
+  }
+  .service-section .order {
+    order: 2;
   }
 
   #footer .part-1 .logo {
-      position: absolute;
-      top: -14px;
+    position: absolute;
+    top: -14px;
   }
-
 }
 
-@media screen and (max-width:575px) {
+@media screen and (max-width: 575px) {
   .navbar-dark .navbar-brand {
-      margin-left: 5px;
-      width: 60%;
+    margin-left: 5px;
+    width: 60%;
   }
 
   .navbar-dark .navbar-brand img {
-      width: 88%;
+    width: 88%;
   }
 
   nav .btnClass-1 {
-      display: block !important;
-      margin-top: 2px;
-      position: relative;
-      left: -17px;
-      cursor: pointer;
-      top: 0;
+    display: block !important;
+    margin-top: 2px;
+    position: relative;
+    left: -17px;
+    cursor: pointer;
+    top: 0;
   }
 
   #layout .overlay .wrap {
-      width: 88%;
-      height: 100%;
+    width: 88%;
+    height: 100%;
   }
 
   #hero .part-1 h2 {
-      font-size: 35px;
-      margin-top: -28px;
+    font-size: 35px;
+    margin-top: -28px;
   }
 
   #hero .btnClass {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
   #hero .part-1 .btn,
   #hero .part-1 .btn {
-      padding: 13px 19px;
-
+    padding: 13px 19px;
   }
 
   #hero .part-1 .my-btn-1 {
-      color: rgb(31, 31, 31);
-
+    color: rgb(31, 31, 31);
   }
 
   #About figure .btn-contact {
-      opacity: 1;
-      color: #fff;
-      background: #00ffee00;
-
+    opacity: 1;
+    color: #fff;
+    background: #00ffee00;
   }
 
   #About figure .overlay {
-      width: 100%;
-      height: 100%;
+    width: 100%;
+    height: 100%;
   }
 
   #About .image::before {
-      display: none;
+    display: none;
   }
 
   #About .warp h2 {
-      font-size: 35px;
-      margin-top: -26px;
+    font-size: 35px;
+    margin-top: -26px;
   }
 
   #About figure .btn-contact {
-      left: 35%;
-      top: 45%;
+    left: 35%;
+    top: 45%;
   }
 
   #About figure .contact_file .main {
-      width: 98%;
-      height: auto;
-      position: relative;
-      top: 45px;
+    width: 98%;
+    height: auto;
+    position: relative;
+    top: 45px;
   }
 
   #About figure .contact_file .main .head_text {
-      margin: 0;
+    margin: 0;
   }
 
   #About figure .contact_file .main .text_1 {
-      font-size: 15px;
-      color: rgb(148, 148, 148);
-      margin: 14px 0px;
-      text-align: start;
+    font-size: 15px;
+    color: rgb(148, 148, 148);
+    margin: 14px 0px;
+    text-align: start;
   }
 
   #About figure .contact_file .address h2 {
-      font-size: 25px;
-      color: #fff;
+    font-size: 25px;
+    color: #fff;
   }
 
   #About figure .contact_file .address {
-      display: block !important;
+    display: block !important;
   }
 
   #About figure .contact_file .address .part-1,
   #About figure .contact_file .address .part-2 {
-      width: 100% !important;
+    width: 100% !important;
   }
 
   #About figure .contact_file .address .part-2 {
-      margin-top: 13px;
+    margin-top: 13px;
   }
 
   #About figure .contact_file .address .part-2 .fab {
-      color: #00ffee;
-      transform: none;
+    color: #00ffee;
+    transform: none;
   }
 
   #About figure .contact_file .address .part-2 .fab:hover {
-      color: #00ffee;
-      transform: none;
+    color: #00ffee;
+    transform: none;
   }
 
   #About .dowwnload-cv-btn {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
   }
 
   #About .warp .btn-cv {
-      background: #00fff000;
-      color: rgb(255, 255, 255);
-
+    background: #00fff000;
+    color: rgb(255, 255, 255);
   }
 
   #experinece {
-      padding-top: 49px;
+    padding-top: 49px;
   }
 
   #experinece .part-1 .text h2 {
-      font-size: 25px;
+    font-size: 25px;
   }
 
   #experinece .box .text .overlay {
-      opacity: 0;
+    opacity: 0;
   }
 
   #experinece .text:hover {
-      box-shadow: none;
-      transform: none;
+    box-shadow: none;
+    transform: none;
   }
 
   #experinece .part-1 h2 {
-      font-size: 30px;
+    font-size: 30px;
   }
 
-  #SERVICES .part-1>h2 {
-      font-size: 30px;
+  #SERVICES .part-1 > h2 {
+    font-size: 30px;
   }
 
   #SERVICES .part-1 h2 {
-      font-size: 30px;
+    font-size: 30px;
   }
 
   #SERVICES .card {
-      margin-top: 60px;
+    margin-top: 60px;
   }
 
   #SERVICES .card i {
-      margin: 20px 0;
+    margin: 20px 0;
   }
 
   #portfolio {
-      padding-top: 65px;
+    padding-top: 65px;
   }
 
   #portfolio .part-1 h2 {
-      font-size: 30px;
+    font-size: 30px;
   }
 
   #portfolio .owl-nav {
-      left: 26%;
+    left: 26%;
   }
 
   #portfolio .owl-nav .owl-prev-1,
   #portfolio .owl-nav .owl-next-1 {
-      background: #0fe0;
-      border: 2px solid #0fe0;
+    background: #0fe0;
+    border: 2px solid #0fe0;
   }
 
   #portfolio .owl-nav .owl-prev-1 i,
   #portfolio .owl-nav .owl-next-1 i {
-      color: #00fff0;
+    color: #00fff0;
   }
 
   #portfolio .owl-carousel {
-      padding-top: 70px;
+    padding-top: 70px;
   }
 
   #TESTIMONIALS .part-1 h2 {
-      font-size: 30px;
+    font-size: 30px;
   }
 
   #Payment .part-1 h2 {
-      font-size: 30px;
+    font-size: 30px;
   }
 
   #blog .menu-bar {
-      left: 0;
+    left: 0;
   }
 
   #blog .owl-nav .owl-prev,
   #blog .owl-nav .owl-next {
-      background: #0fe0;
-      border: 2px solid #0fe0;
+    background: #0fe0;
+    border: 2px solid #0fe0;
   }
 
   #blog .owl-nav .owl-prev i,
   #blog .owl-nav .owl-next i {
-      color: #00fff0;
+    color: #00fff0;
   }
 
   #blog .owl-nav {
-      top: 2px;
-      left: 26%;
-      z-index: 99;
+    top: 2px;
+    left: 26%;
+    z-index: 99;
   }
 
   #blog .owl-item .testimonial {
-      margin-top: 18px;
+    margin-top: 18px;
   }
 
   .newsletter-bg-black .wrap .head-text {
-      font-size: 30px;
-      line-height: 46px;
-      margin-bottom: 25px;
-      margin-top: 19px;
+    font-size: 30px;
+    line-height: 46px;
+    margin-bottom: 25px;
+    margin-top: 19px;
   }
 
   .newsletter-bg-black .cta-form input {
-      margin-bottom: 40px;
+    margin-bottom: 40px;
   }
 
   #portfolio_header {
-      padding-top: 180px;
-      padding-bottom: 25px;
+    padding-top: 180px;
+    padding-bottom: 0;
   }
   #portfolio .rec-arrow-left,
   #portfolio .rec-arrow-right {
     display: none !important;
   }
   .blog-page .section-1 .part-1 .single-item > img {
-      height: auto;
+    height: auto;
   }
   .blog-page .section-1 .part-1 .hadding-text a {
-      font-size: 25px;
+    font-size: 25px;
   }
   .blog-page .section-1 .part-1 .text-overlay h2 {
-      top: 176px;
+    top: 176px;
   }
   .blog_item .section-1 {
-      padding-top: 50px;
+    padding-top: 50px;
   }
   .blog-page .section-1 .part-1 .tag-point {
-     display: inline-block !important;
+    display: inline-block !important;
   }
   .blog-page .section-1 .part-1 .tag-point .read-me,
-  .blog-page .section-1 .part-1 .tag-point .fa-clock{
-     display: none;
+  .blog-page .section-1 .part-1 .tag-point .fa-clock {
+    display: none;
   }
   .blog-page .section-1 .part-1 .tag-point > img {
-      margin-left: 15px;
-      margin-right: 9px;
+    margin-left: 15px;
+    margin-right: 9px;
   }
   .blog-page .section-1 .part-1 .single-item {
-      padding-bottom: 37px;
+    padding-bottom: 37px;
   }
   .blog_item .section-1 .part-2 .wrap-1,
   .blog_item .section-1 .part-2 .wrap-2,
   .blog_item .section-1 .part-2 .wrap-3,
-  .blog_item .section-1 .part-2 .wrap-4{
-      margin-left: 0;
+  .blog_item .section-1 .part-2 .wrap-4 {
+    margin-left: 0;
   }
   .blog_item .section-1 .part-2 .wrap-1 {
-      margin-top: 50px;
+    margin-top: 50px;
   }
 
   .blog_item .section-1 .part-2 .wrap-1 .text h2::before {
-      width: 70%;
+    width: 70%;
   }
 
   .blog_item .section-1 .part-2 .wrap-1:hover .text h2::after {
-      width: 70%;
+    width: 70%;
   }
 
   .blog_item .section-1 .part-2 .wrap-2 .text h2::before {
-      width: 70%;
+    width: 70%;
   }
 
   .blog_item .section-1 .part-2 .wrap-2:hover .text h2::after {
-      width: 70%;
+    width: 70%;
   }
 
   .blog_item .section-1 .part-2 .wrap-3 .text h2::before {
-      width: 70%;
+    width: 70%;
   }
 
   .blog_item .section-1 .part-2 .wrap-3:hover .text h2::after {
-      width: 70%;
+    width: 70%;
   }
 
   .blog_item .section-1 .part-2 .wrap-4 .text h2::before {
-      width: 70%;
+    width: 70%;
   }
 
   .blog_item .section-1 .part-2 .wrap-4:hover .text h2::after {
-
-      width: 70%;
-
+    width: 70%;
   }
   .blog_item .section-1 .part-1 .img-1 {
-      height: auto;
+    height: auto;
   }
   .blog_item .section-1 .part-1 .intro-box {
-      display: inline-block !important;
+    display: inline-block !important;
   }
   .blog_item .section-1 .part-1 .intro-box > a {
-      font-size: 12px;
+    font-size: 12px;
   }
   .blog_item .section-1 .part-1 .intro-box .fas,
-  .blog_item .section-1 .part-1 .intro-box .read{
-      display: none;
+  .blog_item .section-1 .part-1 .intro-box .read {
+    display: none;
   }
   .blog_item .section-1 .part-1 .text-file .testimonial {
-      padding: 30px 8px;
+    padding: 30px 8px;
   }
   .blog_item .section-1 .part-1 .text-file .testimonial .comment,
-  .blog_item .section-1 .part-1 .text-file .testimonial .name{
-      font-size: 22px;
-      margin-left: 55px;
+  .blog_item .section-1 .part-1 .text-file .testimonial .name {
+    font-size: 22px;
+    margin-left: 55px;
   }
   .blog_item .section-1 .part-1 .comment-zoon img {
-      width: 20%;
-      height: 20%;
-      margin-bottom: 20px;
+    width: 20%;
+    height: 20%;
+    margin-bottom: 20px;
   }
-  .blog_item .section-1 .part-1 .reply-main img {   
-       width: 20%;
-      height: 100%;
+  .blog_item .section-1 .part-1 .reply-main img {
+    width: 20%;
+    height: 100%;
   }
   .blog_item .section-1 .part-1 .comment-zoon .reply-main {
-      margin-left: 49px;
+    margin-left: 49px;
   }
   .blog_item .section-1 .part-1 .headding-text {
-      font-size: 24px;
+    font-size: 24px;
   }
   .blog-page .section-1 .part-1 .tag-point a {
-      font-size: 11px;
+    font-size: 11px;
   }
-  .testimonial{
+  .testimonial {
     width: 100% !important;
   }
   #blog .rec-arrow-right,
-  #blog .rec-arrow-left{
+  #blog .rec-arrow-left {
     display: none;
   }
-
 }
 
-@media screen and (max-width:325px) {
+@media screen and (max-width: 325px) {
   #About figure .contact_file .main {
-      top: 17px;
+    top: 17px;
   }
   .blog-page .section-1 .part-1 .tag-point a {
-      margin-right: 15px;
-      font-size: 12px;
+    margin-right: 15px;
+    font-size: 12px;
   }
   .blog-page .section-1 .part-1 .content p {
-      font-size: 16px;
-      margin-right: 15px;
+    font-size: 16px;
+    margin-right: 15px;
   }
   .blog_item .section-1 .part-1 .intro-box > i {
-      padding-right: 0;
+    padding-right: 0;
   }
   .blog_item .section-1 .part-1 .img-2 {
-      margin-right: 0;
+    margin-right: 0;
   }
   .blog_item .section-1 .part-2 .wrap-2 .items img {
-      transition: all .2s linear;
-      width: 80%;
+    transition: all 0.2s linear;
+    width: 80%;
   }
 }

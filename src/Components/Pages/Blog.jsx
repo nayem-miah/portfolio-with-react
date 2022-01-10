@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "./ChildComponents/Header";
 import AuthorImg from "../../Components/Img/single-blog/author1.png";
-import NewsLetter from "./ChildComponents/NewsLetter";
+import NewsLetter from "./ChildComponents/NewsLatter";
 import Footer from "./ChildComponents/Footer";
 import IntroSection from "./ChildComponents/IntroSection";
 

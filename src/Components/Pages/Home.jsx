@@ -9,7 +9,7 @@ import PortfolioSection from "./ChildComponents/PortfolioSection";
 import PaymentSection from "./ChildComponents/PaymentSection";
 import Testimonials from "./ChildComponents/Testimonials";
 import BlogSection from "./ChildComponents/BlogSection";
-import NewsLetter from "./ChildComponents/NewsLetter";
+import NewsLetter from "./ChildComponents/NewsLatter";
 import Footer from "./ChildComponents/Footer";
 
 const Home = () => {

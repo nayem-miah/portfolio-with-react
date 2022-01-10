@@ -236,28 +236,7 @@ const SingleBlog = () => {
                             </div>
 
                         </div>
-                        <div class="wrap-4">
-                            <div class="text">
-                                <h2>
-                                    CATEGORIES .
-                                </h2>
-                            </div>
-                            <div class="tag-box">
-                                <ul>
-                                    <li><a href="#">Travel</a></li>
-                                    <li><a href="#">History</a></li>
-                                    <li><a href="#">Design</a></li>
-                                    <li><a href="#">International</a></li>
-                                    <li><a href="#">App</a></li>
-                                    <li><a href="#">Melbourne</a></li>
-                                    <li><a href="#">Business</a></li>
-                                    <li><a href="#">Darwin</a></li>
-                                    <li><a href="#">Perth</a></li>
-                                    <li><a href="#">Brisbane</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
+                       
 
 
 
