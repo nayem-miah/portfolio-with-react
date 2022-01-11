@@ -40,6 +40,10 @@ const Contact = () => {
                   <a target={'blank'} href='https://www.reddit.com/user/Amitbd33'>
                     <i class="fab fa-reddit-square"></i>
                   </a>
+                  <a target={'blank'} href='https://www.reddit.com/user/Amitbd33'>
+                  <i class="fab fa-instagram"></i>
+                  </a>
+                  
                 </div>
               </div>
             </Col>
