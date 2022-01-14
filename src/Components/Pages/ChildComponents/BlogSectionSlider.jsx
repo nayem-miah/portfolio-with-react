@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const BlogSectionSlider = (props) => {
-    console.log(props.blogSlider);
     const {img,date,des}=props.blogSlider;
     return (
         <div class="testimonial">

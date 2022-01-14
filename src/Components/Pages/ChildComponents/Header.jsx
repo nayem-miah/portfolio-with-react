@@ -5,8 +5,17 @@ import "react-js-stickynav/dist/index.css";
 import AutohorImg from "../../Img/amit.jpg";
 import SignatureImg from "../../Img/signature.png";
 import logo from "../../Img/logo-2.png";
+import { Button } from "react-bootstrap";
+import useFireBaseHook from "../../../FireBase/useFireBaseHook";
+
+
+
 
 const Header = () => {
+
+  // For Google sign In....
+const{signInGoogle, user, signOutGoogle}= useFireBaseHook();
+
   // For layout section
   const [active, setActive] = useState("false");
 
@@ -119,7 +128,7 @@ const Header = () => {
             <div class="icon">
               <span
                 onClick={clickFunction}
-                className={`remove_btn ${active == false ? null : active}`}
+                className='remove_btn'
               >
                 <i class="fas fa-times"></i>
               </span>
@@ -141,6 +150,13 @@ const Header = () => {
               <img class="img-fluid amit" src={AutohorImg} alt="" />
               <img class="img-fluid sing" src={SignatureImg} alt="" />
             </div>
+            <br/>
+
+            {
+              user.email ? <Button onClick={signOutGoogle}>Sign Out</Button> : <Button onClick={signInGoogle}>Sign In</Button>
+            }
+            {/* <Button onClick={signInGoogle}>Sign In</Button>
+            {signInGoogle.email && <Button onClick={signInGoogle}>Sign In</Button> } */}
           </div>
         </div>
       </section>
