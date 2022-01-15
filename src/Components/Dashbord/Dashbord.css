@@ -18,6 +18,22 @@ background: #0b032d
   height: 120px;
 }
 .dashBord .child-content{
+  padding-top: 20px;
 min-height: 100vh;
- background: #ddd;
+ background: #fff;
+}
+.dashBord .child-content form{
+margin-top: 50px;
+}
+.dashBord .child-content .wrap{
+  display: flex;
+    margin: 0 53px;
+    border: 1px solid #7e7e7e70;
+    padding: 18px 22px;
+    margin-bottom: 10px;
+}
+.dashBord .child-content .img-box{
+  width: 30%;
+  height: auto;
+
 }

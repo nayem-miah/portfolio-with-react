@@ -8,13 +8,9 @@ import logo from "../../Img/logo-2.png";
 import { Button } from "react-bootstrap";
 import useFireBaseHook from "../../../FireBase/useFireBaseHook";
 
-
-
-
 const Header = () => {
-
   // For Google sign In....
-const{signInGoogle, user, signOutGoogle}= useFireBaseHook();
+  const { signInGoogle, user, signOutGoogle } = useFireBaseHook();
 
   // For layout section
   const [active, setActive] = useState("false");
@@ -126,10 +122,7 @@ const{signInGoogle, user, signOutGoogle}= useFireBaseHook();
         >
           <div class="wrap">
             <div class="icon">
-              <span
-                onClick={clickFunction}
-                className='remove_btn'
-              >
+              <span onClick={clickFunction} className="remove_btn">
                 <i class="fas fa-times"></i>
               </span>
               <span class="arrow_btn">
@@ -150,13 +143,7 @@ const{signInGoogle, user, signOutGoogle}= useFireBaseHook();
               <img class="img-fluid amit" src={AutohorImg} alt="" />
               <img class="img-fluid sing" src={SignatureImg} alt="" />
             </div>
-            <br/>
-
-            {
-              user.email ? <Button onClick={signOutGoogle}>Sign Out</Button> : <Button onClick={signInGoogle}>Sign In</Button>
-            }
-            {/* <Button onClick={signInGoogle}>Sign In</Button>
-            {signInGoogle.email && <Button onClick={signInGoogle}>Sign In</Button> } */}
+            <br />
           </div>
         </div>
       </section>
