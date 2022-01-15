@@ -1,0 +1,23 @@
+.dashBord .dropdown-menu{
+  /* top: 29%;
+  left: 140px; */
+  background-color: #00ffee;
+}
+.dashBord .dropdown-menu {
+position: unset !important;
+}
+.dashBord .dropdown-menu a{
+text-decoration: none !important;
+}
+.dashBord .content{
+
+background: #0b032d
+}
+.dashBord .headerSpace{
+
+  height: 120px;
+}
+.dashBord .child-content{
+min-height: 100vh;
+ background: #ddd;
+}
