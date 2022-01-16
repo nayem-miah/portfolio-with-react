@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 import AboutImg from "../../Img/about1.png";
 
 const AboutSection = () => {
-    return (
-        <div>
-            <section id="About">
+  return (
+    <div>
+      <section id="About">
         <div class="container">
           <div class="row">
             <div class="col-lg-5">
@@ -16,7 +17,9 @@ const AboutSection = () => {
                 <div class="contact-btn">
                   {/* <!-- <a class="btn btn-contact" href="#">Contact Us</a> --> */}
                   <div class="contact-btn-main">
-                    <p class="btn-contact">Contact Us</p>
+                    <Link to={"/contact"}>
+                      <p class="btn-contact">Contact Us</p>
+                    </Link>
                   </div>
                 </div>
                 <div id="contact_file_popUp" class="contact_file d-flex">
@@ -109,8 +112,8 @@ const AboutSection = () => {
           </div>
         </div>
       </section>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default AboutSection;

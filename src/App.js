@@ -21,6 +21,7 @@ import LoginPage from "./Components/Pages/LogInPage/LoginPage";
 
 import AllProject from "./Components/Dashbord/Page/AllProject";
 import PrivateRoute from "./Components/Pages/LogInPage/PrivateRoute";
+import ScrollToTop from "./Components/HelpPoint/ScrollToTop";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
     <div className="App">
       <AuthContext>
         <Router>
+          <ScrollToTop>
           <Switch>
             <Route path="/" exact><Home /> </Route>
             <Route path="/home"><Home /></Route>
@@ -49,6 +51,7 @@ function App() {
 
             <Route path="*"><NoPageFound/></Route>
           </Switch>
+          </ScrollToTop>
         </Router>
       </AuthContext>
     </div>
