@@ -1,16 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { StickyNav } from "react-js-stickynav";
 import "react-js-stickynav/dist/index.css";
 import AutohorImg from "../../Img/amit.jpg";
 import SignatureImg from "../../Img/signature.png";
 import logo from "../../Img/logo-2.png";
-import { Button } from "react-bootstrap";
-import useFireBaseHook from "../../../FireBase/useFireBaseHook";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  // For Google sign In....
-  const { signInGoogle, user, signOutGoogle } = useFireBaseHook();
 
   // For layout section
   const [active, setActive] = useState("false");

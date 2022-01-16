@@ -1,25 +1,21 @@
 import React, { useContext } from "react";
 import logo from "../../Img/logo-2.png";
-import { Menu, MenuButton, MenuItem, SubMenu } from "@szhsin/react-menu";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/transitions/slide.css";
 import {
   Button,
-  Container,
-  Form,
-  FormControl,
   Nav,
   Navbar,
-  NavDropdown,
-  Offcanvas,
+  NavDropdown
 } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import useAuth from "../../../Context/useAuth";
+import { Link } from "react-router-dom";
+import useFireBaseHook from "../../../FireBase/useFireBaseHook";
 
 const DashBordMenu = () => {
-  const {signOutGoogle, user, signInGoogle}=useAuth()
+  const {signOutGoogle, user, signInGoogle}=useFireBaseHook()
   return (
-    <>
+    <div>
       <Navbar className="d-block" collapseOnSelect expand="lg" variant="dark">
         <Navbar.Brand href="#home">
           <Link to={"/dashbord"}>
@@ -77,15 +73,13 @@ const DashBordMenu = () => {
               id="collasible-nav-dropdown"
               className="dashBord-dropdown"
             >
-              <Link className="dropdown-item" to={"add-project"}>
-                Add Project
+              <Link className="dropdown-item" to={"/add-project"}>
+                Create Project
               </Link>
-              <Link className="dropdown-item" to={"remove-project"}>
-                Remove Project
+              <Link className="dropdown-item" to={"/all-project"}>
+                All Project
               </Link>
-              <Link className="dropdown-item" to={"edit-project"}>
-                Edit Project
-              </Link>
+             
             </NavDropdown>
           </Nav>
           
@@ -98,7 +92,7 @@ const DashBordMenu = () => {
       </Navbar>
 
       
-    </>
+    </div>
   );
 };
 

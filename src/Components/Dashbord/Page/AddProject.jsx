@@ -1,10 +1,9 @@
 import React from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
 import DashBordMenu from "../ChildComponent/DashBordMenu";
 
-const AddSlider = () => {
+const AddProject = () => {
   return (
     <>
       <div className=" dashBord">
@@ -29,7 +28,12 @@ const AddSlider = () => {
               <div className="w-50 ">
                 <Form className="justify-content-center">
                   <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Image Upload For Slider!</Form.Label>
+                    <Form.Label>Create Project Title</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Title" />
+                    <Form.Text className="text-muted">
+                      Add here post title for your new post!
+                    </Form.Text>
+                    <Form.Label>Image Upload</Form.Label>
                     <Form.Control type="text" placeholder="Enter Image URL" />
                     <Form.Text className="text-muted">
                       Input the url of Image!
@@ -50,4 +54,4 @@ const AddSlider = () => {
   );
 };
 
-export default AddSlider;
+export default AddProject;

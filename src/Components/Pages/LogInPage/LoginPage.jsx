@@ -1,12 +1,12 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import useFireBaseHook from "../../FireBase/useFireBaseHook";
-import Footer from "./ChildComponents/Footer";
-import Header from "./ChildComponents/Header";
+import useAuth from "../../../Context/useAuth";
+import Footer from "../ChildComponents/Footer";
+import Header from "../ChildComponents/Header";
 
 const LoginPage = () => {
-  const { signInGoogle, signOutGoogle, user } = useFireBaseHook();
+  const { signInGoogle, signOutGoogle, user } = useAuth();
   return (
     <>
       <Header></Header>

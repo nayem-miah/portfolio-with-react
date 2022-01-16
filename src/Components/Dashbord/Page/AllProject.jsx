@@ -3,7 +3,7 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import DashBordMenu from "../ChildComponent/DashBordMenu";
 
-const RemoveSlider = () => {
+const AllProject = () => {
   return (
     <>
       <div className=" dashBord">
@@ -25,16 +25,14 @@ const RemoveSlider = () => {
               </Row>
             </div>
             <div className="child-content">
-              <div className="wrap ">
-                <div className="img-box">
+              <div className="wrap mt-3">
+                <div className="img-box ">
                   <img src="" alt="" />
-                  <Button variant="danger">Remove Slider</Button>
+                  <Button variant="danger">Remove Post</Button>
+                  <Button className="ml-2">Edit Post</Button>
                 </div>
-              </div>
-              <div className="wrap ">
-                <div className="img-box">
-                  <img src="" alt="" />
-                  <Button variant="danger">Remove Slider</Button>
+                <div className="text-box">
+                  <h5>Title</h5>
                 </div>
               </div>
             </div>
@@ -45,4 +43,4 @@ const RemoveSlider = () => {
   );
 };
 
-export default RemoveSlider;
+export default AllProject;

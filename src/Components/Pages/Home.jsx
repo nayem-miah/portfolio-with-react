@@ -1,3 +1,4 @@
+import React from "react";
 import Layout from "./ChildComponents/Layout";
 import HeroBar from "./ChildComponents/HeroBar";
 import AboutSection from "./ChildComponents/AboutSection";

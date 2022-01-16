@@ -24,9 +24,7 @@ const Dashbord = () => {
               </Col>
             </Row>
           </div>
-          <div className="child-content">
-            
-          </div>
+          <div className="child-content"></div>
         </Col>
       </Row>
     </div>

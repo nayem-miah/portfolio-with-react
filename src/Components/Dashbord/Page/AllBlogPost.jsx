@@ -25,8 +25,6 @@ const AllBlogPost = () => {
               </Row>
             </div>
             <div className="child-content">
-
-
               {/* Dynamic content here... */}
               <div className="wrap mt-3">
                 <div className="img-box ">
@@ -51,8 +49,6 @@ const AllBlogPost = () => {
                   <p>Date</p>
                   <p>Description</p>
                 </div>
-
-               
               </div>
             </div>
           </Col>

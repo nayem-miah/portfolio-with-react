@@ -36,9 +36,18 @@ const CreateBlogPost = () => {
                     <Form.Label>Image Upload</Form.Label>
                     <Form.Control type="text" placeholder="Enter Image URL" />
                     <Form.Text className="text-muted">
-                    Input the url of Image!
-                    </Form.Text> <br></br>
-                    <textarea  class="w-100 massage p-2" name="" id="" placeholder="Write your massage" cols="20" rows="5" spellcheck="false"></textarea>
+                      Input the url of Image!
+                    </Form.Text>{" "}
+                    <br></br>
+                    <textarea
+                      class="w-100 massage p-2"
+                      name=""
+                      id=""
+                      placeholder="Write your massage"
+                      cols="20"
+                      rows="5"
+                      spellcheck="false"
+                    ></textarea>
                   </Form.Group>
 
                   <Button variant="primary" type="submit">
