@@ -12,7 +12,8 @@ const PrivateRoute = ({ children, ...rest }) => {
 
   return (
     
-      <Route
+      <>
+        <Route
         {...rest}
         render={({ location }) =>
           user.email ? (
@@ -27,6 +28,7 @@ const PrivateRoute = ({ children, ...rest }) => {
           )
         }
       ></Route>
+      </>
    
   );
 };

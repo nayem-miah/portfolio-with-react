@@ -373,7 +373,7 @@ header .navbar .disable {
 #hero .part-2 img {
   margin-left: 108px;
   position: relative;
-  animation: forImg 2s linear 1s infinite alternate;
+  animation: forImg 2s linear 1s infinite alternate-reverse;
 }
 
 @keyframes forImg {

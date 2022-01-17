@@ -10,10 +10,9 @@ import {
 } from "react-bootstrap";
 import useAuth from "../../../Context/useAuth";
 import { Link } from "react-router-dom";
-import useFireBaseHook from "../../../FireBase/useFireBaseHook";
 
 const DashBordMenu = () => {
-  const {signOutGoogle, user, signInGoogle}=useFireBaseHook()
+  const {signOutGoogle, user, signInGoogle}=useAuth()
   return (
     <div>
       <Navbar className="d-block" collapseOnSelect expand="lg" variant="dark">
