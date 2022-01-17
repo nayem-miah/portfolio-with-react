@@ -25,6 +25,8 @@ import ScrollToTop from "./Components/HelpPoint/ScrollToTop";
 
 
 function App() {
+
+
   return (
     <div className="App">
       <AuthContext>
@@ -35,12 +37,12 @@ function App() {
             <Route path="/home"><Home /></Route>
             <Route path="/contact"><Contact /></Route>
             <Route path="/blog"><Blog /></Route>
-            <Route path="/single-blog"><SingleBlog/></Route>
+            <Route path="/single-blog/:Slug"><SingleBlog/></Route>
             <Route path="/service"><Service /></Route>
             <Route path="/project"> <Project /></Route>
             <PrivateRoute path="/dashbord"><Dashbord /></PrivateRoute>
             <Route path="/admin-box"><LoginPage /> </Route>
-            <PrivateRoute path="/create-blog-post"> <CreateBlogPost/></PrivateRoute>
+            <PrivateRoute path="/create-blog-post"> <CreateBlogPost/></PrivateRoute>          
             <PrivateRoute path="/all-blog-post"> <AllBlogPost /></PrivateRoute>
             <PrivateRoute path="/add-slider"><AddSlider/></PrivateRoute>
             <PrivateRoute path="/remove-slider"> <RemoveSlider/></PrivateRoute>

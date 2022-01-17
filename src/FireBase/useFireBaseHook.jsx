@@ -20,7 +20,6 @@ const useFireBaseHook = () => {
     setIsLoading(true);
     signInWithPopup(auth, googleAuthProvider)
       .then((result) => {
-          console.log(result.user);
         setUser(result.user);
       })
       .catch((error) => {

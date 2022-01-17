@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import Header from './ChildComponents/Header';
 import IntroSection from './ChildComponents/IntroSection';
 
 const SingleBlog = () => {
+    const {Slug}=useParams();
+    const [uniqueSlug, setUniqueSlug]= useState({});
+
+    useEffect(()=>{
+        const url=`https://jsonplaceholder.typicode.com/users/${Slug}`; // Url of single blog. try: http://localhost:3000/single-blog/1
+        console.log(url);
+        fetch(url)
+        .then(res=>res.json())
+        .then(data=> setUniqueSlug(data));
+    },[])
+  
     return (
         <>
         {/* Header Section */}
@@ -24,7 +36,7 @@ const SingleBlog = () => {
                                 <img class="img-fluid img-1" src="./img/blog-1.jpg" alt=""/>
                             </div>
                             <div class="text-file">
-                                <h2 class="headding-text">SUCCESSFUL CAMPAIGNS USUALLY REQUIRE A CAMPAIGN MANAGER TO
+                                <h2 class="headding-text">{uniqueSlug.username}
                                 </h2>
                                 <div class="intro-box d-flex align-items-center ">
 

@@ -591,7 +591,7 @@ function radialRateInitiate(ratePoint) {
     autoRun = (autoRun == 'load-scroll') ? "load scroll" : autoRun;
 
     if ($(item).data('self') && item.data('point')) {
-        console.log("running");
+        // console.log("running");
 
         var dataPoint = item.attr('data-point') || 0;
         var dataOldPoint = isNaN(parseInt(dataPoint)) ? 0 : parseInt(dataPoint);

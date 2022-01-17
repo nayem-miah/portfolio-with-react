@@ -5,8 +5,12 @@ import AuthorImg from "../../Components/Img/single-blog/author1.png";
 import NewsLetter from "./ChildComponents/NewsLatter";
 import Footer from "./ChildComponents/Footer";
 import IntroSection from "./ChildComponents/IntroSection";
+import SingleBlog from "./SingleBlog";
+import SingleBlogPost from "./ChildComponents/BlogPostData";
+import BlogPostData from "./ChildComponents/BlogPostData";
 
 const Blog = () => {
+  // const url = "./DataBase/blogPageData.JSON";
   const url = "./DataBase/blogPageData.JSON";
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -14,6 +18,8 @@ const Blog = () => {
       .then((res) => res.json())
       .then((result) => setData(result));
   }, []);
+
+  
   return (
     <>
       {/* Header Section */}
@@ -28,40 +34,16 @@ const Blog = () => {
         <div class="container">
           <div class="row section-1">
             <div class="col-lg-8 part-1">
+
+
+
+
               {data.map((data) => (
-                <div class="single-item">
-                  <div class="overlay">
-                    <img class="img-fluid" src={data.img} alt="" />
-                    <h2 class="event">USA EVENT</h2>
-                  </div>
-                  <div class="hadding-text">
-                    <Link to={""}>
-                      SUCCESSFUL CAMPAIGNS USUALLY REQUIRE A CAMPAIGN MANAGER TO
-                    </Link>
-                  </div>
-                  <div class="tag-point d-flex align-items-center">
-                    <img class="img-fluid" src={data.authorImg} alt="" />
-                    <Link to={""}>{data.author}</Link>
-
-                    <span>
-                      <i class="far fa-calendar-alt"></i>
-                    </span>
-                    <Link to={""}> 28 SEPTEMBER</Link>
-                  </div>
-                  <div class="content">
-                    <p>{data.des}</p>
-                  </div>
-                  <div class="read-more-btn d-flex align-items-center justify-content-between">
-                    <Link className="btn btn-read-more" to={"/single-blog"}>
-                      Read More
-                    </Link>
-
-                    <a class="share" href="#">
-                      <i class="fas fa-share-alt"></i>
-                    </a>
-                  </div>
-                </div>
-              ))}
+                <BlogPostData key={data._id} data={data}></BlogPostData>
+              ))
+              
+              
+              }
 
               <div class="pagination ">
                 <nav aria-label="Page navigation example">
