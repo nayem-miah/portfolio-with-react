@@ -8,16 +8,20 @@ import IntroSection from "./ChildComponents/IntroSection";
 import SingleBlog from "./SingleBlog";
 import SingleBlogPost from "./ChildComponents/BlogPostData";
 import BlogPostData from "./ChildComponents/BlogPostData";
+import axios from "axios";
 
 const Blog = () => {
-  // const url = "./DataBase/blogPageData.JSON";
-  const url = "./DataBase/blogPageData.JSON";
   const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((result) => setData(result));
-  }, []);
+
+  // Load Blog Post from Server ....
+
+const URL = 'http://localhost:5000/all-blog-post';
+
+React.useEffect(()=>{
+  axios.get(URL).then((res)=>{
+    setData(res.data)
+  })
+},[])
 
   
   return (

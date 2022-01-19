@@ -3,9 +3,11 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const BlogPostData = (props) => {
-    const {_id,img,authorImg,author,des,title}=props.data;
+    const {BlogTitle, ImgUrl, Description, date}=props.data;
+
+    const DescriptionSlice = Description.slice(0,300);
     
-    const titleLowerCase1 = title.toLowerCase();
+    const titleLowerCase1 = BlogTitle.toLowerCase();
     var titleLowerCase = titleLowerCase1.replace(/\s+/g, '-');
 
 
@@ -15,25 +17,25 @@ const BlogPostData = (props) => {
     return (
         <div class="single-item">
                   <div class="overlay">
-                    <img class="img-fluid" src={img} alt="" />
+                    <img class="img-fluid" src={ImgUrl} alt="" />
                     <h2 class="event">USA EVENT</h2>
                   </div>
                   <div class="hadding-text">
                     <Link to={""}>
-                     {title}
+                     {BlogTitle}
                     </Link>
                   </div>
                   <div class="tag-point d-flex align-items-center">
-                    <img class="img-fluid" src={authorImg} alt="" />
-                    <Link to={""}>{author}</Link>
+                    <img class="img-fluid" src={'authorImg'} alt="" />
+                    <p>Amit Biswas</p>
 
                     <span>
                       <i class="far fa-calendar-alt"></i>
                     </span>
-                    <Link to={""}> 28 SEPTEMBER</Link>
+                    <p> {date}</p>
                   </div>
                   <div class="content">
-                    <p>{des}</p>
+                    <p>{DescriptionSlice} ....</p>
                   </div>
                   <div class="read-more-btn d-flex align-items-center justify-content-between">
                     <Link className="btn btn-read-more" to={`/single-blog/${titleLowerCase}`}>

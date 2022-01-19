@@ -31,9 +31,9 @@ margin-top: 50px;
     border: 1px solid #7e7e7e70;
     padding: 18px 22px;
     margin-bottom: 10px;
+    border-radius: 10px;
 }
-.dashBord .child-content .img-box{
-  width: 30%;
-  height: auto;
+.dashBord .child-content img{
 
+width: 160px;
 }

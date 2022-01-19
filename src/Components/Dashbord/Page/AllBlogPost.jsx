@@ -1,9 +1,22 @@
-import React from "react";
+
+import React, { useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import AllBlogDataChild from "../ChildComponent/AllBlogDataChild";
 import DashBordMenu from "../ChildComponent/DashBordMenu";
-
+import axios from "axios";
 const AllBlogPost = () => {
+  const [data, setData] = useState([]);
+
+  // Load Blog Post from Server ....
+
+const URL = 'http://localhost:5000/all-blog-post';
+
+React.useEffect(()=>{
+  axios.get(URL).then((res)=>{
+    setData(res.data)
+  })
+},[])
   return (
     <>
       <div className=" dashBord">
@@ -15,10 +28,10 @@ const AllBlogPost = () => {
             <div className="headerSpace text-center">
               <Row className="d-flex align-items-center h-100">
                 <Col>
-                  <p className="text-light">Show Error or Success massage</p>
+                  {/* <p className="text-light">Show Error or Success massage</p> */}
                 </Col>
                 <Col className="">
-                  <Link to={"/"}>
+                  <Link to={"/"} target={"blank"}>
                     <Button>Visit Site</Button>
                   </Link>
                 </Col>
@@ -26,30 +39,13 @@ const AllBlogPost = () => {
             </div>
             <div className="child-content">
               {/* Dynamic content here... */}
-              <div className="wrap mt-3">
-                <div className="img-box ">
-                  <img src="" alt="" />
-                  <Button variant="danger">Remove Post</Button>
-                  <Button className="ml-2">Edit Post</Button>
-                </div>
-                <div className="text-box">
-                  <h5>Title</h5>
-                  <p>Date</p>
-                  <p>Description</p>
-                </div>
-              </div>
-              <div className="wrap">
-                <div className="img-box ">
-                  <img src="" alt="" />
-                  <Button variant="danger">Remove Post</Button>
-                  <Button className="ml-2">Edit Post</Button>
-                </div>
-                <div className="text-box">
-                  <h5>Title</h5>
-                  <p>Date</p>
-                  <p>Description</p>
-                </div>
-              </div>
+
+
+              {
+                data.map((data)=><AllBlogDataChild data={data} key={data._id}></AllBlogDataChild>)
+                
+              }
+              
             </div>
           </Col>
         </Row>

@@ -17,7 +17,7 @@ const AddWorkingSection = () => {
                   <p className="text-light">Show Error or Success massage</p>
                 </Col>
                 <Col className="">
-                  <Link to={"/"}>
+                  <Link to={"/"} target={"blank"}>
                     <Button>Visit Site</Button>
                   </Link>
                 </Col>
