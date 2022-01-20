@@ -1,14 +1,17 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import Carousel from 'react-elastic-carousel';
-import slider1 from '../../Img/food-1.png';
-import slider2 from '../../Img/food-2.png';
-import slider3 from '../../Img/food-3.png';
-import slider4 from '../../Img/food-4.png';
-import slider5 from '../../Img/food-5.png';
-import slider6 from '../../Img/food-6.png';
-import slider7 from '../../Img/food-7.png';
 
 const PortfolioSectionSlider = () => {
+
+  const [data, setData]=useState([]);
+
+  useEffect(()=>{
+    axios.get('http://localhost:5000/slider')
+    .then(res=>{
+      setData(res.data)
+    })
+  },[])
 
   var breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -21,13 +24,11 @@ const PortfolioSectionSlider = () => {
 
     return (
         <Carousel breakPoints={breakPoints} className='slider'>
-        <img src={slider1} alt="" />
-        <img src={slider2} alt="" />
-        <img src={slider3} alt="" />
-        <img src={slider4} alt="" />
-        <img src={slider5} alt="" />
-        <img src={slider6} alt="" />
-        <img src={slider7} alt="" />
+
+          {data.map(data=>(
+             <img src={data.ImageUrl} alt="" />
+          ))}
+
       </Carousel>
     );
 };

@@ -21,7 +21,7 @@ const BlogPostData = (props) => {
                     <h2 class="event">USA EVENT</h2>
                   </div>
                   <div class="hadding-text">
-                    <Link to={""}>
+                    <Link to={`/single-blog/${titleLowerCase}`}>
                      {BlogTitle}
                     </Link>
                   </div>
