@@ -1,9 +1,26 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 
 const AllBlogDataChild = (props) => {
-    const {BlogTitle, ImgUrl, Description, date}=props.data;
+    const {_id,BlogTitle, ImgUrl, Description, date}=props.data;
+    const [data, setData]=useState([])
     const DescriptionSlice = Description.slice(0,170);
+
+    const deleteData = (id)=>{
+      const URL= `http://localhost:5000/all-blog-post/${id}`;
+      console.log(URL);
+    
+      axios.delete(URL)
+      .then((res) => {
+        alert("Post deleted!");
+        console.log(res);
+       
+      
+      })
+    } 
+
+  
     return (
         <div className="wrap">
         <div className="img-box ">
@@ -15,7 +32,7 @@ const AllBlogDataChild = (props) => {
           <p>{date}</p>
           <p>{DescriptionSlice}....</p>
           <div className='mt-2'>
-          <Button variant="danger">Remove Post</Button>
+          <Button onClick={()=>deleteData(_id)} variant="danger">Remove Post</Button>
           <Button className="ml-2">Edit Post</Button>
           </div>
         </div>

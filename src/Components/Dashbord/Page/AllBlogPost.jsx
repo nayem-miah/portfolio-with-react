@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -10,13 +9,24 @@ const AllBlogPost = () => {
 
   // Load Blog Post from Server ....
 
-const URL = 'http://localhost:5000/all-blog-post';
+  React.useEffect(() => {
+    axios.get("http://localhost:5000/all-blog-post").then((res) => {
+      setData(res.data);
+    });
+  }, []);
 
-React.useEffect(()=>{
-  axios.get(URL).then((res)=>{
-    setData(res.data)
-  })
-},[])
+  const deleteData = (id) => {
+    const URL = `http://localhost:5000/all-blog-post/${id}`;
+
+    axios.delete(URL).then((res) => {
+      console.log(res);
+      if (res.data.deletedCount == 1) {
+        const remainingID = data.filter((data) => data._id !== id);
+        setData(remainingID);
+      }
+    });
+  };
+
   return (
     <>
       <div className=" dashBord">
@@ -38,14 +48,95 @@ React.useEffect(()=>{
               </Row>
             </div>
             <div className="child-content">
-              {/* Dynamic content here... */}
-
-
               {
-                data.map((data)=><AllBlogDataChild data={data} key={data._id}></AllBlogDataChild>)
-                
+                data.map((data) => (
+                  <div className="wrap">
+                    <div className="img-box ">
+                      <img src={data.ImgUrl} alt="" />
+                    </div>
+                    <div className="text-box pl-5">
+                      <p className="font-weight-bold">{data.BlogTitle}</p>
+                      <p>{data.date}</p>
+                      <p>{data.Description}....</p>
+                      <div className="mt-2">
+
+
+                        {/* ============== Modal ==============*/}
+                        <button
+                          type="button"
+                          class="btn btn-danger"
+                          data-toggle="modal"
+                          data-target="#exampleModalCentered"
+                        >
+                          Remove Post
+                        </button>
+
+                        {/* <!-- Modal --> */}
+                        <div
+                          class="modal"
+                          id="exampleModalCentered"
+                          tabindex="-1"
+                          role="dialog"
+                          aria-labelledby="exampleModalCenteredLabel"
+                          aria-hidden="true"
+                        >
+                          <div
+                            class="modal-dialog modal-dialog-centered"
+                            role="document"
+                          >
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5
+                                  class="modal-title"
+                                  id="exampleModalCenteredLabel"
+                                >
+                                  Modal title
+                                </h5>
+                                <button
+                                  type="button"
+                                  class="close"
+                                  data-dismiss="modal"
+                                  aria-label="Close"
+                                >
+                                  <span aria-hidden="true">×</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">Be careful! Are you want to remove this content?</div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-secondary"
+                                  data-dismiss="modal"
+                                >
+                                  Close
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-danger"
+                                  data-dismiss="modal"
+                                  onClick={() => deleteData(data._id)}
+                                >
+                                  Remove Post
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* ===== */}
+                        {/* <Button
+                          onClick={() => deleteData(data._id)}
+                          variant="danger"
+                        >
+                          Remove Post
+                        </Button> */}
+                        <Button className="ml-2">Edit Post</Button>
+                      </div>
+                    </div>
+                  </div>
+                ))
+                // data.map((data)=><AllBlogDataChild data={data} key={data._id}></AllBlogDataChild>)
               }
-              
             </div>
           </Col>
         </Row>
