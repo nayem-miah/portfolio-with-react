@@ -718,8 +718,8 @@ header .navbar .disable {
   color: #ddd;
 }
 
-.percent_work {
-  margin-top: 70px;
+#percent_work {
+  margin-top: 80px;
 }
 
 .percent_work {
@@ -730,13 +730,17 @@ header .navbar .disable {
 .percent_work .card-1,
 .percent_work .card-2,
 .percent_work .card-3,
-.percent_work .card-4 {
+.percent_work .card-4,
+.percent_work .card-5,
+.percent_work .card-6,
+.percent_work .card-7,
+.percent_work .card-8{
   position: relative;
   width: 259px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 330px;
+  height: 300px;
   border-radius: 4px;
   text-align: center;
   overflow: hidden;
@@ -846,24 +850,40 @@ header .navbar .disable {
 }
 
 .percent_work .card-1 svg circle:nth-child(2) {
-  stroke-dashoffset: 60;
+  stroke-dashoffset: 80;
 
   stroke: #fff;
 }
 
 .percent_work .card-2 svg circle:nth-child(2) {
-  stroke-dashoffset: 110;
+  stroke-dashoffset: 50;
   stroke: #00fff0;
 }
 
 .percent_work .card-3 svg circle:nth-child(2) {
-  stroke-dashoffset: 110;
+  stroke-dashoffset: 130;
   stroke: #ff04f7;
 }
 
 .percent_work .card-4 svg circle:nth-child(2) {
+  stroke-dashoffset: 50;
+  stroke: #2609aa;
+}
+.percent_work .card-5 svg circle:nth-child(2) {
   stroke-dashoffset: 80;
   stroke: #2609aa;
+}
+.percent_work .card-6 svg circle:nth-child(2) {
+  stroke-dashoffset: 105;
+  stroke: #ff04f7;
+}
+.percent_work .card-7 svg circle:nth-child(2) {
+  stroke-dashoffset: 80;
+  stroke: #00fff0;
+}
+.percent_work .card-8 svg circle:nth-child(2) {
+  stroke-dashoffset: 130;
+  stroke: #fff;
 }
 
 /* Service */

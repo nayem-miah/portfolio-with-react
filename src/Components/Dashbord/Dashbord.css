@@ -19,7 +19,7 @@ background: #0b032d
 }
 .dashBord .child-content{
   padding-top: 20px;
-min-height: 100vh;
+/* min-height: 100vh; */
  background: #fff;
 }
 .dashBord .child-content form{
@@ -36,4 +36,23 @@ margin-top: 50px;
 .dashBord .child-content img{
 
 width: 160px;
+}
+.dashBord .main-content{
+  min-height: 100vh;
+  background: #fff;
+}
+.dashBord .child-content.sliderClassBody{
+  padding-top: 30px;
+
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+}
+
+.dashBord .child-content .sliderClass{
+  display: flex;
+  margin: 0 15px;
+    border: 1px solid #7e7e7e70;
+    padding: 18px 22px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }

@@ -57,6 +57,7 @@ const CreateBlogPost = () => {
                 </Col>
               </Row>
             </div>
+            <div className="main-content">
             <div className="child-content d-flex justify-content-center">
               <div className="w-50 ">
                 <Form
@@ -117,6 +118,7 @@ const CreateBlogPost = () => {
 
 
               </div>
+            </div>
             </div>
           </Col>
         </Row>

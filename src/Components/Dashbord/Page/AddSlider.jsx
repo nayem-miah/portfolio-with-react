@@ -37,7 +37,8 @@ const AddSlider = () => {
                 </Col>
               </Row>
             </div>
-            <div className="child-content d-flex justify-content-center">
+          <div className="main-content">
+          <div className="child-content d-flex justify-content-center">
               <div className="w-50 ">
                 <Form className="justify-content-center"  onSubmit={handleSubmit(onSubmit)}>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -55,6 +56,7 @@ const AddSlider = () => {
                 </Form>
               </div>
             </div>
+          </div>
           </Col>
         </Row>
       </div>

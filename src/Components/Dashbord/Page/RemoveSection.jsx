@@ -24,7 +24,7 @@ const RemoveSection = () => {
                 </Col>
               </Row>
             </div>
-            <div className="child-content">
+            <div className="child-content ">
               <div className="wrap mt-3">
                 <div className="img-box ">
                   <img src="" alt="" />
