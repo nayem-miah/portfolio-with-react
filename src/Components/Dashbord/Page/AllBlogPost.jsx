@@ -60,79 +60,16 @@ const AllBlogPost = () => {
                         <p>{data.date}</p>
                         <p>{data.Description}....</p>
                         <div className="mt-2">
-                          {/* ============== Modal ==============*/}
-                          <button
-                            type="button"
-                            class="btn btn-danger"
-                            data-toggle="modal"
-                            data-target="#exampleModalCentered"
-                          >
-                            Remove Post
-                          </button>
-
-                          {/* <!-- Modal --> */}
-                          <div
-                            class="modal"
-                            id="exampleModalCentered"
-                            tabindex="-1"
-                            role="dialog"
-                            aria-labelledby="exampleModalCenteredLabel"
-                            aria-hidden="true"
-                          >
-                            <div
-                              class="modal-dialog modal-dialog-centered"
-                              role="document"
-                            >
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5
-                                    class="modal-title"
-                                    id="exampleModalCenteredLabel"
-                                  >
-                                    Modal title
-                                  </h5>
-                                  <button
-                                    type="button"
-                                    class="close"
-                                    data-dismiss="modal"
-                                    aria-label="Close"
-                                  >
-                                    <span aria-hidden="true">×</span>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  Be careful! Are you want to remove this
-                                  content?
-                                </div>
-                                <div class="modal-footer">
-                                  <button
-                                    type="button"
-                                    class="btn btn-secondary"
-                                    data-dismiss="modal"
-                                  >
-                                    Close
-                                  </button>
-                                  <button
-                                    type="button"
-                                    class="btn btn-danger"
-                                    data-dismiss="modal"
-                                    onClick={() => deleteData(data._id)}
-                                  >
-                                    Remove Post
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                         
 
                           {/* ===== */}
-                          {/* <Button
+                          <Button className="btn-sm"
                           onClick={() => deleteData(data._id)}
                           variant="danger"
                         >
                           Remove Post
-                        </Button> */}
-                          <Button className="ml-2">Edit Post</Button>
+                        </Button>
+                          <Button className="ml-2 btn-sm">Edit Post</Button>
                         </div>
                       </div>
                     </div>

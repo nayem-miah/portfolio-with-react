@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -7,7 +7,10 @@ import DashBordMenu from "../ChildComponent/DashBordMenu";
 import axios from "axios";
 
 const AddSlider = () => {
-  const { register, handleSubmit } = useForm();
+  const [update, setUpdate] = useState("");
+  const { register, handleSubmit ,reset } = useForm();
+  const SucccessMassage = "Data Update Successful!";
+  const UnSuccessfulMassage = "Data Update Error!";
 
 
   const onSubmit = (data)=>{
@@ -16,6 +19,12 @@ const AddSlider = () => {
       .then(res=>{
         
       })
+      reset();
+      if (data) {
+        setUpdate(SucccessMassage);
+      } else {
+        setUpdate(UnSuccessfulMassage);
+      }
   }
   return (
     <>
@@ -28,7 +37,7 @@ const AddSlider = () => {
             <div className="headerSpace text-center">
               <Row className="d-flex align-items-center h-100">
                 <Col>
-                  <p className="text-light">Show Error or Success massage</p>
+                  <p className="text-success lead">{update}</p>
                 </Col>
                 <Col className="">
                   <Link to={"/"} target={"blank"}>
@@ -43,7 +52,7 @@ const AddSlider = () => {
                 <Form className="justify-content-center"  onSubmit={handleSubmit(onSubmit)}>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Image Upload For Slider!</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Image URL" {...register("ImageUrl")}/>
+                    <Form.Control type="text" placeholder="Enter Image URL" required {...register("ImageUrl")}/>
                     <Form.Text className="text-muted">
                       Input the url of Image!
                     </Form.Text>{" "}
