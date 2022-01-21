@@ -4,8 +4,9 @@ import ExperineceSection_child_1 from "./ExperineceSection_child_1";
 const ExperineceSection = () => {
   // For experince -----
   const [experince, setExperince] = useState([]);
+  
   useEffect(() => {
-    fetch("./DataBase/experinece.JSON")
+    fetch("http://localhost:5000/work")
       .then((res) => res.json())
       .then((data) => setExperince(data));
   }, []);

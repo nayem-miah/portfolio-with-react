@@ -47,7 +47,7 @@ const RemoveSlider = () => {
               </Row>
             </div>
             <div className="main-content">
-              <div className="child-content sliderClassBody">
+              <div className="child-content ClassBody">
                 {data.map((data) => (
                   <div className="wrap sliderClass">
                     <div className="img-box text-center">

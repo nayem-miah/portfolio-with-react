@@ -1001,6 +1001,9 @@ portfolio
 #portfolio {
   padding-top: 150px !important;
 }
+#portfolio .container{
+position: relative;
+}
 
 #portfolio .part-1 .wrap {
   margin-top: 16px;
@@ -1072,18 +1075,22 @@ portfolio
 #portfolio .slider {
   margin-top: 60px !important;
 }
-
+#portfolio .rec-carousel-item {
+  overflow: hidden;
+  height: 400px;
+}
 #portfolio .rec-carousel-item img {
   width: 85% !important;
 }
+
 #portfolio .rec-carousel-item img:hover {
-  transition: 0.5s;
-  transform: scale(110%);
+  transition: 3s;
+  transform: translateY(-50%);
 }
 
 #portfolio .rec-arrow-left {
-  position: relative;
-  bottom: 261px;
+  position: absolute;
+  top: -53px;
   left: 88%;
   font-size: 20px;
   background: #00ffee;
@@ -1101,8 +1108,9 @@ portfolio
 }
 
 #portfolio .rec-arrow-right {
-  position: relative;
-  bottom: 261px;
+  position: absolute;
+  top: -53px;
+  right: 0;
   font-size: 20px;
   background: #00ffee;
   padding: 0px 18px;

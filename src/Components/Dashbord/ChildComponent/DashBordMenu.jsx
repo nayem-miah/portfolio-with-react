@@ -2,17 +2,12 @@ import React, { useContext } from "react";
 import logo from "../../Img/logo-2.png";
 import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/transitions/slide.css";
-import {
-  Button,
-  Nav,
-  Navbar,
-  NavDropdown
-} from "react-bootstrap";
+import { Button, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import useAuth from "../../../Context/useAuth";
 import { Link } from "react-router-dom";
 
 const DashBordMenu = () => {
-  const {signOutGoogle, user, signInGoogle}=useAuth()
+  const { signOutGoogle, user, signInGoogle } = useAuth();
   return (
     <div>
       <Navbar className="d-block" collapseOnSelect expand="lg" variant="dark">
@@ -26,71 +21,118 @@ const DashBordMenu = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="d-block">
             <Link className="nav-link" to={"/dashbord"}>
-              Home
+              <i class="fas fa-home"></i> <span> &nbsp; Home</span>
             </Link>
-            <NavDropdown
-              title="Blog"
-              id="collasible-nav-dropdown"
-              className="dashBord-dropdown"
-            >
-              <Link className="dropdown-item" to={'/create-blog-post'}>
-                Create Blog Post
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+             <i class="fab fa-blogger"></i> &nbsp; Blog
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <Link className="dropdown-item" to={"/create-blog-post"}>
+                <i class="fas fa-blog"></i>&nbsp; <span> Create Blog Post</span>
               </Link>
               <Link className="dropdown-item" to={"/all-blog-post"}>
-                All Blog Post
+                <i class="fas fa-dumpster"></i>&nbsp; <span>All Blog Post</span>
               </Link>
-            </NavDropdown>
+              </div>
+            </li>
+
+            
+
             <Link className="nav-link" to={"/catagory"}>
-              Catagory
+            <i class="fas fa-cube"></i>&nbsp;  Catagory
             </Link>
-            <NavDropdown
-              title="Slider"
-              id="collasible-nav-dropdown"
-              className="dashBord-dropdown"
-            >
+
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+             <i class="fas fa-spider"></i>&nbsp;  Slider
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <Link className="dropdown-item" to={"/add-slider"}>
-                Add Slider
+                <i class="fas fa-sliders-h"></i>&nbsp; <span>Add Slider</span>
               </Link>
               <Link className="dropdown-item" to={"/remove-slider"}>
-                Remove Slider
+                <i class="far fa-trash-alt"></i>&nbsp; <span>Remove Slider</span>
               </Link>
-            </NavDropdown>
-            <NavDropdown
-              title="Working Section"
-              id="collasible-nav-dropdown"
-              className="dashBord-dropdown"
-            >
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+             <i class="fas fa-network-wired"></i>&nbsp;  Working Section
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <Link className="dropdown-item" to={"/add-section"}>
-                Add Section
+                <i class="fas fa-file-word"></i>&nbsp; <span>Add Section</span>
               </Link>
               <Link className="dropdown-item" to={"/remove-section"}>
-                Remove Section
+                <i class="far fa-trash-alt"></i>&nbsp; <span> Remove Section</span>
               </Link>
-            </NavDropdown>
-            <NavDropdown
-              title="Project"
-              id="collasible-nav-dropdown"
-              className="dashBord-dropdown"
-            >
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+              <i class="fab fa-r-project"></i> &nbsp; Project
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <Link className="dropdown-item" to={"/add-project"}>
-                Create Project
+                <i class="fas fa-project-diagram"></i>{" "}&nbsp;
+                <span> Create Project</span>
               </Link>
               <Link className="dropdown-item" to={"/all-project"}>
-                All Project
+                <i class="fab fa-r-project"></i>&nbsp; All Project
               </Link>
-             
-            </NavDropdown>
-          </Nav>
-          
-        </Navbar.Collapse>
-        
-       {
-         user.email ?  <Button onClick={signOutGoogle} className="mt-4">Log Out</Button> :  <Button onClick={signInGoogle} className="mt-4">Log in</Button>
-       }
-      
-      </Navbar>
+              </div>
+            </li>
 
-      
+          </Nav>
+        </Navbar.Collapse>
+
+        {user.email ? (
+          <Button onClick={signOutGoogle} className="mt-4">
+            Log Out
+          </Button>
+        ) : (
+          <Button onClick={signInGoogle} className="mt-4">
+            Log in
+          </Button>
+        )}
+      </Navbar>
     </div>
   );
 };

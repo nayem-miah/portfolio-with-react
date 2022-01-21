@@ -9,6 +9,10 @@ position: unset !important;
 .dashBord .dropdown-menu a{
 text-decoration: none !important;
 }
+.dashBord i{
+color: #00FFF0;
+font-size: 15px;
+}
 
 .dashBord .dropdown-item.active, .dashBord .dropdown-item:active {
   color: #c7c7c7;
@@ -20,7 +24,7 @@ text-decoration: none !important;
   text-decoration: none;
   background-color: #007bff00;
 }
-.dashBord .dropdown-item {
+.dashBord .dropdown-item  {
   color: #9f9f9f;
 }
 .dashBord .content{
@@ -54,8 +58,9 @@ margin-top: 50px;
 .dashBord .main-content{
   min-height: 100vh;
   background: #fff;
+  padding-bottom: 20px;
 }
-.dashBord .child-content.sliderClassBody{
+.dashBord .child-content.ClassBody{
   padding-top: 30px;
 
  display: grid;
