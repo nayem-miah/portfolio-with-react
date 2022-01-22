@@ -25,8 +25,7 @@ const ExperineceSection = () => {
           <div class="col-lg-7 part-2">
             <div class="wrap">
               <p>
-                Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Sint
-                Ratione Reprehenderit, Error Qui Enim Sit Ex Provident!
+              My expertise are in HTML, CSS, JavaScript, Jquery, Bootstrap, Material UI, ReactJS, FireBase, GIT, MongoDB, NodeJS, Express, WordPress, FIGMA / XD.
               </p>
             </div>
           </div>

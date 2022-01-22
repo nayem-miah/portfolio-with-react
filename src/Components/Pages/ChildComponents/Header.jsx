@@ -7,7 +7,6 @@ import logo from "../../Img/logo-2.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-
   // For layout section
   const [active, setActive] = useState("false");
 
@@ -128,11 +127,11 @@ const Header = () => {
 
             <img class="img-fluid" src={logo} alt="" />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
-              ratione reprehenderit, error qui enim sit ex provident iure,
-              dolor, nulla eaque delectus, repudiandae commodi. Velit assumenda
-              odit quisquam at, error suscipit unde, necessitatibus ipsum
-              ratione excepturi ducimus labore, totam dolorem.
+              I am a Front End developer with industry experience building
+              websites. My role is to write and style the front-end components
+              that meet the requirements of our mocks and fulfill l our user
+              stories. I have 5+ years of experience in web
+              development and completed 200+ online & offline courses.
             </p>
 
             <div class="img-sin d-flex">

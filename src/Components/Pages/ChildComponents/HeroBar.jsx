@@ -10,12 +10,10 @@ const HeroBar = () => {
             <div class="col-lg-6 part-1">
               <div class="wrapper">
                 <h2 class="animate__animated animate__bounce">
-                  Great Solutions To <br /> Design Your Website
+                Full-Stack Web Developer <br /> With <span className='t-color'>React NodeJS</span>
                 </h2>
                 <p>
-                  Here is the opportunity to build-up your website. Graphical
-                  components, structural advices, plans and many more. Check out
-                  our services and make your company outstanding.
+                Full Stack Web and Mobile Developer specializing in front-end and back-end development. Experienced with all stages of the development cycle for dynamic websites. Well versed in numerous programming languages JavaScriptES6 Nodejs, structured language HTML5 CSS3, Libraries REACT-JS With MongoDB Database.
                 </p>
                 <div class="btnClass">
                   <a class="btn my-btn-1" href="#">
@@ -29,18 +27,19 @@ const HeroBar = () => {
                 </div>
                 <div class="Social">
                   <span class="text">Follow Us : </span>
-                  <a href="#">
+                  <a target='blank' href="https://www.facebook.com/amitbiswas1994">
                     <i class="fab fa-facebook-square"></i>
                   </a>
-                  <a href="#">
+                  <a target='blank' href="https://www.linkedin.com/in/amitbiswas-tm/">
+                  <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a target='blank' href="https://twitter.com/amitgoclick">
                     <i class="fab fa-twitter-square"></i>
                   </a>
-                  <a href="#">
+                  <a target='blank' href="https://www.instagram.com/alvida_amit/">
                     <i class="fab fa-instagram"></i>
                   </a>
-                  <a href="https://www.linkedin.com/in/amitbiswas-tm/">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
+                  
                 </div>
               </div>
             </div>

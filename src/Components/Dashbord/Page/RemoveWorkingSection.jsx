@@ -53,8 +53,7 @@ const RemoveWorkingSection = () => {
               <div className="child-content ">
                 {data.map((data) => (
                   <div className="wrap">
-                    <div className="img-box ">
-                    </div>
+                    
                     <div className="text-box pl-5">
                       <p className="font-weight-bold">{data.title}</p>
                       <p>{data.date}</p>

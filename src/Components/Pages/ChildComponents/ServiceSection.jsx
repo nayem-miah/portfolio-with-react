@@ -16,8 +16,7 @@ const ServiceSection = () => {
             <div class="col-lg-7 part-2">
               <div class="wrap">
                 <p>
-                  Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Sint
-                  Ratione Reprehenderit, Error Qui Enim Sit Ex Provident!
+                To get started, click the contact button now, drop me a message and let's get talking. I respond within minutes. I'm here to help you, let's collaborate!
                 </p>
               </div>
             </div>
@@ -29,10 +28,9 @@ const ServiceSection = () => {
                   <i class="fas fa-ruler-combined"></i>
                 </div>
                 <div class="card-body">
-                  <h4 class="card-title">DESIGN PRINCIPALES</h4>
+                  <h4 class="card-title">RESPONSIVE DESIGN</h4>
                   <p class="card-text">
-                    Need A Project Completed By An Expert? Let’s Go! Access A
-                    Human Resources Consultant To Answer Questions
+                  React-responsive is an npm package that allows you to create truly responsive designs in your React projects.
                   </p>
                 </div>
                 <div class="overlay"></div>
@@ -46,8 +44,7 @@ const ServiceSection = () => {
                 <div class="card-body">
                   <h4 class="card-title">UNIQUE VALUES</h4>
                   <p class="card-text">
-                    Need A Project Completed By An Expert? Let’s Go! Access A
-                    Human Resources Consultant To Answer Questions
+                  In ES6, the code is much simpler. The code snippet below utilizes the Set object to store the collection of unique values.
                   </p>
                 </div>
                 <div class="overlay"></div>
@@ -61,8 +58,7 @@ const ServiceSection = () => {
                 <div class="card-body">
                   <h4 class="card-title">STYLE COMPONENTS</h4>
                   <p class="card-text">
-                    Need A Project Completed By An Expert? Let’s Go! Access A
-                    Human Resources Consultant To Answer Questions
+                  Styled-components is a library built for React and React Native developers. It allows you to use component-level styles in your applications.
                   </p>
                 </div>
                 <div class="overlay"></div>

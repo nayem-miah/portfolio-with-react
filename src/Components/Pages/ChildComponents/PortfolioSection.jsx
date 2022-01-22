@@ -17,8 +17,7 @@ const PortfolioSection = () => {
             <div class="col-lg-6 part-2">
               <div class="wrap">
                 <p>
-                  Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Sint
-                  Ratione Reprehenderit, Error Qui Enim Sit Ex Provident!
+                Below are a few websites that combine React-JS and Node-js, which were used as databases on MongoDB with Responsive.
                 </p>
               </div>
             </div>

@@ -220,7 +220,8 @@ header .navbar .disable {
 #layout .overlay .wrap p {
   font-size: 16px;
   color: #ddd;
-  padding-bottom: 20px;
+  padding-bottom: 13px;
+  padding-top: 27px;
 }
 
 #layout .active {
@@ -283,10 +284,13 @@ header .navbar .disable {
 
 #hero .part-1 h2 {
   color: #fff;
-  font-size: 55px;
+  font-size: 45px;
   /* animation: forH2 1s linear .5s; */
   animation: backInDown;
   animation-duration: 2s;
+}
+#hero .part-1 .t-color {
+  color: #00ffee;
 }
 
 /* @keyframes forH2 {

@@ -1,6 +1,9 @@
 import React from "react";
 import quoteImg from '../../Img/quote.png'
-import testimonialPersonImg from '../../Img/testimonial1.jpg';
+import testimonialPersonImg_1 from '../../Img/tes-1.jpg';
+import testimonialPersonImg_2 from '../../Img/tes-2.jpg';
+import testimonialPersonImg_3 from '../../Img/tes-3.jpg';
+import testimonialPersonImg_4 from '../../Img/tes-4.jpg';
 
 const Testimonials = () => {
   return (
@@ -58,7 +61,7 @@ const Testimonials = () => {
                       <div class="left">
                         <img
                           class="person img-fluid"
-                          src={testimonialPersonImg}
+                          src={testimonialPersonImg_1}
                           alt=""
                         />
                       </div>
@@ -67,9 +70,49 @@ const Testimonials = () => {
                           <img src={quoteImg} alt="" />
                         </span>
                         <p>
-                          Gilroy is a great and super-professional service
-                          provider, which brought new technologes, new
-                          methodology, and a fresh perspective to our project
+                        Amit created a website for one one of my clients and was done in a very short period of time and came out professionally done.. Revisions done quickly with detailed feedback and would recommend him
+                        </p>
+                        <h3>Andy Kowalski MRSC, Loughborough, England, United Kingdom</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item ">
+                    <div class="body"></div>
+                    <div class="carousel-caption d-none d-md-block">
+                      <div class="left">
+                        <img
+                          class="person img-fluid"
+                          src={testimonialPersonImg_2}
+                          alt=""
+                        />
+                      </div>
+                      <div class="right">
+                        <span>
+                          <img src={quoteImg} alt="" />
+                        </span>
+                        <p>
+                        Amit is an excellent communicator - clear and concise. He answered all of my questions. He did what I wanted but better - giving me suggestions that would make my site faster and a better experience for the user. A true professional! I have already planned two other sites to have him create.
+                        </p>
+                        <h3>Marjana Djokic, Serbia</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item ">
+                    <div class="body"></div>
+                    <div class="carousel-caption d-none d-md-block">
+                      <div class="left">
+                        <img
+                          class="person img-fluid"
+                          src={testimonialPersonImg_3}
+                          alt=""
+                        />
+                      </div>
+                      <div class="right">
+                        <span>
+                          <img src={quoteImg} alt="" />
+                        </span>
+                        <p>
+                        Top knowledge of Javascript react coding! The design of the website was also delivered at the highest level! Highly recommended for everyone. The seller is a very responsible and talented developer!
                         </p>
                         <h3>Jack Metiyo Shina, NYC, USA</h3>
                       </div>
@@ -81,7 +124,7 @@ const Testimonials = () => {
                       <div class="left">
                         <img
                           class="person img-fluid"
-                          src={testimonialPersonImg}
+                          src={testimonialPersonImg_4}
                           alt=""
                         />
                       </div>
@@ -90,57 +133,9 @@ const Testimonials = () => {
                           <img src={quoteImg} alt="" />
                         </span>
                         <p>
-                          Gilroy is a great and super-professional service
-                          provider, which brought new technologes, new
-                          methodology, and a fresh perspective to our project
+                        Went above and beyond to make a great project. Great communication. Can deal with large projects. Amazing pricing as well. Look forward to working with Amit again! Auth0 pro as well!
                         </p>
-                        <h3>Jack Metiyo Shina, NYC, USA</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item ">
-                    <div class="body"></div>
-                    <div class="carousel-caption d-none d-md-block">
-                      <div class="left">
-                        <img
-                          class="person img-fluid"
-                          src={testimonialPersonImg}
-                          alt=""
-                        />
-                      </div>
-                      <div class="right">
-                        <span>
-                          <img src={quoteImg} alt="" />
-                        </span>
-                        <p>
-                          Gilroy is a great and super-professional service
-                          provider, which brought new technologes, new
-                          methodology, and a fresh perspective to our project
-                        </p>
-                        <h3>Jack Metiyo Shina, NYC, USA</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item ">
-                    <div class="body"></div>
-                    <div class="carousel-caption d-none d-md-block">
-                      <div class="left">
-                        <img
-                          class="person img-fluid"
-                          src={testimonialPersonImg}
-                          alt=""
-                        />
-                      </div>
-                      <div class="right">
-                        <span>
-                          <img src={quoteImg} alt="" />
-                        </span>
-                        <p>
-                          Gilroy is a great and super-professional service
-                          provider, which brought new technologes, new
-                          methodology, and a fresh perspective to our project
-                        </p>
-                        <h3>Jack Metiyo Shina, NYC, USA</h3>
+                        <h3>Blessing Nkechi Ikiseh, Florida, United States</h3>
                       </div>
                     </div>
                   </div>

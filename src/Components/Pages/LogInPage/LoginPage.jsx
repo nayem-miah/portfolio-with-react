@@ -7,6 +7,7 @@ import Header from "../ChildComponents/Header";
 
 const LoginPage = () => {
   const { signInGoogle, signOutGoogle, user } = useAuth();
+  console.log(user);
   return (
     <>
       <Header></Header>
@@ -14,14 +15,18 @@ const LoginPage = () => {
       <div className="logInPage">
         <div className="text-center">
           <div>
-            {user.email && (
+            {user.email=='amitbd599@gmail.com' ? (
               <p className="m-4 text-danger">
                 You are now login! {user.email}{" "}
+              </p>
+            ):(
+              <p className="m-4 text-danger">
+                invalid Email! {user.email}{" "}
               </p>
             )}
           </div>
 
-          {user.email ? (
+          {user.email=='amitbd599@gmail.com' ? (
             <div>
               {" "}
               <Button onClick={signOutGoogle}>Sign Out</Button>{" "}

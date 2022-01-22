@@ -4,12 +4,12 @@ import Header from './ChildComponents/Header';
 import IntroSection from './ChildComponents/IntroSection';
 
 const SingleBlog = () => {
-    const {Slug}=useParams();
+    const {slug}=useParams();
     const [uniqueSlug, setUniqueSlug]= useState({});
+    console.log(uniqueSlug);
 
     useEffect(()=>{
-        const url=`https://jsonplaceholder.typicode.com/users/${Slug}`; // Url of single blog. try: http://localhost:3000/single-blog/1
-        console.log(url);
+        const url=`http://localhost:5000/all-blog-post/${slug}`; 
         fetch(url)
         .then(res=>res.json())
         .then(data=> setUniqueSlug(data));
@@ -36,7 +36,7 @@ const SingleBlog = () => {
                                 <img class="img-fluid img-1" src="./img/blog-1.jpg" alt=""/>
                             </div>
                             <div class="text-file">
-                                <h2 class="headding-text">{uniqueSlug.username}
+                                <h2 class="headding-text">{slug}
                                 </h2>
                                 <div class="intro-box d-flex align-items-center ">
 
