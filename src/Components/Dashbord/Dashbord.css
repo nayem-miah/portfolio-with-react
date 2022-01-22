@@ -50,10 +50,14 @@ margin-top: 50px;
     margin-bottom: 10px;
     border-radius: 10px;
 }
+.dashBord .img-box{
+  height: 300px;
+  overflow: overlay;
+  position: relative;
+}
 .dashBord .child-content img{
 
   width: 160px;
-  height: 190px;
 }
 .dashBord .main-content{
   min-height: 100vh;

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Dashbord/Dashbord.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import DashBordMenu from "./ChildComponent/DashBordMenu";
 import { Link } from "react-router-dom";
 
 const Dashbord = () => {
+  const [update, setUpdate] = useState("");
   return (
     <div className=" dashBord">
       <Row>
@@ -15,7 +16,7 @@ const Dashbord = () => {
           <div className="headerSpace text-center">
             <Row className="d-flex align-items-center h-100">
               <Col>
-                <p className="text-light">Show Error or Success massage</p>
+              <p className="text-success lead font-weight-bold">{update}</p>
               </Col>
               <Col className="">
                 <Link to={"/"} target={'blank'}>

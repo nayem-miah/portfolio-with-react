@@ -6,12 +6,15 @@ import DashBordMenu from "../ChildComponent/DashBordMenu";
 
 const RemoveSlider = () => {
   const [data, setData] = useState([]);
-  console.log(data);
+  const [update, setUpdate] = useState("");
+  const UnSuccessfulMassage = "Slider Delete Successful!";
+
 
   useEffect(() => {
     const url = "http://localhost:5000/slider";
     axios.get(url).then((res) => {
       setData(res.data);
+     
     });
   }, []);
 
@@ -23,6 +26,7 @@ const RemoveSlider = () => {
       if (res.data.deletedCount == 1) {
         const reminingData = data.filter((data) => data._id !== id);
         setData(reminingData);
+        setUpdate(UnSuccessfulMassage);
       }
     });
   };
@@ -37,7 +41,7 @@ const RemoveSlider = () => {
             <div className="headerSpace text-center">
               <Row className="d-flex align-items-center h-100">
                 <Col>
-                  <p className="text-light">Show Error or Success massage</p>
+                <p className="text-success lead font-weight-bold">{update}</p>
                 </Col>
                 <Col className="">
                   <Link to={"/"} target={"blank"}>
@@ -51,7 +55,6 @@ const RemoveSlider = () => {
                 {data.map((data) => (
                   <div className="wrap sliderClass">
                     <div className="img-box text-center">
-                      <p>{data._id}</p>
                       <img src={data.ImageUrl} alt="" />
                       <Button
                         className="btn btn-danger btn-sm mt-4"

@@ -20,9 +20,9 @@ const CreateBlogPost = () => {
     setValue,
   } = useForm();
 
-  useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {});
-  }, []);
+  // useEffect(() => {
+  //   axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {});
+  // }, []);
 
   const onSubmit = (data) => {
     console.log(data);
@@ -48,7 +48,7 @@ const CreateBlogPost = () => {
             <div className="headerSpace text-center">
               <Row className="d-flex align-items-center h-100">
                 <Col>
-                  <p className="text-danger font-weight-bold">{update}</p>
+                <p className="text-success lead font-weight-bold">{update}</p>
                 </Col>
                 <Col className="">
                   <Link to={"/"} target={"blank"}>

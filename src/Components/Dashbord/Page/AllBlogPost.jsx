@@ -6,6 +6,8 @@ import DashBordMenu from "../ChildComponent/DashBordMenu";
 import axios from "axios";
 const AllBlogPost = () => {
   const [data, setData] = useState([]);
+  const [update, setUpdate] = useState("");
+  const UnSuccessfulMassage = "Slider Delete Successful!";
 
   // Load Blog Post from Server ....
 
@@ -23,6 +25,7 @@ const AllBlogPost = () => {
       if (res.data.deletedCount == 1) {
         const remainingID = data.filter((data) => data._id !== id);
         setData(remainingID);
+        setUpdate(UnSuccessfulMassage);
       }
     });
   };
@@ -38,7 +41,7 @@ const AllBlogPost = () => {
             <div className="headerSpace text-center">
               <Row className="d-flex align-items-center h-100">
                 <Col>
-                  {/* <p className="text-light">Show Error or Success massage</p> */}
+                <p className="text-success lead font-weight-bold">{update}</p>
                 </Col>
                 <Col className="">
                   <Link to={"/"} target={"blank"}>
@@ -48,34 +51,39 @@ const AllBlogPost = () => {
               </Row>
             </div>
             <div className="main-content">
-              <div className="child-content">
+              <div className="child-content text-center">
+                <h4>Total Data Found {data.length}</h4>
                 {
                   data.map((data) => (
+                   
                     <div className="wrap">
-                      <div className="img-box ">
-                        <img src={data.ImgUrl} alt="" />
-                      </div>
-                      <div className="text-box pl-5">
-                        <p className="font-weight-bold">{data.BlogTitle}</p>
-                        <p>{data.date}</p>
-                        <p>{data.Description}....</p>
-                        <div className="mt-2">
-                         
+                    <div className="img-box ">
+                      <img src={data.ImgUrl} alt="" />
+                    </div>
+                    <div className="text-box pl-5">
+                      <p className="font-weight-bold">{data.BlogTitle}</p>
+                      
+                      <p>{data.date}</p>
+                      <p>{data.Description}....</p>
+                      <div className="mt-2">
+                       
 
-                          {/* ===== */}
-                          <Button className="btn-sm"
-                          onClick={() => deleteData(data._id)}
-                          variant="danger"
-                        >
-                          Remove Post
-                        </Button>
-                          <Button className="ml-2 btn-sm">Edit Post</Button>
-                        </div>
+                        {/* ===== */}
+                        <Button className="btn-sm"
+                        onClick={() => deleteData(data._id)}
+                        variant="danger"
+                      >
+                        Remove Post
+                      </Button>
+                        <Button className="ml-2 btn-sm">Edit Post</Button>
                       </div>
                     </div>
+                  </div>
                   ))
                   // data.map((data)=><AllBlogDataChild data={data} key={data._id}></AllBlogDataChild>)
                 }
+
+                
               </div>
             </div>
           </Col>

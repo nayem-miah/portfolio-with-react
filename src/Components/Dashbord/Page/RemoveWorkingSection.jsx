@@ -6,6 +6,8 @@ import DashBordMenu from "../ChildComponent/DashBordMenu";
 
 const RemoveWorkingSection = () => {
   const [data, setData] = useState([]);
+  const [update, setUpdate] = useState("");
+  const UnSuccessfulMassage = "Slider Delete Successful!";
 
   // Load Blog Post from Server ....
 
@@ -23,6 +25,7 @@ const RemoveWorkingSection = () => {
       if (res.data.deletedCount == 1) {
         const remainingID = data.filter((data) => data._id !== id);
         setData(remainingID);
+        setUpdate(UnSuccessfulMassage);
       }
     });
   };
@@ -37,7 +40,7 @@ const RemoveWorkingSection = () => {
             <div className="headerSpace text-center">
               <Row className="d-flex align-items-center h-100">
                 <Col>
-                  <p className="text-light">Show Error or Success massage</p>
+                <p className="text-success lead font-weight-bold">{update}</p>
                 </Col>
                 <Col className="">
                   <Link to={"/"} target={"blank"}>
