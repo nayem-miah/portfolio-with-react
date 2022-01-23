@@ -5,14 +5,14 @@ import IntroSection from './ChildComponents/IntroSection';
 
 const SingleBlog = () => {
     const {slug}=useParams();
-    const [uniqueSlug, setUniqueSlug]= useState({});
+    const [uniqueSlug, setUniqueSlug]= useState([]);
     console.log(uniqueSlug);
 
     useEffect(()=>{
         const url=`http://localhost:5000/all-blog-post/${slug}`; 
         fetch(url)
         .then(res=>res.json())
-        .then(data=> setUniqueSlug(data));
+        .then(data=> setUniqueSlug(data[0]));
     },[])
   
     return (
@@ -33,45 +33,29 @@ const SingleBlog = () => {
                     <div class="col-lg-8 part-1">
                         <div class="wrap-1">
                             <div class="img">
-                                <img class="img-fluid img-1" src="./img/blog-1.jpg" alt=""/>
+                                <img class="img-fluid img-1" src={uniqueSlug.ImgUrl} alt=""/>
                             </div>
                             <div class="text-file">
-                                <h2 class="headding-text">{slug}
+                                <h2 class="headding-text">{uniqueSlug.BlogTitle}
                                 </h2>
                                 <div class="intro-box d-flex align-items-center ">
 
                                     <img class="img-fluid img-2" src="./img/single-blog/author4.png" alt=""/>
 
-                                    <a href="#">Amit Biswas</a>
-                                    <i class="far fa-calendar-alt"></i><a href="#"> 28 SEPTEMBER</a>
-                                    <i class="fas fa-history"></i><a class="read" href="#"> 01 MIN READ</a>
+                                    <a >Amit Biswas</a>
+                                    <i class="far fa-calendar-alt"></i><a > {uniqueSlug.date}</a>
+                                    <i class="fas fa-history"></i><a class="read" > 03 MIN READ</a>
                                 </div>
-                                <p class="text">A Campaign Manager Or Campaign Director Is A Paid Or Volunteer
-                                    Individual Whose Role Is To Coordinate A Political Campaign's Operations Such As
-                                    Fundraising, Advertising, Polling, Getting Out The Vote With Direct Contact To The
-                                    Public.Contrary To Popular Belief, Lorem Ipsum Is Not Simply Random Text. It Has
-                                    Roots In A Piece Of Classical Latin Literature From 45 BC, Making It Over 2000 Years
-                                    Old. Richard McClintock, A Latin Professor At Hampden-Sydney College In Virginia,
-                                    Looked Up One Of The More Obscure Latin Words, Consectetur, From A Lorem Ipsum
-                                    Passage, And Going Through The Cites Of The Word In Classical Literature, Discovered
-                                    The Undoubtable Source. Lorem Ipsum Comes From Sections 1.10.32 And 1.10.33 Of "De
-                                    Finibus Bonorum Et Malorum" (The Extremes Of Good And Evil) By Cicero, Written In 45
-                                    BC. This Book Is A Treatise On The Theory Of Ethics, Very Popular During The
-                                    Renaissance. The First Line Of Lorem Ipsum, "Lorem Ipsum Dolor Sit Amet..", Comes
-                                    From A Line In Section 1.10.32.</p>
+                                <p class="text">{uniqueSlug.DescriptionPart1}</p>
                                 <div class="testimonial">
                                     <div class="content-bar">
                                         <span><i class="fas fa-quote-left"></i></span>
-                                        <h2 class="name">JHONE HARRY</h2>
-                                        <h2 class="comment">THE 5 RULES OF DESIGN COMPOSITION AND LAYOUT DOLOR SIT AMET
-                                            OUR ADIPISCING ELIT.</h2>
+                                        {/* <h2 class="name">JHONE HARRY</h2> */}
+                                        <h2 class="comment">{uniqueSlug.DescriptionPart2}</h2>
                                     </div>
                                 </div>
-                                <p class="text">Contrary To Popular Belief, Lorem Ipsum Is Not Simply Random Text. It
-                                    Has Roots In A Piece Of Classical Latin Literature From 45 BC, Making It Over 2000
-                                    Years Old. Richard McClintock, A Latin Professor At Hampden-Sydney College In
-                                    Virginia, Looked Up One Of The More Obscure Latin Words, Consectetur,</p>
-                                <h2 class="headding-text">HOW CAMPAIGN FUNDS ARE RELEASED</h2>
+                                <p class="text pb-5">{uniqueSlug.DescriptionPart3}</p>
+                                {/* <h2 class="headding-text">HOW CAMPAIGN FUNDS ARE RELEASED</h2>
                                 <p class="text">From A Lorem Ipsum Passage, And Going Through The Cites Of The Word In
                                     Classical Literature, Discovered The Undoubtable Source. Lorem Ipsum Comes From
                                     Sections 1.10.32 And 1.10.33 Of "De Finibus Bonorum Et Malorum" (The Extremes Of
@@ -81,7 +65,7 @@ const SingleBlog = () => {
                                 <br/>
                                 <p class="text pb-5">Contrary To Popular Belief, Lorem Ipsum Is Not Simply Random Text.
                                     It Has Roots In A Piece Of Classical Latin Literature From 45 BC, Making It Over
-                                    2000 Years Old. Richard McClintock, A Latin Professor At Hampw</p>
+                                    2000 Years Old. Richard McClintock, A Latin Professor At Hampw</p> */}
                             </div>
                             <div class="related_tag">
                                 <div class="wrap-2 d-md-flex d-block justify-content-between align-items-center">

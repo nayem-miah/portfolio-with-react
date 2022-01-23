@@ -20,7 +20,7 @@ const IntroSection = (props) => {
           </div>
           <div class="col-md-4">
             <div class="wrap">
-              <h2 class="inner-text">BLOG</h2>
+              <h2 class="inner-text">{props.siteLink}</h2>
             </div>
           </div>
         </div>

@@ -1,18 +1,10 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const BlogPostData = (props) => {
-    const {BlogTitle, ImgUrl, Description, date}=props.data;
-
-    const DescriptionSlice = Description.slice(0,300);
+    const {_id,BlogTitle, ImgUrl, DescriptionPart1, date}=props.data;
+    const DescriptionSlice = DescriptionPart1.slice(0,300);
     
-    const titleLowerCase1 = BlogTitle.toLowerCase();
-    var titleLowerCase = titleLowerCase1.replace(/\s+/g, '-');
-
-
-   
-
 
     return (
         <div class="single-item">
@@ -21,7 +13,7 @@ const BlogPostData = (props) => {
                     <h2 class="event">USA EVENT</h2>
                   </div>
                   <div class="hadding-text">
-                    <Link to={`/single-blog/${titleLowerCase}`}>
+                    <Link to={`/single-blog/${_id}`}>
                      {BlogTitle}
                     </Link>
                   </div>
@@ -38,7 +30,7 @@ const BlogPostData = (props) => {
                     <p>{DescriptionSlice} ....</p>
                   </div>
                   <div class="read-more-btn d-flex align-items-center justify-content-between">
-                    <Link className="btn btn-read-more" to={`/single-blog/${titleLowerCase}`}>
+                    <Link className="btn btn-read-more" to={`/single-blog/${_id}`}>
                       Read More
                     </Link>
 

@@ -7,10 +7,14 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 const CreateBlogPost = () => {
   const [update, setUpdate] = useState("");
+
   const SucccessMassage = "Data Update Successful!";
   const UnSuccessfulMassage = "Data Update Error!";
 
   const todayDate = new Date().toISOString().slice(0, 10);
+ 
+  
+  
 
   const {
     register,
@@ -25,7 +29,7 @@ const CreateBlogPost = () => {
   // }, []);
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     axios.post("http://localhost:5000/all-blog-post", data).then((res) => {
       console.log(res);
     });
@@ -89,16 +93,41 @@ const CreateBlogPost = () => {
                       Input the url of Image!
                     </Form.Text>{" "}
                     <br></br>
+                    <Form.Label>First Section</Form.Label>
                     <textarea
                       class="w-100 massage p-2"
                       name=""
                       id=""
                       placeholder="Write your massage"
                       cols="20"
-                      rows="5"
+                      rows="3"
                       spellcheck="false"
                       required
-                      {...register("Description", { required: true })}
+                      {...register("DescriptionPart1", { required: true })}
+                    ></textarea>
+                    <Form.Label>Intro Section</Form.Label>
+                    <textarea
+                      class="w-100 massage p-2"
+                      name=""
+                      id=""
+                      placeholder="Write your massage"
+                      cols="20"
+                      rows="3"
+                      spellcheck="false"
+                      required
+                      {...register("DescriptionPart2", { required: true })}
+                    ></textarea>
+                    <Form.Label>Last Section</Form.Label>
+                    <textarea
+                      class="w-100 massage p-2"
+                      name=""
+                      id=""
+                      placeholder="Write your massage"
+                      cols="20"
+                      rows="3"
+                      spellcheck="false"
+                      required
+                      {...register("DescriptionPart3", { required: true })}
                     ></textarea>
                   </Form.Group>
 
@@ -106,10 +135,9 @@ const CreateBlogPost = () => {
                     variant="primary"
                     type="submit"
                     onClick={() =>
-                      setValue('date',todayDate, {
-                        shouldValidate: true,
-                        shouldDirty: true,
-                      })
+                     {
+                      setValue('date',todayDate)
+                     }
                     }
                   >
                     Submit

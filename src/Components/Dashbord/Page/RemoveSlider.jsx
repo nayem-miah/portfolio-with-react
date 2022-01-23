@@ -19,8 +19,9 @@ const RemoveSlider = () => {
   }, []);
 
   const deleteHendel = (id) => {
-    console.log(id);
+
     const url = `http://localhost:5000/slider/${id}`;
+    console.log(url);
 
     axios.delete(url).then((res) => {
       if (res.data.deletedCount == 1) {
