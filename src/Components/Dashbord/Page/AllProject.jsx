@@ -19,7 +19,6 @@ const AllProject = () => {
     const URL = `http://localhost:5000/all-blog-post/${id}`;
 
     axios.delete(URL).then((res) => {
-      console.log(res);
       if (res.data.deletedCount == 1) {
         const remainingID = data.filter((data) => data._id !== id);
         setData(remainingID);
@@ -62,7 +61,7 @@ const AllProject = () => {
                         className="btn btn-danger btn-sm mt-4"
                         onClick={() => deleteData(data._id)}
                       >
-                        Remove Slider
+                        Remove Project
                       </Button>
                   </div>
                  

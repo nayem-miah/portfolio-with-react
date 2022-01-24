@@ -16,7 +16,7 @@ const NewsLetter = () => {
                         <div class="cta-form">
                             <form action="#">
                                 <input type="email" placeholder="Enter Your Email.."/>
-                                <a href="#" class="subscribe-btn">Subscribe <i class="fal fa-comments-alt"></i></a>
+                                <a  class="subscribe-btn btn" disabled>Subscribe <i class="fal fa-comments-alt"></i></a>
                             </form>
                         </div>
                     </div>

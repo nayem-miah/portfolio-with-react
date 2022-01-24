@@ -3,14 +3,16 @@ import Carousel from "react-elastic-carousel";
 import BlogSectionSlider from "./BlogSectionSlider";
 import bannerSectionImg from '../../Img/Banner_section.png';
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const BlogSection = () => {
-  const [blogSlider, setBlogSlider] = useState([]);
-  useEffect(()=>{
-    fetch("./DataBase/blogSlider.JSON")
-    .then(res=>res.json())
-    .then(data=>setBlogSlider(data))
-  },[])
+  const [data,setData]=useState([]);
+  console.log(data);
+    const url = 'http://localhost:5000/all-blog-post';
+    useEffect(()=>{
+      axios.get(url)
+      .then(res=>setData(res.data))
+    },[])
 
   var breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -36,8 +38,7 @@ const BlogSection = () => {
           <div class="col-lg-6 part-2">
             <div class="wrap">
               <p>
-                Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Sint
-                Ratione Reprehenderit, Error Qui Enim Sit Ex Provident!
+              I'll always try my best to produce high quality work for my Clients. Baecause Client satisfaction is my very first priority.
               </p>
             </div>
           </div>
@@ -60,10 +61,10 @@ const BlogSection = () => {
             <div class="blog owl-carousel">
               <Carousel breakPoints={breakPoints} className="slider">
                   {
-                      blogSlider.map((blogSlider)=>(
+                      data.map((data)=>(
                           <BlogSectionSlider
-                          key={blogSlider._id}
-                          blogSlider={blogSlider}
+                          key={data._id}
+                          data={data}
                           ></BlogSectionSlider>
                       ))
                   }

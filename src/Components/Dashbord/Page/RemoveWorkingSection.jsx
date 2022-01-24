@@ -21,7 +21,6 @@ const RemoveWorkingSection = () => {
     const URL = `http://localhost:5000/work/${id}`;
 
     axios.delete(URL).then((res) => {
-      console.log(res);
       if (res.data.deletedCount == 1) {
         const remainingID = data.filter((data) => data._id !== id);
         setData(remainingID);

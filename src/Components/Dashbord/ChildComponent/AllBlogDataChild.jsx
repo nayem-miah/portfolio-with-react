@@ -9,14 +9,11 @@ const AllBlogDataChild = (props) => {
 
     const deleteData = (id)=>{
       const URL= `http://localhost:5000/all-blog-post/${id}`;
-      console.log(URL);
     
       axios.delete(URL)
       .then((res) => {
         alert("Post deleted!");
-        console.log(res);
        
-      
       })
     } 
 

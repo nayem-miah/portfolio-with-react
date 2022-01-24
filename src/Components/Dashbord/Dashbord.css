@@ -51,6 +51,9 @@ margin-top: 50px;
     border-radius: 10px;
 }
 .dashBord .img-box{
+  position: relative;
+}
+.dashBord .img-box.overlay{
   height: 300px;
   overflow: overlay;
   position: relative;

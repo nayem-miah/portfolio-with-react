@@ -7,7 +7,6 @@ import Header from "../ChildComponents/Header";
 
 const LoginPage = () => {
   const { signInGoogle, signOutGoogle, user } = useAuth();
-  console.log(user);
   return (
     <>
       <Header></Header>

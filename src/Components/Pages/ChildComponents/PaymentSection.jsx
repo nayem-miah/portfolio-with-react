@@ -13,8 +13,7 @@ const PaymentSection = () => {
                     </div>
                     <div class="col-lg-7 part-2">
                         <div class="wrap">
-                            <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Sint Ratione Reprehenderit,
-                                Error Qui Enim Sit Ex Provident!</p>
+                            <p>Accept payments, send payouts and settle funds, regardless of the country you operate in. Seamless API integration. Real-time card authentication.</p>
                         </div>a
                     </div>
                 </div>
@@ -25,12 +24,11 @@ const PaymentSection = () => {
                                 <i class="fas fa-ruler-combined"></i>
                             </div>
                             <div class="card-body">
-                                <h4 class="card-title">DESIGN PRINCIPALES</h4>
-                                <p class="card-text">
-                                    Need A Project Completed By An Expert? Let’s Go! Access A Human Resources Consultant
-                                    To Answer Questions
+                                <h4 class="card-title">Payment Gateway</h4>
+                                <p class="card-text text-justify">
+                                A customer places an order on website by pressing the 'Submit Order' or equivalent button, or perhaps enters their card.
                                 </p>
-                                <a class="btn" href="#">Read More</a>
+                                {/* <a class="btn" href="#">Read More</a> */}
                             </div>
                             <div class="overlay"></div>
                         </div>
@@ -41,12 +39,11 @@ const PaymentSection = () => {
                                 <i class="fas fa-layer-group"></i>
                             </div>
                             <div class="card-body">
-                                <h4 class="card-title">UNIQUE VALUES</h4>
+                                <h4 class="card-title">Accept payments</h4>
                                 <p class="card-text">
-                                    Need A Project Completed By An Expert? Let’s Go! Access A Human Resources Consultant
-                                    To Answer Questions
+                                A payment gateway is software which facilitates, processes, and/or authorizes banking or credit card information to online retailers.
                                 </p>
-                                <a class="btn" href="#">Read More</a>
+                                {/* <a class="btn" href="#">Read More</a> */}
                             </div>
                             <div class="overlay"></div>
                         </div>
@@ -57,12 +54,11 @@ const PaymentSection = () => {
                                 <i class="fas fa-paste"></i>
                             </div>
                             <div class="card-body">
-                                <h4 class="card-title">STYLE COMPONENTS</h4>
+                                <h4 class="card-title">Apple Pay</h4>
                                 <p class="card-text">
-                                    Need A Project Completed By An Expert? Let’s Go! Access A Human Resources Consultant
-                                    To Answer Questions
+                                Apple Pay is a mobile payment and digital wallet service by Apple Inc. that allows users to make payments in person.
                                 </p>
-                                <a class="btn" href="#">Read More</a>
+                                {/* <a class="btn" href="#">Read More</a> */}
                             </div>
                             <div class="overlay"></div>
                         </div>

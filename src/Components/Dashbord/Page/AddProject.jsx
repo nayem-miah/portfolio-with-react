@@ -22,9 +22,7 @@ const AddProject = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     axios.post("http://localhost:5000/project", data).then((res) => {
-      console.log(res);
     });
     reset();
 

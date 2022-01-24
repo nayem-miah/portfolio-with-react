@@ -14,7 +14,6 @@ const AddSlider = () => {
 
 
   const onSubmit = (data)=>{
-      console.log(data);
       axios.post('http://localhost:5000/slider',data)
       .then(res=>{
         

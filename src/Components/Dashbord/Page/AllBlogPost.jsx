@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import AllBlogDataChild from "../ChildComponent/AllBlogDataChild";
 import DashBordMenu from "../ChildComponent/DashBordMenu";
 import axios from "axios";
 const AllBlogPost = () => {
   const [data, setData] = useState([]);
+  console.log(data);
   const [update, setUpdate] = useState("");
+  const Description= data.DescriptionPart1;
+  // const DescriptionSlice= Description.slice(0,100)
   const UnSuccessfulMassage = "Slider Delete Successful!";
 
   // Load Blog Post from Server ....
@@ -21,7 +23,6 @@ const AllBlogPost = () => {
     const URL = `http://localhost:5000/all-blog-post/${id}`;
 
     axios.delete(URL).then((res) => {
-      console.log(res);
       if (res.data.deletedCount == 1) {
         const remainingID = data.filter((data) => data._id !== id);
         setData(remainingID);
@@ -51,8 +52,8 @@ const AllBlogPost = () => {
               </Row>
             </div>
             <div className="main-content">
-              <div className="child-content text-center">
-                <h4>Total Data Found {data.length}</h4>
+              <div className="child-content  ">
+                <h4 className="ml-5">Total Data Found {data.length}</h4>
                 {
                   data.map((data) => (
                    
@@ -64,7 +65,7 @@ const AllBlogPost = () => {
                       <p className="font-weight-bold">{data.BlogTitle}</p>
                       
                       <p>{data.date}</p>
-                      <p>{data.Description}....</p>
+                      <p className="text-justify">{data.DescriptionPart1.slice(0,200)}....</p>
                       <div className="mt-2">
                        
 
@@ -80,7 +81,6 @@ const AllBlogPost = () => {
                     </div>
                   </div>
                   ))
-                  // data.map((data)=><AllBlogDataChild data={data} key={data._id}></AllBlogDataChild>)
                 }
 
                 

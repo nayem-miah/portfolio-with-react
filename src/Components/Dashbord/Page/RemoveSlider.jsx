@@ -21,7 +21,6 @@ const RemoveSlider = () => {
   const deleteHendel = (id) => {
 
     const url = `http://localhost:5000/slider/${id}`;
-    console.log(url);
 
     axios.delete(url).then((res) => {
       if (res.data.deletedCount == 1) {
@@ -52,10 +51,10 @@ const RemoveSlider = () => {
               </Row>
             </div>
             <div className="main-content">
-              <div className="child-content ClassBody">
+              <div className="child-content ClassBody ">
                 {data.map((data) => (
                   <div className="wrap sliderClass">
-                    <div className="img-box text-center">
+                    <div className="img-box text-center overlay">
                       <img src={data.ImageUrl} alt="" />
                       <Button
                         className="btn btn-danger btn-sm mt-4"

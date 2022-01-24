@@ -21,9 +21,7 @@ const AddWorkingSection = () => {
   }, []);
 
   const onSubmit = (data) => {
-    console.log(data);
     axios.post("http://localhost:5000/work", data).then((res) => {
-      console.log(res);
     });
     reset();
 

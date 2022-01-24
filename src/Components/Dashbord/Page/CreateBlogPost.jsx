@@ -29,9 +29,7 @@ const CreateBlogPost = () => {
   // }, []);
 
   const onSubmit = (data) => {
-    // console.log(data);
     axios.post("http://localhost:5000/all-blog-post", data).then((res) => {
-      console.log(res);
     });
     reset();
 
