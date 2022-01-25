@@ -11,7 +11,7 @@ const BlogSection = () => {
     const url = 'http://localhost:5000/all-blog-post';
     useEffect(()=>{
       axios.get(url)
-      .then(res=>setData(res.data))
+      .then(res=>setData(res.data.BlogData))
     },[])
 
   var breakPoints = [

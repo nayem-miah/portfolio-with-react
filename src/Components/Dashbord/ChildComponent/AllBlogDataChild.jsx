@@ -13,6 +13,7 @@ const AllBlogDataChild = (props) => {
       axios.delete(URL)
       .then((res) => {
         alert("Post deleted!");
+        
        
       })
     } 

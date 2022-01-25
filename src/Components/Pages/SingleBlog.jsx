@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import Footer from './ChildComponents/Footer';
 import Header from './ChildComponents/Header';
 import IntroSection from './ChildComponents/IntroSection';
 import SideBar from './ChildComponents/SideBar';
@@ -78,10 +79,11 @@ const SingleBlog = () => {
                                         </div>
                                     </div>
                                     <div class="social-icon">
-                                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                                    <a href="https://www.facebook.com/amitbiswas1994" target='blank'><i class="fab fa-facebook-square"></i></a>
+                   
+                   <a href="https://www.linkedin.com/in/amitbiswas-tm" target='blank'><i class="fab fa-linkedin"></i></a>
+                   <a href="https://www.instagram.com/alvida_amit/" target='blank'><i class="fab fa-instagram"></i></a>
+                   <a href="https://twitter.com/amitgoclick" target='blank'><i class="fab fa-twitter-square"></i></a>
                                     </div>
 
                                 </div>
@@ -171,6 +173,8 @@ const SingleBlog = () => {
 
             </div>
         </section>
+
+        <Footer></Footer>
             
         </>
     );

@@ -1,7 +1,19 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import amitImg from '../../Img/single-blog/amit.png'
 
 const SideBar = () => {
+    const [data, setdata]= useState([]);
+
+    const dataSlice =data.slice(0,5);
+    console.log(data);
+const url = 'http://localhost:5000/all-blog-post';
+    useEffect(()=>{
+        axios.get(url).then(res=>{
+                setdata(res.data.BlogData);
+        })
+    },[])
     return (
         <div class="col-lg-4 part-2">
         <div class="wrap-1">
@@ -14,14 +26,14 @@ const SideBar = () => {
                 <img class="img-1 img-fluid" src={amitImg} alt=""/>
                 <h2>CREATIVE LEAD</h2>
                 <img class="img-2 img-fluid" src="./img/signature.png" alt=""/>
-                <p>Hello I Am Amit Biswas -Powerful Pointing Has No Control About The Blind Texts It Is
-                    An Almost Unorthographic Life One Day However A Small Line Of Blind Text By The Name
+                <p className='text-justify'>I am full stack developer with multiple skills, The area of my experience includes but is not limited to website development, maintenance, and e-commerce development. I have been working with the following skills for over 3 years.
                 </p>
                 <div class="social-icon">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.facebook.com/amitbiswas1994" target='blank'><i class="fab fa-facebook-square"></i></a>
+                   
+                    <a href="https://www.linkedin.com/in/amitbiswas-tm" target='blank'><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/alvida_amit/" target='blank'><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/amitgoclick" target='blank'><i class="fab fa-twitter-square"></i></a>
                 </div>
             </div>
         </div>
@@ -31,30 +43,21 @@ const SideBar = () => {
                     RECENT POSTS .
                 </h2>
             </div>
-            <div class="items">
+
+            {
+                dataSlice.map((dataSlice)=>(
+                    <div class="items">
                 <div class="item d-flex justify-content-center align-content-center ">
                     <img class="img-fluid" src="./img/single-blog/recent-post1.jpg" alt=""/>
-                    <a href="#">WAVES FLUNG THEMSELVES AT THE BLUE EVENING.</a>
+                    {/* <a href="#">{dataSlice.BlogTitle}</a> */}
+                    <Link className="" to={`/single-blog/${dataSlice._id}`}>
+                    {dataSlice.BlogTitle}
+                    </Link>
                 </div>
             </div>
-            <div class="items">
-                <div class="item d-flex justify-content-center align-content-center ">
-                    <img class="img-fluid" src="./img/single-blog/recent-post2.jpg" alt=""/>
-                    <a href="#">WAVES FLUNG THEMSELVES AT THE BLUE EVENING.</a>
-                </div>
-            </div>
-            <div class="items">
-                <div class="item d-flex justify-content-center align-content-center ">
-                    <img class="img-fluid" src="./img/single-blog/recent-post3.jpg" alt=""/>
-                    <a href="#">WAVES FLUNG THEMSELVES AT THE BLUE EVENING.</a>
-                </div>
-            </div>
-            <div class="items">
-                <div class="item d-flex justify-content-center align-content-center ">
-                    <img class="img-fluid" src="./img/single-blog/recent-post4.jpg" alt=""/>
-                    <a href="#">WAVES FLUNG THEMSELVES AT THE BLUE EVENING.</a>
-                </div>
-            </div>
+                ))
+            }
+            
 
         </div>
         <div class="wrap-3">

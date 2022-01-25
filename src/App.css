@@ -2203,6 +2203,11 @@ position: relative;
   color: #0b032d;
   background: #00ffee;
 }
+.blog-page .section-1 .pagination a.active {
+  border: 1px solid #00ffee;
+  color: #0b032d;
+  background: #00ffee;
+}
 
 /* ////////////////////////////
 
@@ -2524,14 +2529,14 @@ position: relative;
   font-size: 20px;
   font-family: "Oswald", sans-serif;
   font-weight: bold;
-  margin-top: 33px;
+  margin-top: 20px;
 }
 
 .blog_item .section-1 .part-2 .wrap-1 .img-tag > p {
   text-transform: capitalize;
   font-size: 15px;
   font-weight: 400;
-  margin-top: 12px;
+  margin-top: -12px;
   color: rgb(89, 89, 89);
   line-height: 27px;
 }
@@ -2605,6 +2610,10 @@ position: relative;
   line-height: 26px;
   margin-left: 28px;
   text-align: start;
+}
+.blog_item .section-1 .part-2 .wrap-2 .items a:hover {
+  color: #00ffee;
+  transition: .1s;
 }
 
 .blog_item .section-1 .part-2 .wrap-2 .items img {
