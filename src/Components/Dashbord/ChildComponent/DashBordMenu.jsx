@@ -120,6 +120,25 @@ const DashBordMenu = () => {
               </div>
             </li>
 
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+              <i class="fas fa-comment"></i> &nbsp; Comment
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <Link className="dropdown-item" to={"/all-comment"}>
+              <i class="fas fa-comments"></i>&nbsp; All Comment
+              </Link>
+              </div>
+            </li>
+
           </Nav>
         </Navbar.Collapse>
 

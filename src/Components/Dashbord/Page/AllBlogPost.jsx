@@ -5,7 +5,6 @@ import DashBordMenu from "../ChildComponent/DashBordMenu";
 import axios from "axios";
 const AllBlogPost = () => {
   const [data, setData] = useState([]);
-  console.log(data);
   const [update, setUpdate] = useState("");
   const Description= data.DescriptionPart1;
   // const DescriptionSlice= Description.slice(0,100)

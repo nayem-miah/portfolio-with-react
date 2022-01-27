@@ -7,7 +7,6 @@ import axios from "axios";
 
 const BlogSection = () => {
   const [data,setData]=useState([]);
-  console.log(data);
     const url = 'http://localhost:5000/all-blog-post';
     useEffect(()=>{
       axios.get(url)

@@ -51,9 +51,11 @@ input[type="time"]:focus,
 input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
+textarea,
 textarea:focus,
 select:focus {
   outline: 0;
+  border: 2px solid #ced4da !important;
 }
 
 #main {
@@ -2027,6 +2029,7 @@ position: relative;
   margin-bottom: 25px;
 }
 
+
 #single_item .section-2 .text {
   font-size: 16px;
   color: #5c5c5c;
@@ -2119,6 +2122,9 @@ position: relative;
 
 .blog-page .section-1 .part-1 .hadding-text a:hover {
   color: #00ddcf;
+}
+.blog-page .section-1 .part-1 .SocialIcon span {
+padding: 0 3px;
 }
 
 .blog-page .section-1 .part-1 .tag-point {
@@ -2324,6 +2330,10 @@ position: relative;
 .blog_item .section-1 .part-1 .related_tag {
   margin: 100px 0 30px 0;
 }
+.blog_item .section-1 .part-1 .related_tag .SocialIcon span{
+  padding:  0 3px;
+}
+
 
 .blog_item .section-1 .part-1 .related_tag h2 {
   font-size: 25px;
@@ -2397,7 +2407,7 @@ position: relative;
 
 .blog_item .section-1 .part-1 .comment-zoon img {
   border-radius: 50%;
-  width: 25%;
+  width: 50px;
   height: 25%;
 }
 
@@ -2406,12 +2416,11 @@ position: relative;
 }
 
 .blog_item .section-1 .part-1 .comment-zoon .comment .name {
-  margin-bottom: 15px;
+  margin-bottom: 2px;
   font-size: 22px;
   font-weight: 600;
-  color: #00fff0;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
+  color: #5e5e5e;
+ 
 }
 
 .blog_item .section-1 .part-1 .comment-zoon .comment .reply {

@@ -141,7 +141,7 @@ const Percent_work = () => {
                           90<span>%</span>
                         </h2>
                       </div>
-                      <h2 class="text-pro">FireBase</h2>
+                      <h2 class="text-pro">NodeJS</h2>
                     </div>
                   </div>
                 </div>

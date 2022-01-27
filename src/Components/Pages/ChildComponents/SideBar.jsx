@@ -7,13 +7,12 @@ const SideBar = () => {
     const [data, setdata]= useState([]);
 
     const dataSlice =data.slice(0,5);
-    console.log(data);
 const url = 'http://localhost:5000/all-blog-post';
     useEffect(()=>{
         axios.get(url).then(res=>{
                 setdata(res.data.BlogData);
         })
-    },[])
+    },[data])
     return (
         <div class="col-lg-4 part-2">
         <div class="wrap-1">
