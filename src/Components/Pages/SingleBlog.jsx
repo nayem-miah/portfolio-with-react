@@ -4,6 +4,7 @@ import Footer from "./ChildComponents/Footer";
 import Header from "./ChildComponents/Header";
 import IntroSection from "./ChildComponents/IntroSection";
 import SideBar from "./ChildComponents/SideBar";
+import parse from 'html-react-parser';
 import commentImg from "../Img/commentImg.png";
 import {
   FacebookIcon,
@@ -26,13 +27,13 @@ const SingleBlog = () => {
   const [update, setUpdate] = useState("");
   const [comment, setComment] = useState([]);
   const [uniqueSlug, setUniqueSlug] = useState([]);
+  console.log(uniqueSlug);
   const { slug } = useParams();
 
   const SucccessMassage = "Data Update Successful!";
   const UnSuccessfulMassage = "Data Update Error!";
   const todayDate = new Date().toISOString().slice(0, 10);
   const shareUrl = `https://quizbari.com/${slug}`;
-  console.log(shareUrl);
 
   const {
     register,
@@ -50,6 +51,7 @@ const SingleBlog = () => {
       .then((res) => res.json())
       .then((data) => setUniqueSlug(data[0]));
   }, [uniqueSlug]); // Dependence is on.
+  // }, []); // Dependence is on.
 
   // Load comment post .....
   useEffect(() => {
@@ -57,6 +59,7 @@ const SingleBlog = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setComment(data));
+  // }, []); // Dependence is on.
   }, [comment]); // Dependence is on.
 
   // Load comment function
@@ -126,17 +129,11 @@ const SingleBlog = () => {
                     </div>
                   </div>
                   <p class="text pb-5">{uniqueSlug.DescriptionPart3}</p>
-                  {/* <h2 class="headding-text">HOW CAMPAIGN FUNDS ARE RELEASED</h2>
-                                <p class="text">From A Lorem Ipsum Passage, And Going Through The Cites Of The Word In
-                                    Classical Literature, Discovered The Undoubtable Source. Lorem Ipsum Comes From
-                                    Sections 1.10.32 And 1.10.33 Of "De Finibus Bonorum Et Malorum" (The Extremes Of
-                                    Good And Evil) By Cicero, Written In 45 BC. This Book Is A Treatise On The Theory Of
-                                    Ethics, Very Popular During The Renaissance. The First Line Of Lorem Ipsum, "Lorem
-                                    Ipsum Dolor Sit Amet..", Comes From A Line In Section 1.10.32.Section 1.10.32.</p>
-                                <br/>
-                                <p class="text pb-5">Contrary To Popular Belief, Lorem Ipsum Is Not Simply Random Text.
-                                    It Has Roots In A Piece Of Classical Latin Literature From 45 BC, Making It Over
-                                    2000 Years Old. Richard McClintock, A Latin Professor At Hampw</p> */}
+                 
+                      <div>
+                      {parse(`${uniqueSlug.data}`)}
+                      </div>
+                                  
                 </div>
                 <div class="related_tag">
                   <div class="wrap-2 d-md-flex d-block justify-content-between align-items-center">

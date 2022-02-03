@@ -17,7 +17,6 @@ import RemoveSlider from "./Components/Dashbord/Page/RemoveSlider";
 import AddWorkingSection from "./Components/Dashbord/Page/AddWorkingSection";
 import AddProject from "./Components/Dashbord/Page/AddProject";
 import LoginPage from "./Components/Pages/LogInPage/LoginPage";
-
 import AllProject from "./Components/Dashbord/Page/AllProject";
 import PrivateRoute from "./Components/Pages/LogInPage/PrivateRoute";
 import ScrollToTop from "./Components/HelpPoint/ScrollToTop";
@@ -25,8 +24,6 @@ import RemoveWorkingSection from "./Components/Dashbord/Page/RemoveWorkingSectio
 
 
 function App() {
-
-
   return (
     <div className="App">
       <AuthContext>

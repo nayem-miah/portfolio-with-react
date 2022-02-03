@@ -153,8 +153,6 @@ header .navbar .disable {
   cursor: no-drop !important;
 }
 
-
-
 #layout {
   position: relative;
 }
@@ -177,7 +175,7 @@ header .navbar .disable {
   padding: 70px 20px 70px 30px;
   background: #0b032d;
   width: 30%;
-  height: auto;
+  height: 100%;
 }
 
 #layout .overlay .wrap p {
@@ -2531,7 +2529,7 @@ padding: 0 3px;
 
 .blog_item .section-1 .part-2 .wrap-1 .img-1 {
   margin-top: -14px;
-  width: 100%;
+  width: 50%;
 }
 
 .blog_item .section-1 .part-2 .wrap-1 .img-tag > h2 {

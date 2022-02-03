@@ -16,7 +16,7 @@ const AllBlogPost = () => {
     axios.get("http://localhost:5000/all-blog-post").then((res) => {
       setData(res.data.BlogData);
     });
-  }, []);
+  }, [data]);
 
   const deleteData = (id) => {
     const URL = `http://localhost:5000/all-blog-post/${id}`;
