@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Header from "./ChildComponents/Header";
 import Footer from "./ChildComponents/Footer";
 import IntroSection from "./ChildComponents/IntroSection";

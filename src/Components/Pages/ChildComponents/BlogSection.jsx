@@ -67,13 +67,7 @@ const BlogSection = () => {
                           ></BlogSectionSlider>
                       ))
                   }
-              </Carousel>
-
-              
-             
-             
-              
-             
+              </Carousel>           
             </div>
            
           </div>

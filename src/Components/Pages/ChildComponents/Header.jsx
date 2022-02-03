@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StickyNav } from "react-js-stickynav";
 import "react-js-stickynav/dist/index.css";
-import AutohorImg from "../../Img/amit.jpg";
+import AutohorImg from "../../Img/amit2.jpg";
 import SignatureImg from "../../Img/signature.png";
 import logo from "../../Img/logo-2.png";
 import { Link } from "react-router-dom";
@@ -116,7 +116,8 @@ const Header = () => {
           className={`overlay ${active == false ? "active" : null}`}
         >
           <div class="wrap">
-            <div class="icon">
+           <div>
+           <div class="icon">
               <span onClick={clickFunction} className="remove_btn">
                 <i class="fas fa-times"></i>
               </span>
@@ -133,6 +134,9 @@ const Header = () => {
               stories. I have 5+ years of experience in web
               development and completed 200+ online & offline courses.
             </p>
+           </div>
+
+            
 
             <div class="img-sin d-flex">
               <img class="img-fluid amit" src={AutohorImg} alt="" />

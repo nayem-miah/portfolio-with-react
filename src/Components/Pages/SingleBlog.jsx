@@ -9,7 +9,6 @@ import commentImg from "../Img/commentImg.png";
 import {
   FacebookIcon,
   FacebookShareButton,
-  FacebookShareCount,
   LinkedinIcon,
   LinkedinShareButton,
   RedditIcon,
@@ -118,19 +117,19 @@ const SingleBlog = () => {
                     <i class="fas fa-history"></i>
                     <a class="read"> 03 MIN READ</a>
                   </div>
-                  <p class="text">{uniqueSlug.DescriptionPart1}</p>
+                 
                   <div class="testimonial">
                     <div class="content-bar">
                       <span>
                         <i class="fas fa-quote-left"></i>
                       </span>
-                      {/* <h2 class="name">JHONE HARRY</h2> */}
-                      <h2 class="comment">{uniqueSlug.DescriptionPart2}</h2>
+                      <h2 class="name">{uniqueSlug.IntroSection}</h2>
+                     
                     </div>
                   </div>
-                  <p class="text pb-5">{uniqueSlug.DescriptionPart3}</p>
+                  
                  
-                      <div>
+                      <div className="pb-5">
                       {parse(`${uniqueSlug.data}`)}
                       </div>
                                   

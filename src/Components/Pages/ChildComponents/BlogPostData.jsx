@@ -1,10 +1,11 @@
 import React from "react";
 import { Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import parse from "html-react-parser";
+
 import {
   FacebookIcon,
   FacebookShareButton,
-  FacebookShareCount,
   LinkedinIcon,
   LinkedinShareButton,
   RedditIcon,
@@ -17,15 +18,14 @@ import {
 import useAuth from "../../../Context/useAuth";
 
 const BlogPostData = (props) => {
-  const {isLoading } = useAuth();
-  if(isLoading){
-      return <Spinner animation="grow" />
+  const { isLoading } = useAuth();
+  if (isLoading) {
+    return <Spinner animation="grow" />;
   }
-  const { _id, BlogTitle, ImgUrl, DescriptionPart1, date } = props.data;
-  const DescriptionSlice = DescriptionPart1.slice(0, 300);
+  const { _id, BlogTitle, ImgUrl, data, date } = props.data;
+  const DescriptionSlice = parse(data.slice(0, 260));
   const socialIconUrl = `http://localhost:3000/blog/single-blog/${_id}`; // Need to create live link....
-const shareUrl = 'https://quizbari.com';
-
+  const shareUrl = "https://quizbari.com";
 
   return (
     <div class="single-item">
@@ -46,7 +46,7 @@ const shareUrl = 'https://quizbari.com';
         <p> {date}</p>
       </div>
       <div class="content">
-        <p>{DescriptionSlice} ....</p>
+        <p>{DescriptionSlice}</p>
       </div>
       <div class="read-more-btn d-flex align-items-center justify-content-between">
         <Link className="btn btn-read-more" to={`/single-blog/${_id}`}>
@@ -54,36 +54,32 @@ const shareUrl = 'https://quizbari.com';
         </Link>
 
         <div className="mr-4 SocialIcon">
-        <span>
-          <FacebookShareButton url={shareUrl}>
-            <FacebookIcon size={40} round={true} />
-          </FacebookShareButton>
-        </span>
-        <span>
-          <LinkedinShareButton url={shareUrl}>
-            <LinkedinIcon size={40} round={true} />
-          </LinkedinShareButton>
-        </span>
-        <span>
-          <TwitterShareButton url={shareUrl}>
-            <TwitterIcon size={40} round={true} />
-          </TwitterShareButton>
-        </span>
-        <span>
-          <WhatsappShareButton url={shareUrl}>
-            <WhatsappIcon size={40} round={true} />
-          </WhatsappShareButton>
-        </span>
-        <span>
-          <RedditShareButton url={shareUrl}>
-            <RedditIcon size={40} round={true} />
-          </RedditShareButton>
-        </span>
+          <span>
+            <FacebookShareButton url={shareUrl}>
+              <FacebookIcon size={40} round={true} />
+            </FacebookShareButton>
+          </span>
+          <span>
+            <LinkedinShareButton url={shareUrl}>
+              <LinkedinIcon size={40} round={true} />
+            </LinkedinShareButton>
+          </span>
+          <span>
+            <TwitterShareButton url={shareUrl}>
+              <TwitterIcon size={40} round={true} />
+            </TwitterShareButton>
+          </span>
+          <span>
+            <WhatsappShareButton url={shareUrl}>
+              <WhatsappIcon size={40} round={true} />
+            </WhatsappShareButton>
+          </span>
+          <span>
+            <RedditShareButton url={shareUrl}>
+              <RedditIcon size={40} round={true} />
+            </RedditShareButton>
+          </span>
         </div>
-
-        {/* <a class="share" href="#">
-          <i class="fas fa-share-alt"></i>
-        </a> */}
       </div>
     </div>
   );

@@ -1,27 +1,31 @@
-import React from "react";
+import React, { useRef, useState } from 'react';
 import { Col, Container, Row, Form, Button } from "react-bootstrap";
 import Header from "./ChildComponents/Header";
 import IntroSection from "./ChildComponents/IntroSection";
 import Footer from "./ChildComponents/Footer";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-    reset,
-    setValue,
-  } = useForm();
+  const [result, setResult]= useState('');
+  const form = useRef();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    axios.post("http://localhost:5000/contact", data).then((res) => {
-      
-    });
-    reset();
-  };
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_zin0s79', 'template_49b31oo', form.current, 'user_b1NlqxKQ9yYBMbUfNmcyo')
+      .then((result) => {
+          // console.log(result.text);
+          setResult('Message sent successfully!')
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset()
+    }
+
+
+
   return (
     <>
       {/* Header Bar */}
@@ -78,20 +82,20 @@ const Contact = () => {
               </div>
             </Col>
             <Col xl={6} md={6} className="part-2">
-              <Form onSubmit={handleSubmit(onSubmit)}>
+              <Form ref={form} onSubmit={sendEmail}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control
-                    
+                    name='from_name'
                     className="mb-3"
                     type="text"
                     placeholder="Your Name"
-                    {...register("Name")}
+                    required
                   />
                   <Form.Control
-                    
+                    name='from_email'
                     type="email"
                     placeholder="Email Address"
-                    {...register("Email")}
+                    required
                   />
                   <Form.Text className="text-muted">
                     We'll never share your email with anyone else.
@@ -100,18 +104,19 @@ const Contact = () => {
                   <textarea
                       
                     class="w-100 massage p-2"
-                    name=""
+                    name="message"
                     id=""
                     placeholder="Write your massage"
                     cols="20"
                     rows="5"
                     spellcheck="false"
-                    {...register("SMS")}
+                    required
                   ></textarea>
                 </Form.Group>
                 <Button variant="primary" type="submit">
                   Submit
                 </Button>
+                <p className='mt-3 text-danger'>{result}</p>
               </Form>
 
               
@@ -128,5 +133,6 @@ const Contact = () => {
     </>
   );
 };
+
 
 export default Contact;

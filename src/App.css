@@ -57,6 +57,9 @@ select:focus {
   outline: 0;
   border: 2px solid #ced4da !important;
 }
+.eaptOe {
+  background-color: #00fff0 !important;
+}
 
 #main {
   background: #0b032d;
@@ -262,7 +265,7 @@ header .navbar .disable {
 }
 
 #layout .img-sin .amit {
-  width: 30%;
+  width: 45%;
   border-radius: 10px;
 }
 
@@ -1548,12 +1551,14 @@ position: relative;
 }
 
 #blog .owl-carousel .card-title {
-  font-family: "Oswald", sans-serif;
+  /* font-family: "Oswald", sans-serif; */
   color: #0b032d;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 #blog .owl-carousel .btn {
+  position: absolute;
+    bottom: 24px;
   background: #0b032d;
   padding: 13px 29px;
   margin-top: 0;
@@ -1717,7 +1722,7 @@ position: relative;
 
 .newsletter-bg-black .cta-form .subscribe-btn {
   background: #00fff0;
-  padding: 16px 21px;
+  padding: 15px 21px;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 15px;
@@ -2299,6 +2304,10 @@ padding: 0 3px;
 .testimonial {
   width: 90% !important;
 }
+.testimonial .card-body{
+  height: 310px;
+}
+
 
 .blog_item .section-1 .part-1 .text-file .testimonial .fas {
   color: rgb(144, 144, 144);
@@ -2859,6 +2868,11 @@ padding: 0 3px;
   border: 2px solid #00d1ff;
   cursor: pointer;
   transition: all 0.2s linear;
+
+}
+#contactSection .part-2 .btn:hover{
+  background: #0B032D;
+    color: #fff;
 
 }
 

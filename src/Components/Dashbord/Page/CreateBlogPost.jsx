@@ -91,47 +91,26 @@ console.log(data);
                         Input the url of Image!
                       </Form.Text>{" "}
                       <br></br>
-                      <Form.Label>First Section</Form.Label>
-                      <textarea
-                        class="w-100 massage p-2"
-                        name=""
-                        id=""
-                        placeholder="Write your massage"
-                        cols="20"
-                        rows="3"
-                        spellcheck="false"
-                        required
-                        {...register("DescriptionPart1", { required: true })}
-                      ></textarea>
-                      <Form.Label>Intro Section</Form.Label>
-                      <textarea
-                        class="w-100 massage p-2"
-                        name=""
-                        id=""
-                        placeholder="Write your massage"
-                        cols="20"
-                        rows="3"
-                        spellcheck="false"
-                        required
-                        {...register("DescriptionPart2", { required: true })}
-                      ></textarea>
-                      <Form.Label>Last Section</Form.Label>
-                      <textarea
-                        class="w-100 massage p-2"
-                        name=""
-                        id=""
-                        placeholder="Write your massage"
-                        cols="20"
-                        rows="3"
-                        spellcheck="false"
-                        required
-                        {...register("DescriptionPart3", { required: true })}
-                      ></textarea>
                       <CKEditor
                        onChange={({ editor }) => {
                         setData(editor.getData());
                       }}
                       />
+                      
+                      {/* <Form.Label>Intro Section</Form.Label>
+                      <textarea
+                        class="w-100 massage p-2"
+                        name=""
+                        id=""
+                        placeholder="Write your massage"
+                        cols="10"
+                        rows="2"
+                        spellcheck="false"
+                        required
+                        {...register("IntroSection", { required: true })}
+                      ></textarea> */}
+                     
+                     
                     </Form.Group>
 
                     <Button
