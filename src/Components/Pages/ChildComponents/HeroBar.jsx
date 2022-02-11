@@ -26,7 +26,7 @@ const HeroBar = () => {
                   </a>
                 </div>
                 <div class="Social">
-                  <span class="text">Follow Us : </span>
+                  <span class="text">Follow Me : </span>
                   <a target='blank' href="https://www.facebook.com/amitbiswas1994">
                     <i class="fab fa-facebook-square"></i>
                   </a>

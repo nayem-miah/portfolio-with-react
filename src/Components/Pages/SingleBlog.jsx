@@ -4,7 +4,7 @@ import Footer from "./ChildComponents/Footer";
 import Header from "./ChildComponents/Header";
 import IntroSection from "./ChildComponents/IntroSection";
 import SideBar from "./ChildComponents/SideBar";
-import parse from 'html-react-parser';
+import parse from "html-react-parser";
 import commentImg from "../Img/commentImg.png";
 import {
   FacebookIcon,
@@ -32,7 +32,7 @@ const SingleBlog = () => {
   const SucccessMassage = "Data Update Successful!";
   const UnSuccessfulMassage = "Data Update Error!";
   const todayDate = new Date().toISOString().slice(0, 10);
-  const shareUrl = `https://quizbari.com/${slug}`;
+  const shareUrl = `https://amitjs.com/single-blog/${slug}`;
 
   const {
     register,
@@ -45,7 +45,7 @@ const SingleBlog = () => {
   // Load Unique Blog ...
 
   useEffect(() => {
-    const url = `http://localhost:5000/all-blog-post/${slug}`;
+    const url = `https://amitjs.herokuapp.com/all-blog-post/${slug}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setUniqueSlug(data[0]));
@@ -54,11 +54,11 @@ const SingleBlog = () => {
 
   // Load comment post .....
   useEffect(() => {
-    const url = `http://localhost:5000/comment`;
+    const url = `https://amitjs.herokuapp.com/comment`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setComment(data));
-  // }, []); // Dependence is on.
+    // }, []); // Dependence is on.
   }, [comment]); // Dependence is on.
 
   // Load comment function
@@ -70,7 +70,7 @@ const SingleBlog = () => {
 
   // Submit comment to server...
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/comment", data).then((res) => {});
+    axios.post("https://amitjs.herokuapp.com/comment", data).then((res) => {});
     reset();
 
     if (data) {
@@ -117,22 +117,17 @@ const SingleBlog = () => {
                     <i class="fas fa-history"></i>
                     <a class="read"> 03 MIN READ</a>
                   </div>
-                 
+
                   <div class="testimonial">
                     <div class="content-bar">
                       <span>
                         <i class="fas fa-quote-left"></i>
                       </span>
                       <h2 class="name">{uniqueSlug.IntroSection}</h2>
-                     
                     </div>
                   </div>
-                  
-                 
-                      <div className="pb-5">
-                      {parse(`${uniqueSlug.data}`)}
-                      </div>
-                                  
+
+                  <div className="pb-5">{parse(`${uniqueSlug.data}`)}</div>
                 </div>
                 <div class="related_tag">
                   <div class="wrap-2 d-md-flex d-block justify-content-between align-items-center">

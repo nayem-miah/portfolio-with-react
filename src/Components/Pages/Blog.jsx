@@ -7,18 +7,16 @@ import axios from "axios";
 import SideBar from "./ChildComponents/SideBar";
 
 const Blog = () => {
-
   const [data, setData] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   console.log(pageCount);
   const [page, setPage] = useState(0);
   console.log(page);
-  const size =5;
+  const size = 5;
 
   // Load Blog Post from Server ....
 
-
-  const URL = `http://localhost:5000/all-blog-post?page=${page}&&size=${size}`;
+  const URL = `https://amitjs.herokuapp.com/all-blog-post?page=${page}&&size=${size}`;
   React.useEffect(() => {
     axios.get(URL).then((res) => {
       setData(res.data.BlogData.reverse());
@@ -28,7 +26,6 @@ const Blog = () => {
       setPageCount(pageNumber);
     });
   }, [page]);
-
 
   return (
     <>
@@ -66,7 +63,7 @@ const Blog = () => {
                           onClick={() => setPage(number)}
                           aria-label="Previous"
                         >
-                          <span aria-hidden="true">{number+1}</span>
+                          <span aria-hidden="true">{number + 1}</span>
                         </a>
                       </li>
                     ))}
@@ -81,8 +78,6 @@ const Blog = () => {
           </div>
         </div>
       </section>
-
-  
 
       {/* Footer */}
 

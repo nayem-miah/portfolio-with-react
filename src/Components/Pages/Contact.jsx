@@ -48,12 +48,10 @@ const Contact = () => {
                   contact
                 </h2>
                 <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form
+                We would love to work with you, say hello and let’s start a wonderful journey together.
                 </p>
                 <h4>Email: amitbd599@gmail.com</h4>
-                <div>
+                <div className='mb-3'>
                   <a
                     target={"blank"}
                     href="https://www.facebook.com/amitbiswas1994"

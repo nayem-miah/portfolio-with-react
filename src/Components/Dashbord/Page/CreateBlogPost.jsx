@@ -3,14 +3,13 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import DashBordMenu from "../ChildComponent/DashBordMenu";
 import { useForm } from "react-hook-form";
-import { CKEditor } from 'ckeditor4-react';
+import { CKEditor } from "ckeditor4-react";
 
 import axios from "axios";
 const CreateBlogPost = () => {
-  
   const [update, setUpdate] = useState("");
-const [data,setData]=useState('');
-console.log(data);
+  const [data, setData] = useState("");
+  console.log(data);
 
   const SucccessMassage = "Data Update Successful!";
   const UnSuccessfulMassage = "Data Update Error!";
@@ -30,7 +29,9 @@ console.log(data);
   // }, []);
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/all-blog-post", data).then((res) => {});
+    axios
+      .post("https://amitjs.herokuapp.com/all-blog-post", data)
+      .then((res) => {});
     reset();
 
     if (data) {
@@ -92,11 +93,10 @@ console.log(data);
                       </Form.Text>{" "}
                       <br></br>
                       <CKEditor
-                       onChange={({ editor }) => {
-                        setData(editor.getData());
-                      }}
+                        onChange={({ editor }) => {
+                          setData(editor.getData());
+                        }}
                       />
-                      
                       {/* <Form.Label>Intro Section</Form.Label>
                       <textarea
                         class="w-100 massage p-2"
@@ -109,8 +109,6 @@ console.log(data);
                         required
                         {...register("IntroSection", { required: true })}
                       ></textarea> */}
-                     
-                     
                     </Form.Group>
 
                     <Button

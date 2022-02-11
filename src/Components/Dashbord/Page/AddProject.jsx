@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import DashBordMenu from "../ChildComponent/DashBordMenu";
 
 const AddProject = () => {
-
   const [update, setUpdate] = useState("");
   const SucccessMassage = "Data Update Successful!";
   const UnSuccessfulMassage = "Data Update Error!";
@@ -22,8 +21,7 @@ const AddProject = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/project", data).then((res) => {
-    });
+    axios.post("https://amitjs.herokuapp.com/project", data).then((res) => {});
     reset();
 
     if (data) {
@@ -43,7 +41,7 @@ const AddProject = () => {
             <div className="headerSpace text-center">
               <Row className="d-flex align-items-center h-100">
                 <Col>
-                <p className="text-success lead font-weight-bold">{update}</p>
+                  <p className="text-success lead font-weight-bold">{update}</p>
                 </Col>
                 <Col className="">
                   <Link to={"/"} target={"blank"}>
@@ -55,16 +53,28 @@ const AddProject = () => {
             <div className="main-content">
               <div className="child-content d-flex justify-content-center">
                 <div className="w-50 ">
-                  <Form className="justify-content-center"
-                  onSubmit={handleSubmit(onSubmit)}>
+                  <Form
+                    className="justify-content-center"
+                    onSubmit={handleSubmit(onSubmit)}
+                  >
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                       <Form.Label>Create Project Title</Form.Label>
-                      <Form.Control type="text" placeholder="Enter Title" required   {...register("title", { required: true })}/>
+                      <Form.Control
+                        type="text"
+                        placeholder="Enter Title"
+                        required
+                        {...register("title", { required: true })}
+                      />
                       <Form.Text className="text-muted">
                         Add here post title for your new post!
                       </Form.Text>
                       <Form.Label>Image Upload</Form.Label>
-                      <Form.Control type="text" placeholder="Enter Image URL"  required   {...register("imgUrl", { required: true })} />
+                      <Form.Control
+                        type="text"
+                        placeholder="Enter Image URL"
+                        required
+                        {...register("imgUrl", { required: true })}
+                      />
                       <Form.Text className="text-muted">
                         Input the url of Image!
                       </Form.Text>{" "}
@@ -72,17 +82,17 @@ const AddProject = () => {
                     </Form.Group>
 
                     <Button
-                    variant="primary"
-                    type="submit"
-                    onClick={() =>
-                      setValue('date',todayDate, {
-                        shouldValidate: true,
-                        shouldDirty: true,
-                      })
-                    }
-                  >
-                    Submit
-                  </Button>
+                      variant="primary"
+                      type="submit"
+                      onClick={() =>
+                        setValue("date", todayDate, {
+                          shouldValidate: true,
+                          shouldDirty: true,
+                        })
+                      }
+                    >
+                      Submit
+                    </Button>
                   </Form>
                 </div>
               </div>

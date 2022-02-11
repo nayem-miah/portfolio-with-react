@@ -29,27 +29,68 @@ function App() {
       <AuthContext>
         <Router>
           <ScrollToTop>
-          <Switch>
-            <Route path="/" exact><Home /> </Route>
-            <Route path="/home"><Home /></Route>
-            <Route path="/contact"><Contact /></Route>
-            <Route path="/blog"><Blog /></Route>
-            <Route path="/single-blog/:slug"><SingleBlog/></Route>
-            <Route path="/service"><Service /></Route>
-            <Route path="/project"> <Project /></Route>
-            <PrivateRoute path="/dashbord"><Dashbord /></PrivateRoute>
-            <Route path="/admin-box"><LoginPage /> </Route>
-            <PrivateRoute path="/create-blog-post"> <CreateBlogPost/></PrivateRoute>          
-            <PrivateRoute path="/all-blog-post"> <AllBlogPost /></PrivateRoute>
-            <PrivateRoute path="/add-slider"><AddSlider/></PrivateRoute>
-            <PrivateRoute path="/remove-slider"> <RemoveSlider/></PrivateRoute>
-            <PrivateRoute path="/add-section"><AddWorkingSection/></PrivateRoute>
-            <PrivateRoute path="/remove-section"><RemoveWorkingSection/></PrivateRoute>
-            <PrivateRoute path="/add-project"><AddProject/></PrivateRoute>
-            <PrivateRoute path="/all-project"> <AllProject/></PrivateRoute>
+            <Switch>
+              <Route path="/" exact>
+                <Home />{" "}
+              </Route>
+              <Route path="/home">
+                <Home />
+              </Route>
+              <Route  path="/contact">
+                <Contact />
+              </Route>
+              <Route path="/blog">
+                <Blog />
+              </Route>
+              <Route path="/single-blog/:slug">
+                <SingleBlog />
+              </Route>
+              <Route path="/service">
+                <Service />
+              </Route>
+              <Route path="/project">
+                {" "}
+                <Project />
+              </Route>
+              <PrivateRoute path="/dashbord">
+                <Dashbord />
+              </PrivateRoute>
+              <Route path="/admin-box">
+                <LoginPage />{" "}
+              </Route>
+              <PrivateRoute path="/create-blog-post">
+                {" "}
+                <CreateBlogPost />
+              </PrivateRoute>
+              <PrivateRoute path="/all-blog-post">
+                {" "}
+                <AllBlogPost />
+              </PrivateRoute>
+              <PrivateRoute path="/add-slider">
+                <AddSlider />
+              </PrivateRoute>
+              <PrivateRoute path="/remove-slider">
+                {" "}
+                <RemoveSlider />
+              </PrivateRoute>
+              <PrivateRoute path="/add-section">
+                <AddWorkingSection />
+              </PrivateRoute>
+              <PrivateRoute path="/remove-section">
+                <RemoveWorkingSection />
+              </PrivateRoute>
+              <PrivateRoute path="/add-project">
+                <AddProject />
+              </PrivateRoute>
+              <PrivateRoute path="/all-project">
+                {" "}
+                <AllProject />
+              </PrivateRoute>
 
-            <Route path="*"><NoPageFound/></Route>
-          </Switch>
+              <Route path="*">
+                <NoPageFound />
+              </Route>
+            </Switch>
           </ScrollToTop>
         </Router>
       </AuthContext>

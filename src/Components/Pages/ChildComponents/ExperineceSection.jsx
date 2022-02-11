@@ -4,9 +4,9 @@ import ExperineceSection_child_1 from "./ExperineceSection_child_1";
 const ExperineceSection = () => {
   // For experince -----
   const [experince, setExperince] = useState([]);
-  
+
   useEffect(() => {
-    fetch("http://localhost:5000/work")
+    fetch("https://amitjs.herokuapp.com/work")
       .then((res) => res.json())
       .then((data) => setExperince(data));
   }, []);
@@ -25,13 +25,14 @@ const ExperineceSection = () => {
           <div class="col-lg-7 part-2">
             <div class="wrap">
               <p>
-              My expertise are in HTML, CSS, JavaScript, Jquery, Bootstrap, Material UI, ReactJS, FireBase, GIT, MongoDB, NodeJS, Express, WordPress, FIGMA / XD.
+                My expertise are in HTML, CSS, JavaScript, Jquery, Bootstrap,
+                Material UI, ReactJS, FireBase, GIT, MongoDB, NodeJS, Express,
+                WordPress, FIGMA / XD.
               </p>
             </div>
           </div>
         </div>
         <div class="row box">
-
           {/* Experince Section Start Here... */}
 
           {experince.map((experince) => (

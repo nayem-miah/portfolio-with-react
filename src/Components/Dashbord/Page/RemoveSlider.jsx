@@ -9,18 +9,15 @@ const RemoveSlider = () => {
   const [update, setUpdate] = useState("");
   const UnSuccessfulMassage = "Slider Delete Successful!";
 
-
   useEffect(() => {
-    const url = "http://localhost:5000/slider";
+    const url = "https://amitjs.herokuapp.com/slider";
     axios.get(url).then((res) => {
       setData(res.data);
-     
     });
   }, []);
 
   const deleteHendel = (id) => {
-
-    const url = `http://localhost:5000/slider/${id}`;
+    const url = `https://amitjs.herokuapp.com/slider/${id}`;
 
     axios.delete(url).then((res) => {
       if (res.data.deletedCount == 1) {
@@ -41,7 +38,7 @@ const RemoveSlider = () => {
             <div className="headerSpace text-center">
               <Row className="d-flex align-items-center h-100">
                 <Col>
-                <p className="text-success lead font-weight-bold">{update}</p>
+                  <p className="text-success lead font-weight-bold">{update}</p>
                 </Col>
                 <Col className="">
                   <Link to={"/"} target={"blank"}>

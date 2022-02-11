@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
 import BlogSectionSlider from "./BlogSectionSlider";
-import bannerSectionImg from '../../Img/Banner_section.png';
+import bannerSectionImg from "../../Img/Banner_section.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 const BlogSection = () => {
-  const [data,setData]=useState([]);
-    const url = 'http://localhost:5000/all-blog-post';
-    useEffect(()=>{
-      axios.get(url)
-      .then(res=>setData(res.data.BlogData))
-    },[])
+  const [data, setData] = useState([]);
+  const url = "https://amitjs.herokuapp.com/all-blog-post";
+  useEffect(() => {
+    axios.get(url).then((res) => setData(res.data.BlogData));
+  }, []);
 
   var breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -37,7 +36,8 @@ const BlogSection = () => {
           <div class="col-lg-6 part-2">
             <div class="wrap">
               <p>
-              I'll always try my best to produce high quality work for my Clients. Baecause Client satisfaction is my very first priority.
+                I'll always try my best to produce high quality work for my
+                Clients. Baecause Client satisfaction is my very first priority.
               </p>
             </div>
           </div>
@@ -47,8 +47,10 @@ const BlogSection = () => {
           <div class="col d-flex justify-content-center">
             <div class="menu-bar d-flex">
               <h2>ALL BLOGS</h2>
-              <Link to={'./blog'}><img class="img-fluid" src={bannerSectionImg} alt="" /></Link>
-              
+              <Link to={"./blog"}>
+                <img class="img-fluid" src={bannerSectionImg} alt="" />
+              </Link>
+
               <span>
                 <i class="fas fa-arrow-left"></i>
               </span>
@@ -59,17 +61,14 @@ const BlogSection = () => {
           <div class="col">
             <div class="blog owl-carousel">
               <Carousel breakPoints={breakPoints} className="slider">
-                  {
-                      data.map((data)=>(
-                          <BlogSectionSlider
-                          key={data._id}
-                          data={data}
-                          ></BlogSectionSlider>
-                      ))
-                  }
-              </Carousel>           
+                {data.map((data) => (
+                  <BlogSectionSlider
+                    key={data._id}
+                    data={data}
+                  ></BlogSectionSlider>
+                ))}
+              </Carousel>
             </div>
-           
           </div>
         </div>
       </div>

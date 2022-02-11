@@ -21,8 +21,7 @@ const AddWorkingSection = () => {
   }, []);
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/work", data).then((res) => {
-    });
+    axios.post("https://amitjs.herokuapp.com/work", data).then((res) => {});
     reset();
 
     if (data) {
@@ -42,7 +41,7 @@ const AddWorkingSection = () => {
             <div className="headerSpace text-center">
               <Row className="d-flex align-items-center h-100">
                 <Col>
-                <p className="text-success lead font-weight-bold">{update}</p>
+                  <p className="text-success lead font-weight-bold">{update}</p>
                 </Col>
                 <Col className="">
                   <Link to={"/"} target={"blank"}>
@@ -54,8 +53,10 @@ const AddWorkingSection = () => {
             <div className="main-content">
               <div className="child-content d-flex justify-content-center">
                 <div className="w-50 ">
-                  <Form className="justify-content-center"
-                  onSubmit={handleSubmit(onSubmit)}>
+                  <Form
+                    className="justify-content-center"
+                    onSubmit={handleSubmit(onSubmit)}
+                  >
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                       <Form.Label>Create Position Title</Form.Label>
                       <Form.Control

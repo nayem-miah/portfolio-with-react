@@ -10,13 +10,13 @@ const AllProject = () => {
   const UnSuccessfulMassage = "Slider Delete Successful!";
 
   React.useEffect(() => {
-    axios.get("http://localhost:5000/all-blog-post").then((res) => {
+    axios.get("https://amitjs.herokuapp.com/all-blog-post").then((res) => {
       setData(res.data);
     });
   }, []);
 
   const deleteData = (id) => {
-    const URL = `http://localhost:5000/all-blog-post/${id}`;
+    const URL = `https://amitjs.herokuapp.com/all-blog-post/${id}`;
 
     axios.delete(URL).then((res) => {
       if (res.data.BlogData.deletedCount == 1) {
@@ -38,7 +38,7 @@ const AllProject = () => {
             <div className="headerSpace text-center">
               <Row className="d-flex align-items-center h-100">
                 <Col>
-                <p className="text-success lead font-weight-bold">{update}</p>
+                  <p className="text-success lead font-weight-bold">{update}</p>
                 </Col>
                 <Col className="">
                   <Link to={"/"} target={"blank"}>
@@ -50,26 +50,21 @@ const AllProject = () => {
             <div className="main-content text-center">
               <h4 className="pt-3">Total data found : {data.length}</h4>
 
-
-              {
-                data.map((data)=>(
-                   <div className="child-content ClassBody">
-                <div className="wrap mt-3">
-                  <div className="img-box ">
-                    <img src={data.imgUrl} alt="" />
-                    <Button
+              {data.map((data) => (
+                <div className="child-content ClassBody">
+                  <div className="wrap mt-3">
+                    <div className="img-box ">
+                      <img src={data.imgUrl} alt="" />
+                      <Button
                         className="btn btn-danger btn-sm mt-4"
                         onClick={() => deleteData(data._id)}
                       >
                         Remove Project
                       </Button>
+                    </div>
                   </div>
-                 
                 </div>
-              </div>
-                ))
-              }
-             
+              ))}
             </div>
           </Col>
         </Row>

@@ -12,13 +12,13 @@ const RemoveWorkingSection = () => {
   // Load Blog Post from Server ....
 
   React.useEffect(() => {
-    axios.get("http://localhost:5000/work").then((res) => {
+    axios.get("https://amitjs.herokuapp.com/work").then((res) => {
       setData(res.data);
     });
   }, []);
 
   const deleteData = (id) => {
-    const URL = `http://localhost:5000/work/${id}`;
+    const URL = `https://amitjs.herokuapp.com/work/${id}`;
 
     axios.delete(URL).then((res) => {
       if (res.data.deletedCount == 1) {
@@ -39,7 +39,7 @@ const RemoveWorkingSection = () => {
             <div className="headerSpace text-center">
               <Row className="d-flex align-items-center h-100">
                 <Col>
-                <p className="text-success lead font-weight-bold">{update}</p>
+                  <p className="text-success lead font-weight-bold">{update}</p>
                 </Col>
                 <Col className="">
                   <Link to={"/"} target={"blank"}>
@@ -52,7 +52,6 @@ const RemoveWorkingSection = () => {
               <div className="child-content ">
                 {data.map((data) => (
                   <div className="wrap">
-                    
                     <div className="text-box pl-5">
                       <p className="font-weight-bold">{data.title}</p>
                       <p>{data.date}</p>

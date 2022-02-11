@@ -5,7 +5,8 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   signOut,
-  onAuthStateChanged
+  onAuthStateChanged,
+  getIdToken
 } from "firebase/auth";
 
 initalizeAuthentication();
@@ -30,6 +31,7 @@ const useFireBaseHook = () => {
   useEffect(()=>{
       onAuthStateChanged(auth, user=>{
           if(user){
+            getIdToken(user).then(idToken =>localStorage.setItem ('idToken', idToken))
               setUser(user)
           }else{
             setUser('')

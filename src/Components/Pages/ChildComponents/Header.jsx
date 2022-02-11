@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { StickyNav } from "react-js-stickynav";
 import "react-js-stickynav/dist/index.css";
-import AutohorImg from "../../Img/amit2.jpg";
+import AutohorImg from "../../Img/amit2.png";
 import SignatureImg from "../../Img/signature.png";
-import logo from "../../Img/logo-2.png";
+import logo from "../../Img/Group30.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -49,8 +49,8 @@ const Header = () => {
         <header class="">
           <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
-              <Link class="navbar-brand" to="/">
-                <img src={logo} alt="" />
+              <Link class="navbar-brand logo" to="/">
+                <img className="logo" src={logo} alt="" />
               </Link>
               <Link to="/"></Link>
 
@@ -124,9 +124,10 @@ const Header = () => {
               <span class="arrow_btn">
                 <i class="fas fa-arrow-left"></i>
               </span>
+              <img class="img-fluid logo layoutImg" src={logo} alt="" />
             </div>
 
-            <img class="img-fluid" src={logo} alt="" />
+            
             <p>
               I am a Front End developer with industry experience building
               websites. My role is to write and style the front-end components
@@ -134,6 +135,22 @@ const Header = () => {
               stories. I have 5+ years of experience in web
               development and completed 200+ online & offline courses.
             </p>
+            <div class="Social">
+                  <span class="text">Follow Me : </span>
+                  <a target='blank' href="https://www.facebook.com/amitbiswas1994">
+                    <i class="fab fa-facebook-square"></i>
+                  </a>
+                  <a target='blank' href="https://www.linkedin.com/in/amitbiswas-tm/">
+                  <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a target='blank' href="https://twitter.com/amitgoclick">
+                    <i class="fab fa-twitter-square"></i>
+                  </a>
+                  <a target='blank' href="https://www.instagram.com/alvida_amit/">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  
+                </div>
            </div>
 
             

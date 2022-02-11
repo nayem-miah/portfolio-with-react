@@ -12,13 +12,13 @@ const AllBlogPost = () => {
   // Load Blog Post from Server ....
 
   React.useEffect(() => {
-    axios.get("http://localhost:5000/all-blog-post").then((res) => {
+    axios.get("https://amitjs.herokuapp.com/all-blog-post").then((res) => {
       setData(res.data.BlogData);
     });
   }, [data]);
 
   const deleteData = (id) => {
-    const URL = `http://localhost:5000/all-blog-post/${id}`;
+    const URL = `https://amitjs.herokuapp.com/all-blog-post/${id}`;
 
     axios.delete(URL).then((res) => {
       if (res.data.BlogData.deletedCount == 1) {

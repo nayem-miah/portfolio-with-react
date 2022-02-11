@@ -25,7 +25,8 @@ const BlogPostData = (props) => {
   const { _id, BlogTitle, ImgUrl, data, date } = props.data;
   const DescriptionSlice = parse(data.slice(0, 260));
   const socialIconUrl = `http://localhost:3000/blog/single-blog/${_id}`; // Need to create live link....
-  const shareUrl = "https://quizbari.com";
+  const shareUrl = `https://amitjs.com/single-blog/${_id}`;
+  console.log(shareUrl);
 
   return (
     <div class="single-item">
