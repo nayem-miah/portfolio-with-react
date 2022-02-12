@@ -3,7 +3,7 @@ import { StickyNav } from "react-js-stickynav";
 import "react-js-stickynav/dist/index.css";
 import AutohorImg from "../../Img/amit2.png";
 import SignatureImg from "../../Img/signature.png";
-import logo from "../../Img/Group30.png";
+import logo from "../../Img/Group4.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -30,7 +30,7 @@ const Header = () => {
           background: #0b032d;
         }
         .scrollNav {
-          height: 100px;
+          height: 84px;
           background: #05001a;
           border-bottom: 3px solid #00fff0;
           box-shadow: 2px 4px 32px #00ffee83;

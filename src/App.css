@@ -156,7 +156,7 @@ header .navbar .disable {
   cursor: no-drop !important;
 }
 .logo{
-width: 146px;
+width: 225px;
 }
 
 #layout {
@@ -202,7 +202,7 @@ width: 146px;
 
 #layout .arrow_btn {
   position: relative;
-  top: -20px;
+  top: -13px;
   font-size: 20px;
   color: #00ffee;
   animation: forArrowBtn-1 1s linear 1s infinite alternate;
@@ -226,8 +226,8 @@ width: 146px;
 }
 #layout .overlay .wrap .layoutImg {
   position: relative;
-  top: -21px;
-  left: 186px;
+  top: -25px;
+  left: 127px;
  
 }
 
