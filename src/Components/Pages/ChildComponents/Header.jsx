@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { StickyNav } from "react-js-stickynav";
-import "react-js-stickynav/dist/index.css";
-import AutohorImg from "../../Img/amit2.png";
+import AutohorImg from "../../Img/nayem.png";
 import SignatureImg from "../../Img/signature.png";
-import logo from "../../Img/Group4.png";
-import { Link } from "react-router-dom";
+import logo from "../../Img/2.png";
+import {Link, NavLink} from 'react-router-dom'
+
+
 
 const Header = () => {
   // For layout section
@@ -13,38 +14,11 @@ const Header = () => {
   const clickFunction = () => {
     setActive(!active);
   };
-  const style = () => {
-    return (
-      <style jsx>{`
-        .nav {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          transition: 0.6s;
-          z-index: 99;
-          height: 120px;
-          background: #0b032d;
-        }
-        .scrollNav {
-          height: 84px;
-          background: #05001a;
-          border-bottom: 3px solid #00fff0;
-          box-shadow: 2px 4px 32px #00ffee83;
-        }
-        .styl {
-          padding-top: 80px;
-        }
-      `}</style>
-    );
-  };
+  
 
   return (
     <>
-      {style()}
+
       <StickyNav length="40">
         <header class="">
           <div class="container">
@@ -52,7 +26,7 @@ const Header = () => {
               <Link class="navbar-brand logo" to="/">
                 <img className="logo" src={logo} alt="" />
               </Link>
-              <Link to="/"></Link>
+  
 
               <div class="login-btn-img d-none">
                 <img class="btnClass-1 d-none" src="" alt="" />
@@ -75,26 +49,33 @@ const Header = () => {
                     <Link className="nav-link" to={"/"}>
                       Home
                     </Link>
+                 
                   </li>
                   <li class="nav-item">
                     <Link className="nav-link" to={"/service"}>
                       Service
                     </Link>
+                  
+                   
                   </li>
-                  <li class="nav-item">
-                    <Link className="nav-link" to={"/project"}>
-                      Project
-                    </Link>
-                  </li>
+             
                   <li class="nav-item">
                     <Link className="nav-link" to={"/blog"}>
                       Blog
                     </Link> 
+             
                   </li>
                   <li class="nav-item">
                     <Link className="nav-link" to={"/contact"}>
                       Contact
                     </Link>
+                   
+                  </li>
+                  <li class="nav-item">
+                    <Link className="nav-link" to={"/dashbord"}>
+                      Dashbord
+                    </Link>
+                   
                   </li>
                   <li class="login-btn animate__animated animate__rubberBand">
                     <p onClick={clickFunction} class="btnClass">
@@ -108,7 +89,7 @@ const Header = () => {
         </header>
       </StickyNav>
 
-      {/* Layout */}
+ 
 
       <section id="layout">
         <div
@@ -137,16 +118,16 @@ const Header = () => {
             </p>
             <div class="Social">
                   <span class="text">Follow Me : </span>
-                  <a target='blank' href="https://www.facebook.com/amitbiswas1994">
+                  <a target='blank' href="https://web.facebook.com/nayemmiahcu">
                     <i class="fab fa-facebook-square"></i>
                   </a>
-                  <a target='blank' href="https://www.linkedin.com/in/amitbiswas-tm/">
+                  <a target='blank' href="https://www.linkedin.com/in/nayem-miah/">
                   <i class="fab fa-linkedin"></i>
                   </a>
-                  <a target='blank' href="https://twitter.com/amitgoclick">
+                  <a target='blank' href="https://twitter.com/NaeemIslamNeha1">
                     <i class="fab fa-twitter-square"></i>
                   </a>
-                  <a target='blank' href="https://www.instagram.com/alvida_amit/">
+                  <a target='blank' href="https://www.instagram.com/nayemmiah.cu/">
                     <i class="fab fa-instagram"></i>
                   </a>
                   

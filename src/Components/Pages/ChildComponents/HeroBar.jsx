@@ -2,6 +2,7 @@ import React from 'react';
 import HeroImg from "../../Img/Design.png";
 
 const HeroBar = () => {
+  
     return (
         <div>
             <section id="hero">
@@ -27,16 +28,16 @@ const HeroBar = () => {
                 </div>
                 <div class="Social">
                   <span class="text">Follow Me : </span>
-                  <a target='blank' href="https://www.facebook.com/amitbiswas1994">
+                  <a target='blank' href="https://web.facebook.com/nayemmiahcu">
                     <i class="fab fa-facebook-square"></i>
                   </a>
-                  <a target='blank' href="https://www.linkedin.com/in/amitbiswas-tm/">
+                  <a target='blank' href="https://www.linkedin.com/in/nayem-miah/">
                   <i class="fab fa-linkedin"></i>
                   </a>
-                  <a target='blank' href="https://twitter.com/amitgoclick">
+                  <a target='blank' href="https://twitter.com/NaeemIslamNeha1">
                     <i class="fab fa-twitter-square"></i>
                   </a>
-                  <a target='blank' href="https://www.instagram.com/alvida_amit/">
+                  <a target='blank' href="https://www.instagram.com/nayemmiah.cu/">
                     <i class="fab fa-instagram"></i>
                   </a>
                   

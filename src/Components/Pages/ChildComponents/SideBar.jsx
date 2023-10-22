@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import amitImg from "../../Img/single-blog/amit.png";
+import amitImg from "../../Img/single-blog/nayem.png";
 
 const SideBar = () => {
   const [data, setdata] = useState([]);

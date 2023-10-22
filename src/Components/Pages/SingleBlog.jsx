@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+
 import Footer from "./ChildComponents/Footer";
 import Header from "./ChildComponents/Header";
 import IntroSection from "./ChildComponents/IntroSection";
@@ -27,12 +27,12 @@ const SingleBlog = () => {
   const [comment, setComment] = useState([]);
   const [uniqueSlug, setUniqueSlug] = useState([]);
   console.log(uniqueSlug);
-  const { slug } = useParams();
+  // const { slug } = useParams();
 
   const SucccessMassage = "Data Update Successful!";
   const UnSuccessfulMassage = "Data Update Error!";
   const todayDate = new Date().toISOString().slice(0, 10);
-  const shareUrl = `https://amitjs.com/single-blog/${slug}`;
+  // const shareUrl = `https://amitjs.com/single-blog/${slug}`;
 
   const {
     register,
@@ -45,7 +45,7 @@ const SingleBlog = () => {
   // Load Unique Blog ...
 
   useEffect(() => {
-    const url = `https://amitjs.herokuapp.com/all-blog-post/${slug}`;
+    const url = `https://amitjs.herokuapp.com/all-blog-post/${false}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setUniqueSlug(data[0]));
@@ -140,30 +140,30 @@ const SingleBlog = () => {
                       </div>
                     </div>
                     <div className="mr-4 SocialIcon">
-                      <span>
+                      {/* <span>
                         <FacebookShareButton url={shareUrl}>
                           <FacebookIcon size={40} round={true} />
                         </FacebookShareButton>
-                      </span>
+                      </span> */}
                       <span>
-                        <LinkedinShareButton url={shareUrl}>
+                        {/* <LinkedinShareButton url={shareUrl}>
                           <LinkedinIcon size={40} round={true} />
-                        </LinkedinShareButton>
+                        </LinkedinShareButton> */}
                       </span>
                       <span>
-                        <TwitterShareButton url={shareUrl}>
+                        {/* <TwitterShareButton url={shareUrl}>
                           <TwitterIcon size={40} round={true} />
-                        </TwitterShareButton>
+                        </TwitterShareButton> */}
                       </span>
                       <span>
-                        <WhatsappShareButton url={shareUrl}>
+                        {/* <WhatsappShareButton url={shareUrl}>
                           <WhatsappIcon size={40} round={true} />
-                        </WhatsappShareButton>
+                        </WhatsappShareButton> */}
                       </span>
                       <span>
-                        <RedditShareButton url={shareUrl}>
+                        {/* <RedditShareButton url={shareUrl}>
                           <RedditIcon size={40} round={true} />
-                        </RedditShareButton>
+                        </RedditShareButton> */}
                       </span>
                     </div>
                   </div>
@@ -188,7 +188,7 @@ const SingleBlog = () => {
 
                 <div class="comment-zoon">
                   {newSlugId.map((e) => {
-                    if (e.slugId == slug) {
+                    if (e.slugId == false) {
                       console.log(e);
                       return (
                         <div className="mt-5">
@@ -272,7 +272,7 @@ const SingleBlog = () => {
                         type="submit"
                         onClick={() => {
                           setValue("date", todayDate);
-                          setValue("slugId", slug);
+                          setValue("slugId", false);
                         }}
                       >
                         Submit

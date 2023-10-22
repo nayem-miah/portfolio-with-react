@@ -7,12 +7,12 @@ import useAuth from "../../../Context/useAuth";
 import { Link } from "react-router-dom";
 
 const DashBordMenu = () => {
-  const { signOutGoogle, user, signInGoogle } = useAuth();
+  // const { signOutGoogle, user, signInGoogle } = useAuth();
   return (
     <div>
       <Navbar className="d-block" collapseOnSelect expand="lg" variant="dark">
         <Navbar.Brand href="#home">
-          <Link to={"/dashbord"}>
+          <Link to={"/"}>
             <img src={logo} alt="" />
           </Link>
         </Navbar.Brand>
@@ -48,7 +48,7 @@ const DashBordMenu = () => {
 
             
 
-            <Link className="nav-link" to={"/catagory"}>
+            <Link className="nav-link" to={"/blog"}>
             <i class="fas fa-cube"></i>&nbsp;  Catagory
             </Link>
 
@@ -88,10 +88,10 @@ const DashBordMenu = () => {
              <i class="fas fa-network-wired"></i>&nbsp;  Working Section
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <Link className="dropdown-item" to={"/add-section"}>
+              <Link className="dropdown-item" to={"/Add-Working-Section"}>
                 <i class="fas fa-file-word"></i>&nbsp; <span>Add Section</span>
               </Link>
-              <Link className="dropdown-item" to={"/remove-section"}>
+              <Link className="dropdown-item" to={"/remove-working-section"}>
                 <i class="far fa-trash-alt"></i>&nbsp; <span> Remove Section</span>
               </Link>
               </div>
@@ -114,7 +114,7 @@ const DashBordMenu = () => {
                 <i class="fas fa-project-diagram"></i>{" "}&nbsp;
                 <span> Create Project</span>
               </Link>
-              <Link className="dropdown-item" to={"/all-project"}>
+              <Link className="dropdown-item" to={"/project"}>
                 <i class="fab fa-r-project"></i>&nbsp; All Project
               </Link>
               </div>
@@ -133,7 +133,7 @@ const DashBordMenu = () => {
               <i class="fas fa-comment"></i> &nbsp; Comment
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <Link className="dropdown-item" to={"/all-comment"}>
+              <Link className="dropdown-item" to={"/blog"}>
               <i class="fas fa-comments"></i>&nbsp; All Comment
               </Link>
               </div>
@@ -142,15 +142,15 @@ const DashBordMenu = () => {
           </Nav>
         </Navbar.Collapse>
 
-        {user.email ? (
-          <Button onClick={signOutGoogle} className="mt-4">
+        {/* {user.email ? (
+          <Button onClick={true} className="mt-4">
             Log Out
           </Button>
         ) : (
-          <Button onClick={signInGoogle} className="mt-4">
+          <Button onClick={true} className="mt-4">
             Log in
           </Button>
-        )}
+        )} */}
       </Navbar>
     </div>
   );

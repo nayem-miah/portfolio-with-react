@@ -165,7 +165,7 @@ width: 225px;
 
 #layout .overlay {
   position: fixed;
-  background: #0000008a;
+  background: #0000008e;
   z-index: 200;
   height: 100%;
   width: 100%;
@@ -226,8 +226,8 @@ width: 225px;
 }
 #layout .overlay .wrap .layoutImg {
   position: relative;
-  top: -25px;
-  left: 127px;
+  top: -31px;
+  left: 90px;
  
 }
 

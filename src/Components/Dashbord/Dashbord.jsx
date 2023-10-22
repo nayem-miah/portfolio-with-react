@@ -19,9 +19,10 @@ const Dashbord = () => {
               <p className="text-success lead font-weight-bold">{update}</p>
               </Col>
               <Col className="">
-                <Link to={"/"} target={'blank'}>
+                <Link to={"dashbord"}>
                   <Button>Visit Site</Button>
                 </Link>
+
               </Col>
             </Row>
           </div>

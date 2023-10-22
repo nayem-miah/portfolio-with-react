@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import AboutImg from "../../Img/about1.png";
 
 const AboutSection = () => {
@@ -17,9 +17,9 @@ const AboutSection = () => {
                 <div class="contact-btn">
                   {/* <!-- <a class="btn btn-contact" href="#">Contact Us</a> --> */}
                   <div class="contact-btn-main">
-                    <Link to={"/contact"}>
+                    {/* <Link to={"/contact"}>
                       <p class="btn-contact">Contact Us</p>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
                 
@@ -36,7 +36,7 @@ const AboutSection = () => {
                   I am a Front End developer with industry experience building websites. My role is to write and style the front-end components that meet the requirements of our mocks and fulfill l our user stories. I also monitor and process pull requests for production deployments. Technologies used: HTML5, CSS3, JavaScript, Bootstrap, MUI, React, MongoDB, Git, JQuery, Photoshop, Illustrator, Figma, Adobe xd.
                   </p>
                   <div class="dowwnload-cv-btn">
-                    <a class="btn btn-cv" href="./pdf/Profile.pdf" download>
+                    <a class="btn btn-cv" target='blank' href="https://flowcv.com/resume/ipifsve5ev" download>
                       DOWNLOAD CV
                     </a>
                   </div>

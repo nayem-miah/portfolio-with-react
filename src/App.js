@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Pages/Home";
 import Contact from "./Components/Pages/Contact";
@@ -23,10 +22,47 @@ import ScrollToTop from "./Components/HelpPoint/ScrollToTop";
 import RemoveWorkingSection from "./Components/Dashbord/Page/RemoveWorkingSection";
 
 
+
+import { BrowserRouter,Routes, Route } from "react-router-dom";
+
+
 function App() {
   return (
     <div className="App">
-      <AuthContext>
+ 
+              
+     <BrowserRouter>
+       <Routes>
+        
+          <Route path='/' element={ <Home />}></Route>
+          <Route path='/service' element={<Service/>}> </Route>
+          <Route path='/project' element={<AllProject />}> </Route>
+          <Route path='/add-project' element={<AddProject />}> </Route>
+          <Route path='/contact' element={<Contact />}> </Route>
+          <Route path='/blog' element={<Blog/>}> </Route>
+          <Route path='/Singl-blog' element={<SingleBlog />}> </Route>
+          <Route path='/create-blog-post' element={<CreateBlogPost />}> </Route>
+          <Route path='/add-slider' element={<AddSlider />}> </Route>
+          <Route path='/remove-slider' element={<RemoveSlider />}> </Route>
+          <Route path='/all-blog-post' element={<AllBlogPost />}> </Route>
+          <Route path='/Add-Working-Section' element={<AddWorkingSection />}> </Route>
+          <Route path='/remove-working-section' element={<RemoveWorkingSection />}> </Route>
+          <Route path='/No-Page-Found' element={<NoPageFound />}> </Route>
+          <Route path='/dashbord' element={<Dashbord />}> </Route>
+
+          
+       </Routes>
+    </BrowserRouter>
+
+   
+ 
+    </div>
+  );
+}
+
+export default App;
+
+{/* <AuthContext>
         <Router>
           <ScrollToTop>
             <Switch>
@@ -93,9 +129,4 @@ function App() {
             </Switch>
           </ScrollToTop>
         </Router>
-      </AuthContext>
-    </div>
-  );
-}
-
-export default App;
+      </AuthContext> */}

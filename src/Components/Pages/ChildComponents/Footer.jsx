@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../Img/Group4.png'
+import logo from '../../Img/2.png'
 const Footer = () => {
     return (
         <section id="footer">
@@ -58,7 +58,7 @@ const Footer = () => {
                 </div>
                 <div class="row">
                     <div class="col text-center copy_write">
-                        <p>&#169; Getmore7 - 2021</p>
+                        <p>&#169; Nayem - 2023</p>
                     </div>
                 </div>
             </div>

@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import DashBordMenu from "../ChildComponent/DashBordMenu";
+// import { Link } from "react-router-dom";
+// import DashBordMenu from "../ChildComponent/DashBordMenu";
 
 const RemoveSlider = () => {
   const [data, setData] = useState([]);
@@ -32,7 +32,7 @@ const RemoveSlider = () => {
       <div className=" dashBord ">
         <Row>
           <Col md={3} sm={12} className="mt-4">
-            <DashBordMenu></DashBordMenu>
+            {/* <DashBordMenu></DashBordMenu> */}
           </Col>
           <Col md={9} sm={12} className="content">
             <div className="headerSpace text-center">
@@ -41,9 +41,9 @@ const RemoveSlider = () => {
                   <p className="text-success lead font-weight-bold">{update}</p>
                 </Col>
                 <Col className="">
-                  <Link to={"/"} target={"blank"}>
+                  {/* <Link to={"/"} target={"blank"}>
                     <Button>Visit Site</Button>
-                  </Link>
+                  </Link> */}
                 </Col>
               </Row>
             </div>

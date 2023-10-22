@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import DashBordMenu from "../ChildComponent/DashBordMenu";
 import axios from "axios";
 const AllBlogPost = () => {
@@ -43,9 +43,9 @@ const AllBlogPost = () => {
                   <p className="text-success lead font-weight-bold">{update}</p>
                 </Col>
                 <Col className="">
-                  <Link to={"/"} target={"blank"}>
+                  {/* <Link to={"/"} target={"blank"}>
                     <Button>Visit Site</Button>
-                  </Link>
+                  </Link> */}
                 </Col>
               </Row>
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const IntroSection = (props) => {
   return (
@@ -10,11 +10,11 @@ const IntroSection = (props) => {
             <div class="wrap">
               <h2>{props.siteLink}</h2>
               <h3>
-                <Link to={"/"}> {props.homeLink}</Link> /{" "}
-                <Link className="active" to={"/"}>
+                {/* <Link to={"/"}> {props.homeLink}</Link> /{" "}
+                <Link className="active" to={"/"}> */}
                   {" "}
                   {props.siteLink}
-                </Link>{" "}
+                {/* </Link>{" "} */}
               </h3>
             </div>
           </div>
