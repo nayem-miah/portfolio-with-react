@@ -12,6 +12,7 @@ import Testimonials from "./ChildComponents/Testimonials";
 import BlogSection from "./ChildComponents/BlogSection";
 import NewsLetter from "./ChildComponents/NewsLatter";
 import Footer from "./ChildComponents/Footer";
+import Data from "./Data";
 
 const Home = () => {
   return (
@@ -65,6 +66,8 @@ const Home = () => {
       <NewsLetter></NewsLetter>
 
       {/* Footer */}
+
+      <Data/>
 
       <Footer></Footer>
 
